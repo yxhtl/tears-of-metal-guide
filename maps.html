@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全关卡地图攻略 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal 全关卡地图攻略：草地、森林、山地、海岸、村庄关卡的地图分析、地形利用与波次拆解。">
+<meta name="keywords" content="Tears of Metal关卡,钢铁之泪地图,草地,森林,山地,海岸,村庄,地形,波次">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a3a4a">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 全关卡地图攻略","inLanguage":"zh-CN","about":"Tears of Metal 关卡地图与地形分析","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span class="logo">TM</span><span data-i18n="brand">钢铁之泪攻略站</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
+      <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
+      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
+      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
+      <a href="maps.html" class="active" data-i18n="nav.maps">关卡攻略</a>
+      <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
+    </nav>
+    <div class="nav-utils">
+      <button class="nav-btn search-btn" aria-label="搜索"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-btn dark-btn" aria-label="暗色模式"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="nav-btn lang-btn" aria-label="语言">English</button>
+      <a href="index.html" class="nav-cta" data-i18n="nav.cta.home">返回首页</a>
+    </div>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section id="top" class="section-anchor" style="padding-top:54px">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Maps">关卡攻略</span></div>
+    <span class="eyebrow" data-en="Maps &amp; Levels">关卡攻略</span>
+    <h2 class="title" data-en="Full Map &amp; Level Guide">全关卡地图攻略</h2>
+    <p class="subtitle" data-en="Five map themes, each with unique terrain. Understanding the choke points and path layout is the difference between a clean clear and a leak."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>五种地图主题，各有独特地形。掌握隘口和路径布局，是完美通关和漏怪的分水岭。</p>
+
+    <!-- Map Progression -->
+    <h3 id="progression" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Map Unlock Progression">地图解锁顺序</h3>
+    <div class="biome-progression">
+      <div class="bp-node active"><div class="bp-step" data-en="01">01</div><div class="bp-name" data-en="Grassland">草地</div><div class="bp-info" data-en="Beginner">新手</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="02">02</div><div class="bp-name" data-en="Forest">森林</div><div class="bp-info" data-en="Intermediate">中级</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="03">03</div><div class="bp-name" data-en="Mountain">山地</div><div class="bp-info" data-en="Advanced">高级</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="04">04</div><div class="bp-name" data-en="Coast">海岸</div><div class="bp-info" data-en="Expert">专家</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="05">05</div><div class="bp-name" data-en="Village">村庄</div><div class="bp-info" data-en="Final">终极</div></div>
+    </div>
+
+    <!-- Map Details -->
+    <div class="map-grid" style="margin-top:30px">
+      <div class="map-card" id="grassland">
+        <div class="map-head"><div class="num">1</div><h4 data-en="Grassland">草地</h4></div>
+        <p data-en="Open terrain, wide paths. Beginner-friendly — plenty of tower placement options.">开阔地形、宽阔路径。新手友好——塔位选择多。</p>
+        <ul>
+          <li data-en="<b>Difficulty:</b> Easy"><b>难度：</b>简单</li>
+          <li data-en="<b>Waves:</b> 10"><b>波次：</b>10</li>
+          <li data-en="<b>Terrain:</b> Wide paths, few choke points"><b>地形：</b>宽阔路径，少隘口</li>
+          <li data-en="<b>Strategy:</b> Spread towers along main path"><b>策略：</b>沿主路径分布塔</li>
+        </ul>
+      </div>
+      <div class="map-card b-forest" id="forest">
+        <div class="map-head"><div class="num">2</div><h4 data-en="Forest">森林</h4></div>
+        <p data-en="Tree cover provides concealment for enemies. Narrow winding paths create natural choke points.">树木遮挡敌人。蜿蜒窄路天然形成隘口。</p>
+        <ul>
+          <li data-en="<b>Difficulty:</b> Medium"><b>难度：</b>中等</li>
+          <li data-en="<b>Waves:</b> 12"><b>波次：</b>12</li>
+          <li data-en="<b>Terrain:</b> Narrow paths, good choke points"><b>地形：</b>窄路径，优良隘口</li>
+          <li data-en="<b>Strategy:</b> Stack defenses at forest gaps"><b>策略：</b>在林间缺口堆防</li>
+        </ul>
+      </div>
+      <div class="map-card b-mountain" id="mountain">
+        <div class="map-head"><div class="num">3</div><h4 data-en="Mountain">山地</h4></div>
+        <p data-en="Steep cliffs and canyon paths. Very tight choke points but multiple branching paths.">陡峭悬崖和峡谷路径。极窄隘口但有多条分岔路。</p>
+        <ul>
+          <li data-en="<b>Difficulty:</b> Hard"><b>难度：</b>困难</li>
+          <li data-en="<b>Waves:</b> 14"><b>波次：</b>14</li>
+          <li data-en="<b>Terrain:</b> Canyons, branching paths"><b>地形：</b>峡谷、分岔路</li>
+          <li data-en="<b>Strategy:</b> Cover both branches, focus on merge point"><b>策略：</b>两条岔路都覆盖，重点放合流点</li>
+        </ul>
+      </div>
+      <div class="map-card b-coast" id="coast">
+        <div class="map-head"><div class="num">4</div><h4 data-en="Coast">海岸</h4></div>
+        <p data-en="Coastal map with water boundaries. Enemies may approach from multiple angles. Limited build space near shore.">海岸地图，有水域边界。敌人可能从多个角度进攻。岸边建造空间有限。</p>
+        <ul>
+          <li data-en="<b>Difficulty:</b> Expert"><b>难度：</b>专家</li>
+          <li data-en="<b>Waves:</b> 15"><b>波次：</b>15</li>
+          <li data-en="<b>Terrain:</b> Water edges, multi-angle"><b>地形：</b>水边、多角度</li>
+          <li data-en="<b>Strategy:</b> Long-range towers (Magic), unit repositioning key"><b>策略：</b>远程塔（法塔），单位重摆是关键</li>
+        </ul>
+      </div>
+      <div class="map-card b-village" id="village">
+        <div class="map-head"><div class="num">5</div><h4 data-en="Village">村庄</h4></div>
+        <p data-en="Final map — urban terrain with buildings blocking sight lines. Complex path network. Boss appears early.">终局地图——城镇地形，建筑遮挡视线。复杂路径网。Boss 提前出现。</p>
+        <ul>
+          <li data-en="<b>Difficulty:</b> Extreme"><b>难度：</b>极高</li>
+          <li data-en="<b>Waves:</b> 18"><b>波次：</b>18</li>
+          <li data-en="<b>Terrain:</b> Buildings, complex paths"><b>地形：</b>建筑、复杂路径</li>
+          <li data-en="<b>Strategy:</b> Max upgrades, full unit diversity needed"><b>策略：</b>需要满级升级和全套兵种</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Terrain Tips -->
+    <h3 id="terrain" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Terrain &amp; Choke Point Tips">地形与隘口技巧</h3>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Identify Choke Points">识别隘口</h4><ul>
+        <li data-en="Narrow paths where enemies must funnel through">敌人必须通过的窄路</li>
+        <li data-en="Path merge points (where two branches join) — ideal kill zones">路径合流点（两条岔路汇合处）——理想击杀区</li>
+        <li data-en="Corners force enemies to slow down — extra tower uptime">拐角处敌人减速——塔有更多输出时间</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Tower Placement by Terrain">按地形放塔</h4><ul>
+        <li data-en="Grassland: spread along the path, no single choke to stack on">草地：沿路分布，无单一隘口可堆</li>
+        <li data-en="Forest: stack 2-3 towers at the narrowest gap">森林：在最窄处堆 2-3 塔</li>
+        <li data-en="Mountain: cover both branches, heavy defense at merge">山地：两岔路都覆盖，合流处重防</li>
+        <li data-en="Coast/Village: Magic towers for long-range coverage">海岸/村庄：法塔远程覆盖</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Wave Preview">波次预览</h4><ul>
+        <li data-en="Always check the wave preview before it starts — enemy types matter">波次开始前务必看预览——敌人类型很重要</li>
+        <li data-en="Armored wave? Make sure Magic Tower is ready">重甲波？确保法塔就位</li>
+        <li data-en="Swarm wave? Arrow Tower multi-shot shines">群怪波？箭塔多重射击发威</li>
+        <li data-en="Boss wave? Concentrate everything on the main path">Boss 波？集中一切在主路径</li>
+      </ul></div>
+    </div>
+
+    <!-- 交叉引用 -->
+    <div class="cross-links">
+      <h4 data-en="Related Guides">相关攻略</h4>
+      <div class="cl-list">
+        <a href="towers.html" data-en="Towers">防御塔</a>
+        <a href="economy.html" data-en="Economy">经济养成</a>
+        <a href="codex.html" data-en="Codex">图鉴速查</a>
+      </div>
+    </div>
+
+    <!-- 上下篇导航 -->
+    <div class="page-nav">
+      <a href="economy.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Economy">经济养成</div></a>
+      <a href="codex.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Codex">图鉴速查</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
+        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+      </div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+    </div>
+    <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="返回顶部" data-en="Top">顶部</button>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-wrap">
+      <span class="s-ico"></span>
+      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <button class="search-close" aria-label="关闭">×</button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>

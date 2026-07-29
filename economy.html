@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经济管理与Meta养成 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal 经济养成攻略：金币收支管理、永久升级优先级、Meta养成树推荐路线。">
+<meta name="keywords" content="Tears of Metal经济,钢铁之泪养成,金币,Meta升级,永久升级,roguelite养成">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a3a4a">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 经济管理与Meta养成","inLanguage":"zh-CN","about":"Tears of Metal 金币管理与永久养成树","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span class="logo">TM</span><span data-i18n="brand">钢铁之泪攻略站</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
+      <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
+      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
+      <a href="economy.html" class="active" data-i18n="nav.economy">经济养成</a>
+      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
+    </nav>
+    <div class="nav-utils">
+      <button class="nav-btn search-btn" aria-label="搜索"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-btn dark-btn" aria-label="暗色模式"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="nav-btn lang-btn" aria-label="语言">English</button>
+      <a href="index.html" class="nav-cta" data-i18n="nav.cta.home">返回首页</a>
+    </div>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section id="top" class="section-anchor" style="padding-top:54px">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Economy">经济养成</span></div>
+    <span class="eyebrow" data-en="Economy &amp; Meta">经济养成</span>
+    <h2 class="title" data-en="Gold Management &amp; Meta Progression">金币管理与 Meta 养成</h2>
+    <p class="subtitle" data-en="Gold is your most precious resource. Spend it wisely during runs, and invest permanent upgrades between runs. This is the roguelite core of Tears of Metal."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>金币是你最宝贵的资源。运行中精打细算，运行间投资永久升级。这就是钢铁之泪的 roguelite 核心。</p>
+
+    <!-- Gold Income Sources -->
+    <h3 id="income" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Gold Income Sources">金币来源</h3>
+    <table class="data-table">
+      <thead><tr>
+        <th data-en="Source">来源</th>
+        <th data-en="When">时机</th>
+        <th data-en="Amount">数量</th>
+        <th data-en="Notes">说明</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><b data-en="Enemy kills">击杀敌人</b></td>
+          <td data-en="Every wave">每波</td>
+          <td data-en="[待核实] per kill">[待核实] /只</td>
+          <td data-en="Main income source — tougher enemies give more gold">主要收入——越强的敌人给越多</td>
+        </tr>
+        <tr>
+          <td><b data-en="Wave clear bonus">波次清完奖励</b></td>
+          <td data-en="End of each wave">每波结束</td>
+          <td data-en="[待核实] flat bonus">[待核实] 固定</td>
+          <td data-en="Bonus for clearing without leaks (no enemy reached base)">无漏怪（无敌人到基地）额外奖励</td>
+        </tr>
+        <tr>
+          <td><b data-en="Gold building">金币建筑</b></td>
+          <td data-en="Passive, each wave">被动，每波</td>
+          <td data-en="[待核实] /wave">[待核实] /波</td>
+          <td data-en="Build gold-generating structures — cost upfront, pay off over time">建造金币产出建筑——前期投入，长期回报</td>
+        </tr>
+        <tr>
+          <td><b data-en="Meta upgrade bonus">养成加成</b></td>
+          <td data-en="Permanent">永久</td>
+          <td data-en="% bonus">百分比加成</td>
+          <td data-en="Invest meta points in gold income — compounds every wave">在养成树投资金币产出——每波复利</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Gold Spending Priorities -->
+    <h3 id="spending" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Gold Spending Priorities">金币支出优先级</h3>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Early Game (Wave 1-3)">前期（第 1-3 波）</h4><ul>
+        <li data-en="1. Build gold-generating structure (long-term ROI)">1. 建金币建筑（长期回报）</li>
+        <li data-en="2. Build 2nd tower at choke point">2. 在隘口建第二座塔</li>
+        <li data-en="3. Upgrade main tower to Tier 2">3. 主塔升至 2 级</li>
+        <li data-en="Don't: max a single tower too early">别做：太早把单塔升满</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Mid Game (Wave 4-6)">中期（第 4-6 波）</h4><ul>
+        <li data-en="1. Build Magic Tower (armored enemies arrive)">1. 建法塔（重甲敌人来了）</li>
+        <li data-en="2. Upgrade towers to Tier 2 (all of them)">2. 所有塔升至 2 级</li>
+        <li data-en="3. Unlock and deploy support unit">3. 解锁并部署支援单位</li>
+        <li data-en="Don't: skip economy for pure offense">别做：为纯攻击放弃经济</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Late Game (Wave 7-10+)">后期（第 7-10+ 波）</h4><ul>
+        <li data-en="1. Upgrade key towers to Tier 3">1. 关键塔升至 3 级</li>
+        <li data-en="2. Keep reserve gold for revives/repairs">2. 留金币复活/修理</li>
+        <li data-en="3. Fill remaining tower slots">3. 填满剩余塔位</li>
+        <li data-en="Don't: spend everything before boss wave">别做：Boss 波前花光金币</li>
+      </ul></div>
+    </div>
+
+    <!-- Meta Upgrade Tree -->
+    <h3 id="meta-tree" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Meta Upgrade Tree">Meta 养成树</h3>
+    <p style="margin-bottom:16px;color:var(--ink-soft);font-size:14px" data-en="Permanent upgrades that carry over between runs. Earned by clearing waves and defeating bosses. The order you unlock these in dramatically affects your run power.">在多次运行间继承的永久升级。通过清波和击败 Boss 获得点数。解锁顺序极大影响你的运行强度。</p>
+    <table class="data-table">
+      <thead><tr>
+        <th data-en="Upgrade">升级项</th>
+        <th data-en="Effect">效果</th>
+        <th data-en="Priority">优先级</th>
+        <th data-en="Cost">成本</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><b data-en="Gold Income Bonus">金币产出加成</b></td>
+          <td data-en="+% gold per kill / per wave">+百分比 击杀/每波金币</td>
+          <td data-en="1st (highest)">第一（最高）</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Starting Gold">初始金币</b></td>
+          <td data-en="+flat gold at wave 1">+固定 第 1 波初始金币</td>
+          <td data-en="2nd">第二</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Unit HP Bonus">单位血量加成</b></td>
+          <td data-en="+% HP for all units">+百分比 全单位血量</td>
+          <td data-en="3rd">第三</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Unit Damage Bonus">单位伤害加成</b></td>
+          <td data-en="+% damage for all units">+百分比 全单位伤害</td>
+          <td data-en="4th">第四</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Tower Damage Bonus">塔伤害加成</b></td>
+          <td data-en="+% tower damage">+百分比 塔伤害</td>
+          <td data-en="5th">第五</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Tower Range Bonus">塔范围加成</b></td>
+          <td data-en="+% tower range">+百分比 塔范围</td>
+          <td data-en="6th">第六</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Base HP Bonus">基地血量加成</b></td>
+          <td data-en="+flat base HP (more leak tolerance)">+固定 基地血量（更多容错）</td>
+          <td data-en="7th">第七</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+        <tr>
+          <td><b data-en="Revive Cost Reduction">复活成本降低</b></td>
+          <td data-en="-% gold to revive fallen units">-百分比 复活金币</td>
+          <td data-en="8th">第八</td>
+          <td data-en="[待核实]">[待核实]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Recommended Build Order -->
+    <h3 id="build-order" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Recommended Meta Build Order">推荐养成路线</h3>
+    <div class="biome-progression">
+      <div class="bp-node active"><div class="bp-step" data-en="01">01</div><div class="bp-name" data-en="Gold Income">金币产出</div><div class="bp-info" data-en="Compound every wave">每波复利</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="02">02</div><div class="bp-name" data-en="Starting Gold">初始金币</div><div class="bp-info" data-en="More wave-1 options">第1波更多选择</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="03">03</div><div class="bp-name" data-en="Unit HP">单位血量</div><div class="bp-info" data-en="Survivability">生存能力</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="04">04</div><div class="bp-name" data-en="Unit DMG">单位伤害</div><div class="bp-info" data-en="Kill speed">击杀速度</div></div>
+      <div class="bp-arrow">›</div>
+      <div class="bp-node"><div class="bp-step" data-en="05">05</div><div class="bp-name" data-en="Tower DMG">塔伤害</div><div class="bp-info" data-en="Passive offense">被动进攻</div></div>
+    </div>
+    <p style="color:var(--ink-soft);font-size:13px;margin-top:-20px" data-en="This order maximizes long-term power: economy first (compounds), then survivability, then offense. Specific node costs and values are [待核实 — pending verification].">这个顺序最大化长期强度：经济优先（复利），然后生存，然后进攻。具体节点成本和数值 [待核实 — 等待确认]。</p>
+
+    <!-- 交叉引用 -->
+    <div class="cross-links">
+      <h4 data-en="Related Guides">相关攻略</h4>
+      <div class="cl-list">
+        <a href="towers.html" data-en="Towers">防御塔</a>
+        <a href="getting-started.html" data-en="Beginner">新手入门</a>
+        <a href="maps.html" data-en="Maps">关卡攻略</a>
+      </div>
+    </div>
+
+    <!-- 上下篇导航 -->
+    <div class="page-nav">
+      <a href="towers.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Towers">防御塔</div></a>
+      <a href="maps.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Maps">关卡攻略</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
+        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+      </div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+    </div>
+    <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="返回顶部" data-en="Top">顶部</button>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-wrap">
+      <span class="s-ico"></span>
+      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <button class="search-close" aria-label="关闭">×</button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>

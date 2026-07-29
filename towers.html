@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>防御塔类型与升级路线 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal 防御塔详解：箭塔、炮塔、法塔的类型对比、升级路线、放塔策略与协同搭配。">
+<meta name="keywords" content="Tears of Metal防御塔,钢铁之泪箭塔,炮塔,法塔,升级路线,放塔策略">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a3a4a">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 防御塔类型与升级路线","inLanguage":"zh-CN","about":"Tears of Metal 防御塔类型、升级路线与放塔策略","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span class="logo">TM</span><span data-i18n="brand">钢铁之泪攻略站</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
+      <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
+      <a href="towers.html" class="active" data-i18n="nav.towers">防御塔</a>
+      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
+      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
+    </nav>
+    <div class="nav-utils">
+      <button class="nav-btn search-btn" aria-label="搜索"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-btn dark-btn" aria-label="暗色模式"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="nav-btn lang-btn" aria-label="语言">English</button>
+      <a href="index.html" class="nav-cta" data-i18n="nav.cta.home">返回首页</a>
+    </div>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section id="top" class="section-anchor" style="padding-top:54px">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Towers">防御塔</span></div>
+    <span class="eyebrow" data-en="Towers">防御塔</span>
+    <h2 class="title" data-en="Tower Types &amp; Upgrade Paths">防御塔类型与升级路线</h2>
+    <p class="subtitle" data-en="Three tower families, each with three upgrade tiers. Knowing when to build what — and where — is the core skill of Tears of Metal."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>三大塔系，每系三个升级层级。知道何时建什么塔、建在哪里——这是钢铁之泪的核心技巧。</p>
+
+    <!-- Tower Types -->
+    <h3 id="types" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Tower Type Comparison">防御塔类型对比</h3>
+    <div class="tower-grid">
+      <div class="tower-card">
+        <div class="tower-type" data-en="ARROW TOWER">箭塔</div>
+        <h4 data-en="Arrow Tower">箭塔</h4>
+        <p class="tower-desc" data-en="Fast attack speed, low per-hit damage. Cheap to build and upgrade. Effective against unarmored swarms. Bonus: slows enemies on hit (Tier 3).">高攻速、低单次伤害。建造和升级成本低。对无甲群怪有效。3级额外效果：命中减速。</p>
+        <div class="tower-stats">
+          <span data-en="Cost: Low">造价：低</span>
+          <span data-en="DPS: Med">输出：中</span>
+          <span data-en="Range: Med">范围：中</span>
+        </div>
+        <span class="tower-tier" data-en="Best vs: Swarms">最佳对：群怪</span>
+      </div>
+      <div class="tower-card" style="border-top-color:var(--crimson)">
+        <div class="tower-type" data-en="CANNON TOWER">炮塔</div>
+        <h4 data-en="Cannon Tower">炮塔</h4>
+        <p class="tower-desc" data-en="Slow attack speed, high AoE damage. Expensive but devastating against groups. Tier 3 adds knockback effect.">低攻速、高范围伤害。造价贵但对群体毁灭性。3级额外效果：击退。</p>
+        <div class="tower-stats">
+          <span data-en="Cost: High">造价：高</span>
+          <span data-en="DPS: High">输出：高</span>
+          <span data-en="Range: Med">范围：中</span>
+        </div>
+        <span class="tower-tier" data-en="Best vs: Groups">最佳对：群体</span>
+      </div>
+      <div class="tower-card" style="border-top-color:var(--heather)">
+        <div class="tower-type" data-en="MAGIC TOWER">法塔</div>
+        <h4 data-en="Magic Tower">法塔</h4>
+        <p class="tower-desc" data-en="Medium attack speed, ignores armor. Essential for armored enemies. Tier 3 adds chain lightning between targets.">中攻速、无视护甲。对重甲敌人必备。3级额外效果：链式闪电跳跃。</p>
+        <div class="tower-stats">
+          <span data-en="Cost: Med">造价：中</span>
+          <span data-en="DPS: Med">输出：中</span>
+          <span data-en="Range: Long">范围：远</span>
+        </div>
+        <span class="tower-tier" data-en="Best vs: Armored">最佳对：重甲</span>
+      </div>
+    </div>
+
+    <!-- Upgrade Paths -->
+    <h3 id="upgrades" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Upgrade Paths">升级路线</h3>
+    <table class="data-table">
+      <thead><tr>
+        <th data-en="Tower">防御塔</th>
+        <th data-en="Tier 1 (Base)">1 级（基础）</th>
+        <th data-en="Tier 2">2 级</th>
+        <th data-en="Tier 3 (Max)">3 级（满级）</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><b data-en="Arrow">箭塔</b></td>
+          <td data-en="Single target, fast shots">单体、快速射击</td>
+          <td data-en="+50% damage, +range">+50% 伤害、+范围</td>
+          <td data-en="Slow on hit, multi-shot">命中减速、多重射击</td>
+        </tr>
+        <tr>
+          <td><b data-en="Cannon">炮塔</b></td>
+          <td data-en="AoE splash, slow">范围溅射、慢速</td>
+          <td data-en="+AoE radius, +damage">+范围半径、+伤害</td>
+          <td data-en="Knockback, bigger splash">击退、更大溅射</td>
+        </tr>
+        <tr>
+          <td><b data-en="Magic">法塔</b></td>
+          <td data-en="Armor-piercing shots">破甲射击</td>
+          <td data-en="+damage, +range">+伤害、+范围</td>
+          <td data-en="Chain lightning (3 jumps)">链式闪电（3跳）</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: Specific stat values are [待核实 — pending game data verification]. Upgrade cost approximately doubles per tier.">注：具体数值 [待核实 — 等待游戏数据确认]。升级成本每级约翻倍。</p>
+
+    <!-- Placement Strategy -->
+    <h3 id="placement" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Placement Strategy">放塔策略</h3>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Choke Points First">优先放隘口</h4><ul>
+        <li data-en="Towers at narrow paths hit every passing enemy">窄道上的塔能打到每个经过的敌人</li>
+        <li data-en="Two towers side by side at a choke = maximum coverage">两座塔在隘口并排 = 最大覆盖</li>
+        <li data-en="Don't waste tower slots on open areas early">前期别把塔位浪费在开阔地带</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Tower Synergy">塔的协同</h4><ul>
+        <li data-en="Arrow + Cannon: slow + AoE cleanup">箭塔+炮塔：减速+范围清场</li>
+        <li data-en="Magic + Arrow: armor break + fast fire">法塔+箭塔：破甲+快速射击</li>
+        <li data-en="Avoid: only one tower type (easily countered)">避免：单一塔种（容易被克制）</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Range Overlap">范围重叠</h4><ul>
+        <li data-en="Position towers so their ranges overlap on the main path">塔的射程在主路径上重叠</li>
+        <li data-en="This creates a &quot;kill zone&quot; where enemies take damage from multiple towers">形成"击杀区"——敌人同时受多塔伤害</li>
+        <li data-en="Magic tower's long range makes it ideal for backline">法塔射程远，适合放后排</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="When to Upgrade vs Build">升级还是新建</h4><ul>
+        <li data-en="Wave 1-3: Build new towers (coverage > power)">第 1-3 波：建新塔（覆盖 > 威力）</li>
+        <li data-en="Wave 4-6: Upgrade existing to Tier 2">第 4-6 波：升级已有塔至 2 级</li>
+        <li data-en="Wave 7+: Tier 3 on key towers + new coverage">第 7+ 波：关键塔升 3 级 + 新覆盖</li>
+      </ul></div>
+    </div>
+
+    <!-- 交叉引用 -->
+    <div class="cross-links">
+      <h4 data-en="Related Guides">相关攻略</h4>
+      <div class="cl-list">
+        <a href="economy.html" data-en="Economy">经济养成</a>
+        <a href="combat.html" data-en="Combat">战斗系统</a>
+        <a href="codex.html#towers" data-en="Tower Codex">防御塔图鉴</a>
+      </div>
+    </div>
+
+    <!-- 上下篇导航 -->
+    <div class="page-nav">
+      <a href="combat.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Combat System">战斗系统</div></a>
+      <a href="economy.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Economy">经济养成</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
+        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+      </div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+    </div>
+    <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="返回顶部" data-en="Top">顶部</button>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-wrap">
+      <span class="s-ico"></span>
+      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <button class="search-close" aria-label="关闭">×</button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>

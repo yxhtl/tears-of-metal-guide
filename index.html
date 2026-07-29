@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>钢铁之泪攻略站 | Tears of Metal 中文攻略</title>
+<meta name="description" content="《Tears of Metal》(钢铁之泪) 中文攻略站：新手入门、战斗系统、防御塔、经济养成、关卡攻略与图鉴速查。苏格兰高地塔防roguelite，一站式攻略。">
+<meta name="keywords" content="Tears of Metal,钢铁之泪,攻略,塔防,roguelite,苏格兰,高地,防御塔,新手指南">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a3a4a">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"钢铁之泪攻略站","alternateName":"Tears of Metal 中文攻略","inLanguage":"zh-CN","url":"index.html","about":"《Tears of Metal》中文攻略站：新手入门、战斗系统、防御塔、经济养成、关卡攻略与图鉴速查"}
+</script>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span class="logo">TM</span><span data-i18n="brand">钢铁之泪攻略站</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
+      <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
+      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
+      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
+      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
+    </nav>
+    <div class="nav-utils">
+      <button class="nav-btn search-btn" aria-label="搜索"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-btn dark-btn" aria-label="暗色模式"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="nav-btn lang-btn" aria-label="语言">English</button>
+      <a href="getting-started.html" class="nav-cta" data-i18n="nav.cta.start">开始攻略</a>
+    </div>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero" id="top">
+  <div class="wrap" style="padding-top:14px">
+    <div class="breadcrumb" style="color:#c4ccd4"><span data-en="Home">首页</span></div>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 data-en="Defend the Highlands in&lt;br&gt;&lt;span&gt;Tears of Metal&lt;/span&gt;">在 <span>钢铁之泪</span><br>守卫高地</h1>
+      <p class="tag" data-en="A tower defense roguelite — command Scottish highlanders, build defenses, survive endless waves. Your journey from first skirmish to final stand, all in one place.">苏格兰高地塔防 roguelite——指挥高地战士，建造防御，抵御无尽的波次。从第一场小规模战斗到最终坚守，你的攻略一站搞定。</p>
+      <div class="hero-btns">
+        <a href="getting-started.html" class="btn btn-primary" data-en="Beginner Guide">新手入门指南</a>
+        <a href="maps.html" class="btn btn-ghost" data-en="Level Guide">关卡攻略</a>
+      </div>
+      <div class="hero-stats">
+        <div class="s"><b>7</b><small data-en="Guide Pages">攻略页面</small></div>
+        <div class="s"><b>6+</b><small data-en="Unit Types">单位类型</small></div>
+        <div class="s"><b>5+</b><small data-en="Tower Types">防御塔</small></div>
+        <div class="s"><b>10+</b><small data-en="Enemy Types">敌人种类</small></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="island-card">
+        <h3 data-en="First 3 Things to Do">前三件事</h3>
+        <div class="day-row"><div class="day-badge">W1</div><div class="t"><b data-en="Place Defenses">部署防御</b><small data-en="Build towers at choke points">在隘口建防御塔</small></div></div>
+        <div class="day-row"><div class="day-badge">W2</div><div class="t"><b data-en="Position Units">排兵布阵</b><small data-en="Melee front, ranged back">近战在前，远程在后</small></div></div>
+        <div class="day-row"><div class="day-badge">W3</div><div class="t"><b data-en="Upgrade Economy">升级经济</b><small data-en="Spend gold on permanent upgrades">用金币投资永久升级</small></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== QUICK ACCESS ===== -->
+<section style="padding-top:54px">
+  <div class="wrap">
+    <div class="quick">
+      <a href="getting-started.html" class="qcard"><h3 data-en="Beginner Guide">新手入门</h3><p data-en="First-run walkthrough, core mechanics, common mistakes">首战通关流程、核心机制、新手避坑</p></a>
+      <a href="combat.html" class="qcard"><h3 data-en="Combat System">战斗系统</h3><p data-en="Unit types, formations, tactical tips">单位类型、阵型搭配、战术技巧</p></a>
+      <a href="towers.html" class="qcard"><h3 data-en="Towers">防御塔</h3><p data-en="Tower types, upgrade paths, placement">塔类型、升级路线、放塔策略</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WAVE PROGRESSION ===== -->
+<section class="bg-alt">
+  <div class="wrap">
+    <span class="eyebrow" data-en="Wave Progression">波次推进</span>
+    <h2 class="title" data-en="Wave Difficulty Curve">波次难度曲线</h2>
+    <p class="subtitle" data-en="Each wave introduces new enemy types and tougher numbers. Plan your defense upgrades ahead — gold spent early on economy pays off in later waves."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>每一波引入新敌人类型和更多数量。提前规划防御升级——早期投资经济的金币在后期波次会有回报。</p>
+    <div class="wave-grid">
+      <div class="wave-card">
+        <div class="wave-num" data-en="WAVE 1-3">第 1-3 波</div>
+        <h4 data-en="Early Waves">前期波次</h4>
+        <p class="wave-desc" data-en="Basic infantry enemies, low HP. Focus on economy — minimal defenses needed. Build gold-generating structures early.">基础步兵敌人，低血量。专注经济建设——只需最低限度防御。尽早建造产出金币的建筑。</p>
+        <span class="wave-power" data-en="Threat: Low">威胁：低</span>
+      </div>
+      <div class="wave-card">
+        <div class="wave-num" data-en="WAVE 4-6">第 4-6 波</div>
+        <h4 data-en="Mid Waves">中期波次</h4>
+        <p class="wave-desc" data-en="Armored units and fast runners appear. Upgrade towers to tier 2. Position melee units at choke points to slow advances.">出现重甲单位和快速冲锋兵。防御塔升至2级。将近战单位放在隘口减缓推进。</p>
+        <span class="wave-power" data-en="Threat: Medium">威胁：中</span>
+      </div>
+      <div class="wave-card">
+        <div class="wave-num" data-en="WAVE 7-9">第 7-9 波</div>
+        <h4 data-en="Late Waves">后期波次</h4>
+        <p class="wave-desc" data-en="Ranged enemies and siege units join. Diversify tower types — magic towers for armor, cannon towers for groups. Prepare healing.">远程敌人和攻城单位加入。防御塔多样化——法塔破甲，炮塔清群。准备治疗手段。</p>
+        <span class="wave-power" data-en="Threat: High">威胁：高</span>
+      </div>
+      <div class="wave-card">
+        <div class="wave-num" data-en="WAVE 10+">第 10+ 波</div>
+        <h4 data-en="Boss Waves">Boss 波次</h4>
+        <p class="wave-desc" data-en="Boss-class enemies with massive HP and special abilities. Full upgrade path needed. Concentrate fire and use unit abilities strategically.">Boss 级敌人，超高血量+特殊技能。需要完整升级路线。集中火力，战略性使用单位技能。</p>
+        <span class="wave-power" data-en="Threat: Extreme">威胁：极高</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUIDE OVERVIEW ===== -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow" data-en="Guide Navigation">攻略导航</span>
+    <h2 class="title" data-en="Site Guide Overview">全站攻略总览</h2>
+    <p class="subtitle" data-en="Six sections covering all core Tears of Metal gameplay. Click a card to jump to the guide.">六大板块覆盖钢铁之泪全部核心玩法，点击卡片直达对应攻略。</p>
+    <div class="feature-grid">
+      <a href="getting-started.html" class="fcard"><h4 data-en="Beginner Guide">新手入门</h4><p data-en="From first wave to first clear — a step-by-step walkthrough.">从第一波到首次通关，逐步教学。</p><ul><li data-en="First-run strategy">首战策略</li><li data-en="Core mechanics explained">核心机制讲解</li><li data-en="Common mistakes to avoid">新手常见错误</li></ul></a>
+      <a href="combat.html" class="fcard"><h4 data-en="Combat System">战斗系统</h4><p data-en="Unit types, roles, formations, and tactical tips.">单位类型、角色定位、阵型与战术。</p><ul><li data-en="Melee / Ranged / Support / Siege">近战/远程/支援/攻城</li><li data-en="Formation strategies">阵型策略</li><li data-en="Counter relationships">克制关系</li></ul></a>
+      <a href="towers.html" class="fcard"><h4 data-en="Towers">防御塔</h4><p data-en="Tower types, upgrade paths, and placement strategy.">防御塔类型、升级路线与放塔策略。</p><ul><li data-en="Arrow / Cannon / Magic towers">箭塔/炮塔/法塔</li><li data-en="Tier upgrade paths">等级升级路线</li><li data-en="Placement principles">放塔原则</li></ul></a>
+      <a href="economy.html" class="fcard"><h4 data-en="Economy">经济养成</h4><p data-en="Gold management and meta-progression upgrade tree.">金币管理与 Meta 养成升级树。</p><ul><li data-en="Gold income & spending">金币收支</li><li data-en="Permanent upgrade priorities">永久升级优先级</li><li data-en="Meta progression tree">Meta 养成树</li></ul></a>
+      <a href="maps.html" class="fcard"><h4 data-en="Maps">关卡攻略</h4><p data-en="Full level guide with terrain analysis and wave breakdowns.">全关卡地图与地形分析、波次拆解。</p><ul><li data-en="Grassland / Forest / Mountain">草地/森林/山地</li><li data-en="Coast / Village levels">海岸/村庄关卡</li><li data-en="Choke points & terrain">隘口与地形利用</li></ul></a>
+      <a href="codex.html" class="fcard"><h4 data-en="Codex">图鉴速查</h4><p data-en="Full searchable codex of units, enemies, and towers.">可搜索的全单位、敌人、防御塔图鉴。</p><ul><li data-en="Unit stats & abilities">单位属性与技能</li><li data-en="Enemy stats & weaknesses">敌人属性与弱点</li><li data-en="Tower stats & upgrades">防御塔属性与升级</li></ul></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section>
+  <div class="wrap">
+    <div class="cta-strip">
+      <h3 data-en="Guides Continuously Updated">攻略持续更新中</h3>
+      <p data-en="Content curated by the player community, guiding you from wave 1 to the final boss. Feedback welcome!">本站内容由玩家社区整理，陪你从第一波打到最终 Boss。有问题欢迎反馈！</p>
+      <a href="getting-started.html" class="btn btn-primary" data-en="Start with Beginner Guide">从新手攻略开始</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
+        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+      </div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+    </div>
+    <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="返回顶部" data-en="Top">顶部</button>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-wrap">
+      <span class="s-ico"></span>
+      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <button class="search-close" aria-label="关闭">×</button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>
