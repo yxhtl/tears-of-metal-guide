@@ -777,7 +777,7 @@
       { id: "chm-vitality", zh: "示例：生命护符", en: "Ex: Vitality Charm", hpPct: 0.15, regenPct: 0.02, desc: { zh: "+15% 生命，+2% 生命回复/秒", en: "+15% HP, +2% HP Regen/s" } },
       { id: "chm-swift", zh: "示例：疾行护符", en: "Ex: Swift Charm", moveSpdPct: 0.10, dodgePct: 0.05, desc: { zh: "+10% 移速，+5% 闪避", en: "+10% Move SPD, +5% Dodge" } },
       { id: "chm-warding", zh: "示例：庇护护符", en: "Ex: Warding Charm", drPct: 0.10, hpPct: 0.10, desc: { zh: "+10% 减伤，+10% 生命", en: "+10% DMG Reduction, +10% HP" } },
-      { id: "chm-cutthroat", zh: "割喉之刃", en: "Cutthroat's Blade", critPct: 0.10, desc: { zh: "普通护符，终结技 +10% 暴击率", en: "Common Charm, +10% Crit on Finishers" } }
+      { id: "chm-cutthroat", zh: "示例：割喉之刃", en: "Ex: Cutthroat's Blade", critPct: 0.10, desc: { zh: "普通护符，终结技 +10% 暴击率", en: "Common Charm, +10% Crit on Finishers" } }
     ]
   };
 

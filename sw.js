@@ -40,24 +40,24 @@ self.addEventListener("activate", function(e){
   );
 });
 
+/* stale-while-revalidate: return cache instantly, update cache from network in background */
 self.addEventListener("fetch", function(e){
   if(e.request.method !== "GET") return;
   e.respondWith(
-    caches.match(e.request).then(function(cached){
-      if(cached) return cached;
-      return fetch(e.request).then(function(response){
-        var url = new URL(e.request.url);
-        if(url.origin === self.location.origin){
-          var respClone = response.clone();
-          caches.open(CACHE_NAME).then(function(cache){
-            cache.put(e.request, respClone);
-          });
-        }
-        return response;
-      }).catch(function(){
-        if(e.request.mode === "navigate"){
-          return caches.match("index.html");
-        }
+    caches.open(CACHE_NAME).then(function(cache){
+      return cache.match(e.request).then(function(cached){
+        var fetched = fetch(e.request).then(function(response){
+          var url = new URL(e.request.url);
+          if(url.origin === self.location.origin && response.ok){
+            cache.put(e.request, response.clone());
+          }
+          return response;
+        }).catch(function(){
+          if(e.request.mode === "navigate"){
+            return caches.match("index.html");
+          }
+        });
+        return cached || fetched;
       });
     })
   );

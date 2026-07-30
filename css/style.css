@@ -376,15 +376,7 @@ body.dark .data-table tr:hover td{background:#222e38}
 .bp-info{font-size:11px;color:var(--ink-soft);line-height:1.4}
 .bp-arrow{display:grid;place-items:center;color:var(--line);font-size:18px;font-weight:700;align-self:center}
 
-/* ===== CALCULATOR ===== */
-.calc-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-top:18px}
-.calc-row{display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
-.calc-row label{font-size:14px;font-weight:700;color:var(--ink);min-width:80px}
-.calc-row select{flex:1;min-width:180px;padding:10px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;font-family:inherit;outline:0;transition:.15s}
-.calc-row select:focus{border-color:var(--moss-2)}
-.calc-row input[type=number]{width:90px;padding:10px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14px;font-family:inherit;outline:0;text-align:center}
-.calc-row input[type=number]:focus{border-color:var(--moss-2)}
-.calc-result{background:#f5f8f5;border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:10px}
+/* ===== CALCULATOR (legacy result sub-styles — container overridden below) ===== */
 .calc-result .rline{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:14px}
 .calc-result .rline b{color:var(--ink);font-size:16px}
 .calc-result .rline .big{font-size:22px;font-weight:900;color:var(--copper)}
@@ -751,6 +743,7 @@ a.tier-chip:hover{background:var(--copper);color:#fff;border-color:var(--copper)
   border-radius:12px;
   padding:24px;
   margin:20px 0;
+  box-shadow:var(--shadow);
 }
 .calc-row{
   display:grid;
@@ -779,6 +772,7 @@ a.tier-chip:hover{background:var(--copper);color:#fff;border-color:var(--copper)
 .calc-row select:focus,.calc-row input:focus{border-color:var(--accent)}
 .calc-result{
   background:var(--bg);
+  border:1px solid var(--border);
   border-radius:8px;
   padding:16px;
   text-align:center;
