@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>防御塔类型与升级路线 | Tears of Metal 钢铁之泪攻略</title>
-<meta name="description" content="Tears of Metal 防御塔详解：箭塔、炮塔、法塔的类型对比、升级路线、放塔策略与协同搭配。">
-<meta name="keywords" content="Tears of Metal防御塔,钢铁之泪箭塔,炮塔,法塔,升级路线,放塔策略">
+<title>神器与构建系统 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal 神器与构建系统详解：100+ 神器、徽章、护符的类型、效果与协同搭配，构建计算器助你优化属性。">
+<meta name="keywords" content="Tears of Metal神器,钢铁之泪构建,徽章,护符,协同,build,artifact,emblem,charm">
 <link rel="stylesheet" href="css/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2a3a4a">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 防御塔类型与升级路线","inLanguage":"zh-CN","about":"Tears of Metal 防御塔类型、升级路线与放塔策略","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 神器与构建系统","inLanguage":"zh-CN","about":"Tears of Metal 神器、徽章、护符与构建协同","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
 </script>
-</head>
+
+    <meta property="og:title" content="神器与构建系统 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="Tears of Metal 神器与构建系统详解：100+ 神器、徽章、护符的类型、效果与协同搭配，构建计算器助你优化属性。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <header class="nav">
@@ -21,9 +28,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" class="active" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" class="active" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -38,120 +46,289 @@
 
 <section id="top" class="section-anchor" style="padding-top:54px">
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Towers">防御塔</span></div>
-    <span class="eyebrow" data-en="Towers">防御塔</span>
-    <h2 class="title" data-en="Tower Types &amp; Upgrade Paths">防御塔类型与升级路线</h2>
-    <p class="subtitle" data-en="Three tower families, each with three upgrade tiers. Knowing when to build what — and where — is the core skill of Tears of Metal."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>三大塔系，每系三个升级层级。知道何时建什么塔、建在哪里——这是钢铁之泪的核心技巧。</p>
+    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Artifacts">神器构建</span></div>
+    <span class="eyebrow" data-en="Artifacts & Builds">神器构建</span>
+    <h2 class="title" data-en="Artifacts & Build System">神器与构建系统</h2>
+    <p class="subtitle" data-en="Tears of Metal features 100+ artifacts across three categories, plus emblems and charms. Combine them to create powerful synergies for any playstyle."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>钢铁之泪拥有 100+ 神器，分为三大类别，另有徽章与护符。组合它们以创造适合任何操作风格的强力协同。</p>
 
-    <!-- Tower Types -->
-    <h3 id="types" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Tower Type Comparison">防御塔类型对比</h3>
+    <div class="toc-box">
+      <h4 data-en="Contents">目录</h4>
+      <ol>
+        <li><a href="#artifacts" data-en="Artifacts">神器</a></li>
+        <li><a href="#emblems" data-en="Emblems">徽章</a></li>
+        <li><a href="#charms" data-en="Charms">护符</a></li>
+        <li><a href="#synergy" data-en="Build Synergy">构建协同</a></li>
+        <li><a href="#calc" data-en="Build Calculator">构建计算器</a></li>
+      </ol>
+    </div>
+
+    <!-- Artifacts -->
+    <h3 id="artifacts" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Artifacts">神器</h3>
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="artifacts">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+      <div class="progress-actions">
+        <button data-action="export-progress" data-i18n="progress.export">导出进度</button>
+        <button data-action="import-progress" data-i18n="progress.import">导入进度</button>
+        <button data-action="reset-progress" data-i18n="progress.reset">重置全部进度</button>
+      </div>
+    </div>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Artifacts are the core of your build. Each run you collect artifacts that enhance your character. The full game has 100+ artifacts. Below are representative examples of each category type — specific names and stats are being compiled from Early Access.">神器是构建的核心。每局你收集的神器会增强角色。完整游戏有 100+ 神器。以下是各类别的代表性示例——具体名称和数值正在从抢先体验中整理。</p>
+    <div class="fcard" style="margin-bottom:14px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ The artifact names and stats listed below are representative examples of typical roguelike artifact categories, NOT confirmed game items. The developer confirmed 100+ artifacts exist, but specific names are being documented by the community during Early Access.">⚠ 以下列出的神器名称和数值是典型 Roguelike 神器类别的代表性示例，并非已确认的游戏内物品。开发者已确认有 100+ 神器，但具体名称正在抢先体验期间由社区记录。</p>
+    </div>
+
+    <h4 style="font-size:16px;color:var(--ink);margin:20px 0 10px" data-en="Offense Artifacts">攻击型神器</h4>
+    <p style="margin-bottom:10px;color:var(--ink-soft);font-size:13px" data-en="Boosts damage, attack speed, crit. Ideal for DPS-focused builds.">提升伤害、攻速、暴击。适合输出型构建。</p>
     <div class="tower-grid">
-      <div class="tower-card">
-        <div class="tower-type" data-en="ARROW TOWER">箭塔</div>
-        <h4 data-en="Arrow Tower">箭塔</h4>
-        <p class="tower-desc" data-en="Fast attack speed, low per-hit damage. Cheap to build and upgrade. Effective against unarmored swarms. Bonus: slows enemies on hit (Tier 3).">高攻速、低单次伤害。建造和升级成本低。对无甲群怪有效。3级额外效果：命中减速。</p>
+      <div class="tower-card" data-track="art-off-blade" data-track-type="collect" data-track-group="artifacts">
+        <div class="tower-type" data-en="OFFENSE">攻击型</div>
+        <h4 data-en="Ex: Blade Shard">示例：利刃碎片</h4>
+        <p class="tower-desc" data-en="+15% ATK, +5% Crit Rate. A sharp fragment that enhances every strike.">+15% 攻击力，+5% 暴击率。强化每一击的锋利碎片。</p>
         <div class="tower-stats">
-          <span data-en="Cost: Low">造价：低</span>
-          <span data-en="DPS: Med">输出：中</span>
-          <span data-en="Range: Med">范围：中</span>
+          <span data-en="ATK: +15%">攻击力：+15%</span>
+          <span data-en="Crit: +5%">暴击：+5%</span>
         </div>
-        <span class="tower-tier" data-en="Best vs: Swarms">最佳对：群怪</span>
+        <span class="tower-tier" data-en="Tier: DPS">定位：输出</span>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="tower-card" style="border-top-color:var(--crimson)">
-        <div class="tower-type" data-en="CANNON TOWER">炮塔</div>
-        <h4 data-en="Cannon Tower">炮塔</h4>
-        <p class="tower-desc" data-en="Slow attack speed, high AoE damage. Expensive but devastating against groups. Tier 3 adds knockback effect.">低攻速、高范围伤害。造价贵但对群体毁灭性。3级额外效果：击退。</p>
+      <div class="tower-card" data-track="art-off-frenzy" data-track-type="collect" data-track-group="artifacts" style="border-top-color:var(--crimson)">
+        <div class="tower-type" data-en="OFFENSE">攻击型</div>
+        <h4 data-en="Ex: Frenzy Blood">示例：狂战之血</h4>
+        <p class="tower-desc" data-en="+10% ATK, +20% ATK SPD. For those who live fast and hit harder.">+10% 攻击力，+20% 攻速。为快节奏重击而生。</p>
         <div class="tower-stats">
-          <span data-en="Cost: High">造价：高</span>
-          <span data-en="DPS: High">输出：高</span>
-          <span data-en="Range: Med">范围：中</span>
+          <span data-en="ATK: +10%">攻击力：+10%</span>
+          <span data-en="ATK SPD: +20%">攻速：+20%</span>
         </div>
-        <span class="tower-tier" data-en="Best vs: Groups">最佳对：群体</span>
+        <span class="tower-tier" data-en="Tier: DPS">定位：输出</span>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="tower-card" style="border-top-color:var(--heather)">
-        <div class="tower-type" data-en="MAGIC TOWER">法塔</div>
-        <h4 data-en="Magic Tower">法塔</h4>
-        <p class="tower-desc" data-en="Medium attack speed, ignores armor. Essential for armored enemies. Tier 3 adds chain lightning between targets.">中攻速、无视护甲。对重甲敌人必备。3级额外效果：链式闪电跳跃。</p>
+      <div class="tower-card" data-track="art-off-executioner" data-track-type="collect" data-track-group="artifacts" style="border-top-color:var(--crimson)">
+        <div class="tower-type" data-en="OFFENSE">攻击型</div>
+        <h4 data-en="Ex: Executioner's Mark">示例：处刑者印记</h4>
+        <p class="tower-desc" data-en="+50% Crit DMG, +5% ATK. Execute the weak, obliterate the strong.">+50% 暴击伤害，+5% 攻击力。处决弱者，粉碎强者。</p>
         <div class="tower-stats">
-          <span data-en="Cost: Med">造价：中</span>
-          <span data-en="DPS: Med">输出：中</span>
-          <span data-en="Range: Long">范围：远</span>
+          <span data-en="Crit DMG: +50%">暴击伤害：+50%</span>
+          <span data-en="ATK: +5%">攻击力：+5%</span>
         </div>
-        <span class="tower-tier" data-en="Best vs: Armored">最佳对：重甲</span>
+        <span class="tower-tier" data-en="Tier: Burst">定位：爆发</span>
+        <span class="track-label">未收集</span>
       </div>
     </div>
 
-    <!-- Upgrade Paths -->
-    <h3 id="upgrades" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Upgrade Paths">升级路线</h3>
-    <table class="data-table">
-      <thead><tr>
-        <th data-en="Tower">防御塔</th>
-        <th data-en="Tier 1 (Base)">1 级（基础）</th>
-        <th data-en="Tier 2">2 级</th>
-        <th data-en="Tier 3 (Max)">3 级（满级）</th>
-      </tr></thead>
-      <tbody>
-        <tr>
-          <td><b data-en="Arrow">箭塔</b></td>
-          <td data-en="Single target, fast shots">单体、快速射击</td>
-          <td data-en="+50% damage, +range">+50% 伤害、+范围</td>
-          <td data-en="Slow on hit, multi-shot">命中减速、多重射击</td>
-        </tr>
-        <tr>
-          <td><b data-en="Cannon">炮塔</b></td>
-          <td data-en="AoE splash, slow">范围溅射、慢速</td>
-          <td data-en="+AoE radius, +damage">+范围半径、+伤害</td>
-          <td data-en="Knockback, bigger splash">击退、更大溅射</td>
-        </tr>
-        <tr>
-          <td><b data-en="Magic">法塔</b></td>
-          <td data-en="Armor-piercing shots">破甲射击</td>
-          <td data-en="+damage, +range">+伤害、+范围</td>
-          <td data-en="Chain lightning (3 jumps)">链式闪电（3跳）</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: Specific stat values are [待核实 — pending game data verification]. Upgrade cost approximately doubles per tier.">注：具体数值 [待核实 — 等待游戏数据确认]。升级成本每级约翻倍。</p>
+    <h4 style="font-size:16px;color:var(--ink);margin:24px 0 10px" data-en="Defense Artifacts">防御型神器</h4>
+    <p style="margin-bottom:10px;color:var(--ink-soft);font-size:13px" data-en="Boosts HP, armor, damage reduction. Essential for surviving tougher environments.">提升生命值、护甲、减伤。在更难环境中生存必备。</p>
+    <div class="tower-grid">
+      <div class="tower-card" data-track="art-def-bulwark" data-track-type="collect" data-track-group="artifacts" style="border-top-color:var(--moss)">
+        <div class="tower-type" data-en="DEFENSE">防御型</div>
+        <h4 data-en="Ex: Bulwark Heart">示例：壁垒之心</h4>
+        <p class="tower-desc" data-en="+20% HP, +10% DMG Reduction. A stalwart heart that turns blows aside.">+20% 生命值，+10% 减伤。偏转攻击的坚定之心。</p>
+        <div class="tower-stats">
+          <span data-en="HP: +20%">生命值：+20%</span>
+          <span data-en="DR: +10%">减伤：+10%</span>
+        </div>
+        <span class="tower-tier" data-en="Tier: Tank">定位：坦克</span>
+        <span class="track-label">未收集</span>
+      </div>
+      <div class="tower-card" data-track="art-def-reflection" data-track-type="collect" data-track-group="artifacts" style="border-top-color:var(--moss)">
+        <div class="tower-type" data-en="DEFENSE">防御型</div>
+        <h4 data-en="Ex: Mirror of Reflection">示例：反射之镜</h4>
+        <p class="tower-desc" data-en="+15% DMG Reduction, reflect 10% damage. Turn their strength against them.">+15% 减伤，反射 10% 伤害。以其人之道还治其人之身。</p>
+        <div class="tower-stats">
+          <span data-en="DR: +15%">减伤：+15%</span>
+          <span data-en="Reflect: 10%">反射：10%</span>
+        </div>
+        <span class="tower-tier" data-en="Tier: Tank">定位：坦克</span>
+        <span class="track-label">未收集</span>
+      </div>
+    </div>
 
-    <!-- Placement Strategy -->
-    <h3 id="placement" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Placement Strategy">放塔策略</h3>
+    <h4 style="font-size:16px;color:var(--ink);margin:24px 0 10px" data-en="Utility Artifacts">辅助型神器</h4>
+    <p style="margin-bottom:10px;color:var(--ink-soft);font-size:13px" data-en="Boosts move speed, CDR, pickup range. Great for hit-and-run and farming builds.">提升移速、冷却缩减、拾取范围。适合游击和刷金构建。</p>
+    <div class="tower-grid">
+      <div class="tower-card" data-track="art-util-swift" data-track-type="collect" data-track-group="artifacts" style="border-top-color:var(--heather)">
+        <div class="tower-type" data-en="UTILITY">辅助型</div>
+        <h4 data-en="Ex: Wings of Swiftness">示例：疾风之翼</h4>
+        <p class="tower-desc" data-en="+15% Move SPD, +10% CDR. Never stop moving, never stop casting.">+15% 移速，+10% 冷却缩减。永不停步，永不停施。</p>
+        <div class="tower-stats">
+          <span data-en="Move SPD: +15%">移速：+15%</span>
+          <span data-en="CDR: +10%">冷却：+10%</span>
+        </div>
+        <span class="tower-tier" data-en="Tier: Mobility">定位：机动</span>
+        <span class="track-label">未收集</span>
+      </div>
+      <div class="tower-card" data-track="art-util-greed" data-track-type="collect" data-track-group="artifacts" style="border-top-color:var(--heather)">
+        <div class="tower-type" data-en="UTILITY">辅助型</div>
+        <h4 data-en="Ex: Eye of Greed">示例：贪婪之眼</h4>
+        <p class="tower-desc" data-en="+2 Pickup Range, +15% Gold. See the treasure, claim the treasure.">+2 拾取范围，+15% 金币。看见宝藏，据为己有。</p>
+        <div class="tower-stats">
+          <span data-en="Pickup: +2">拾取：+2</span>
+          <span data-en="Gold: +15%">金币：+15%</span>
+        </div>
+        <span class="tower-tier" data-en="Tier: Farm">定位：刷金</span>
+        <span class="track-label">未收集</span>
+      </div>
+    </div>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: The above are representative examples of artifact categories, not confirmed game items. The full game has 100+ artifacts with many more effects and synergies to discover. Specific names and stats will be updated as Early Access data becomes available.">注：以上为神器类别的代表性示例，并非已确认的游戏内物品。完整游戏有 100+ 神器，还有更多效果和协同等你发现。具体名称和数值将随抢先体验数据完善而更新。</p>
+
+    <!-- Emblems -->
+    <h3 id="emblems" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Emblems">徽章</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Emblems are a core power system in Tears of Metal. The full game features 8 base Emblem families, each with Tier 1-3 emblems and unique synergy emblems that create powerful cross-family combinations. In the demo, only 4 incomplete families were available.">徽章是钢铁之泪的核心力量系统。完整游戏拥有 8 个基础徽章家族，每个家族有 Tier 1-3 徽章，以及与其他家族产生强大协同的独特徽章。Demo 中仅提供了 4 个不完整的家族。</p>
     <div class="feature-grid">
-      <div class="fcard"><h4 data-en="Choke Points First">优先放隘口</h4><ul>
-        <li data-en="Towers at narrow paths hit every passing enemy">窄道上的塔能打到每个经过的敌人</li>
-        <li data-en="Two towers side by side at a choke = maximum coverage">两座塔在隘口并排 = 最大覆盖</li>
-        <li data-en="Don't waste tower slots on open areas early">前期别把塔位浪费在开阔地带</li>
+      <div class="fcard"><h4 data-en="8 Base Families">8 个基础家族</h4><p data-en="The full game has 8 Emblem families, each representing a different playstyle and power fantasy. The demo only showed 4 incomplete families.">完整游戏有 8 个徽章家族，每个代表不同的游玩风格和力量幻想。Demo 仅展示了 4 个不完整家族。</p></div>
+      <div class="fcard" data-track="art-emb-warrior" data-track-type="collect" data-track-group="emblems"><h4 data-en="Tier 1-3 System">Tier 1-3 系统</h4><p data-en="Each family has emblems going from Tier 1 to Tier 3. Higher tiers offer more powerful effects. Collect and upgrade within a family to unlock its full potential.">每个家族有 Tier 1 到 Tier 3 的徽章。更高层级提供更强效果。在同一家族内收集和升级以释放全部潜力。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-emb-guardian" data-track-type="collect" data-track-group="emblems"><h4 data-en="Cross-Family Synergy">跨家族协同</h4><p data-en="Each family has unique Emblems designed for synergies with other families. Experiment with different family combinations to discover devastating builds.">每个家族都有专为与其他家族协同设计的独特徽章。尝试不同家族组合以发现强力构建。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-emb-scout" data-track-type="collect" data-track-group="emblems"><h4 data-en="Ally Emblems Persist">盟友徽章继承</h4><p data-en="Ally Emblems persist across runs until that ally dies (permadeath). Choose carefully which allies to invest in.">盟友的徽章在局间继承，直到该盟友阵亡（永久死亡）。谨慎选择投资哪些盟友。</p><span class="track-label">未收集</span></div>
+    </div>
+    <div class="fcard" style="margin-top:14px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ Specific Emblem family names and exact effects are being compiled from Early Access playthroughs. The developer has confirmed 8 families with Tier 1-3 and cross-family synergies, but individual names and stats will be added as the community documents them.">⚠ 具体徽章家族名称和精确效果正在从抢先体验游戏中整理。开发者已确认 8 个家族、Tier 1-3 和跨家族协同，但各家族名称和数值将随社区记录而补充。</p>
+    </div>
+    <div class="progress-header" style="margin-top:14px">
+      <div class="pbar" data-progress-bar="emblems">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+    </div>
+
+    <!-- Charms -->
+    <h3 id="charms" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Charms">护符</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Charms are purchasable items that provide various bonuses. The demo alone featured 30+ Charms earned through challenges. Charms have rarity tiers and can be stacked for cumulative effects.">护符是可购买的物品，提供各种加成。仅 Demo 就有 30+ 种通过挑战获得的护符。护符有稀有度等级，可叠加获得累积效果。</p>
+    <div class="feature-grid">
+      <div class="fcard" data-track="art-chm-iron" data-track-type="collect" data-track-group="charms"><h4 data-en="30+ Charms">30+ 种护符</h4><p data-en="The demo alone featured over 30 Charms. The full game has even more. Each Charm provides unique bonuses to your build.">仅 Demo 就有 30+ 种护符，完整游戏更多。每种护符为你的构建提供独特加成。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-chm-thorn" data-track-type="collect" data-track-group="charms"><h4 data-en="Rarity System">稀有度系统</h4><p data-en="Charms have rarity tiers. Higher rarity Charms offer more powerful effects. The developer is actively balancing rarity distribution.">护符有稀有度等级。更高稀有度的护符提供更强效果。开发者正在积极平衡稀有度分布。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-chm-vitality" data-track-type="collect" data-track-group="charms"><h4 data-en="Purchased, Not Granted">购买获取</h4><p data-en="Charms are purchased from shops, not granted by objectives (changed during Beta #2). Manage your resources wisely.">护符在商店购买，而非通过目标获得（Beta #2 中改为购买制）。合理管理资源。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-chm-swift" data-track-type="collect" data-track-group="charms"><h4 data-en="Stack System">叠加系统</h4><p data-en="Charms can be stacked for cumulative effects. Stack counts update when picking up certain Charms. Experiment with stacking strategies.">护符可叠加获得累积效果。拾取特定护符时叠加数会更新。尝试不同叠加策略。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-chm-warding" data-track-type="collect" data-track-group="charms"><h4 data-en="Earned Through Challenges">挑战获取</h4><p data-en="Complete special objectives and challenges to unlock new Charms. Some Charms are only available through specific challenges.">完成特殊目标和挑战以解锁新护符。部分护符只能通过特定挑战获得。</p><span class="track-label">未收集</span></div>
+      <div class="fcard" data-track="art-chm-cutthroat" data-track-type="collect" data-track-group="charms" style="border:2px solid var(--copper)"><h4 data-en="✓ Cutthroat's Blade (Confirmed)">✓ 割喉之刃（已确认）</h4><p data-en="<b>Common Charm</b> — Grants +10% critical hit chance on Finishers. Confirmed in patch v0.8.57278."><b>普通护符</b>——终结技 +10% 暴击率。补丁 v0.8.57278 中确认。</p><span class="track-label">未收集</span></div>
+    </div>
+    <div class="fcard" style="margin-top:14px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ Specific Charm names and exact effects are being compiled from Early Access playthroughs. The system is confirmed to have 30+ Charms with rarity tiers and a purchase/stack system. <b>Cutthroat's Blade</b> (Common Charm, +10% Crit on Finishers) is the first confirmed real Charm from patch v0.8. More names and stats will be added as the community documents them.">⚠ 具体护符名称和精确效果正在从抢先体验游戏中整理。系统已确认有 30+ 种护符、稀有度等级和购买/叠加系统。<b>割喉之刃</b>（普通护符，终结技 +10% 暴击）是首个由补丁 v0.8 确认的真实护符。更多名称和数值将随社区记录而补充。</p>
+    </div>
+    <div class="progress-header" style="margin-top:14px">
+      <div class="pbar" data-progress-bar="charms">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+    </div>
+
+    <!-- Build Synergy -->
+    <h3 id="synergy" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Build Synergy">构建协同</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="The key to powerful builds is synergy — combining artifacts, emblems, and charms whose effects multiply rather than add.">强力构建的关键是协同——组合那些效果能相乘而非简单相加的神器、徽章和护符。</p>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Crit Burst Build">暴击爆发流</h4><ul>
+        <li data-en="<b>Core</b>: Executioner's Mark (+50% Crit DMG)"><b>核心</b>：处刑者印记（+50% 暴击伤害）</li>
+        <li data-en="<b>Emblem</b>: Scout Emblem (+8% Crit)"><b>徽章</b>：侦察徽章（+8% 暴击）</li>
+        <li data-en="<b>Charm</b>: Thorn Charm (+5% ATK)"><b>护符</b>：荆棘护符（+5% 攻击）</li>
+        <li data-en="<b>Playstyle</b>: Build crit rate, burst down elites and bosses"><b>打法</b>：堆暴击率，爆发秒杀精英和 Boss</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Tower Synergy">塔的协同</h4><ul>
-        <li data-en="Arrow + Cannon: slow + AoE cleanup">箭塔+炮塔：减速+范围清场</li>
-        <li data-en="Magic + Arrow: armor break + fast fire">法塔+箭塔：破甲+快速射击</li>
-        <li data-en="Avoid: only one tower type (easily countered)">避免：单一塔种（容易被克制）</li>
+      <div class="fcard"><h4 data-en="Tank + Battalion Swarm">坦克+营队群流</h4><ul>
+        <li data-en="<b>Core</b>: Bulwark Heart (+20% HP, +10% DR)"><b>核心</b>：壁垒之心（+20% 生命，+10% 减伤）</li>
+        <li data-en="<b>Emblem</b>: Guardian Emblem (+15% HP)"><b>徽章</b>：守护徽章（+15% 生命）</li>
+        <li data-en="<b>Charm</b>: Warding Charm (+10% DR, +10% HP)"><b>护符</b>：庇护护符（+10% 减伤，+10% 生命）</li>
+        <li data-en="<b>Playstyle</b>: Soak damage, rally battalion, overwhelm enemies"><b>打法</b>：吸收伤害，集结营队，压倒敌人</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Range Overlap">范围重叠</h4><ul>
-        <li data-en="Position towers so their ranges overlap on the main path">塔的射程在主路径上重叠</li>
-        <li data-en="This creates a &quot;kill zone&quot; where enemies take damage from multiple towers">形成"击杀区"——敌人同时受多塔伤害</li>
-        <li data-en="Magic tower's long range makes it ideal for backline">法塔射程远，适合放后排</li>
+      <div class="fcard"><h4 data-en="Mobility Hit-and-Run">机动游击流</h4><ul>
+        <li data-en="<b>Core</b>: Wings of Swiftness (+15% Move SPD, +10% CDR)"><b>核心</b>：疾风之翼（+15% 移速，+10% 冷却）</li>
+        <li data-en="<b>Emblem</b>: Scout Emblem (+10% Move SPD)"><b>徽章</b>：侦察徽章（+10% 移速）</li>
+        <li data-en="<b>Charm</b>: Swift Charm (+10% Move SPD, +5% Dodge)"><b>护符</b>：疾行护符（+10% 移速，+5% 闪避）</li>
+        <li data-en="<b>Playstyle</b>: Never stop moving, pick off stragglers"><b>打法</b>：永不停步，逐个击破散兵</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="When to Upgrade vs Build">升级还是新建</h4><ul>
-        <li data-en="Wave 1-3: Build new towers (coverage > power)">第 1-3 波：建新塔（覆盖 > 威力）</li>
-        <li data-en="Wave 4-6: Upgrade existing to Tier 2">第 4-6 波：升级已有塔至 2 级</li>
-        <li data-en="Wave 7+: Tier 3 on key towers + new coverage">第 7+ 波：关键塔升 3 级 + 新覆盖</li>
+      <div class="fcard"><h4 data-en="Attack Speed Build">攻速流</h4><ul>
+        <li data-en="<b>Core</b>: Frenzy Blood (+20% ATK SPD)"><b>核心</b>：狂战之血（+20% 攻速）</li>
+        <li data-en="<b>Emblem</b>: Sage Emblem (+5% ATK SPD, +15% CDR)"><b>徽章</b>：贤者徽章（+5% 攻速，+15% 冷却）</li>
+        <li data-en="<b>Charm</b>: Vitality Charm (+2% HP Regen/s)"><b>护符</b>：生命护符（+2% 生命回复/秒）</li>
+        <li data-en="<b>Playstyle</b>: DPS through volume, sustain through regen"><b>打法</b>：以频率堆输出，以回复保续航</li>
       </ul></div>
+    </div>
+    <p style="margin-top:16px;color:var(--ink-soft);font-size:13px" data-en="See the <a class='xref' href='combat.html#tier-list'>Build Tier List</a> for community rankings of these and more archetypes.">查看<a class="xref" href="combat.html#tier-list">构建强度榜</a>了解这些及更多原型的社区排名。</p>
+
+    <!-- Build Calculator -->
+    <h3 id="calc" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Build Calculator">构建计算器</h3>
+    <div class="fcard" style="margin-bottom:16px;background:var(--crimson);border:2px solid var(--crimson);color:#fff">
+      <p style="font-size:15px;font-weight:700;margin:0;color:#fff" data-en="⚠ EXAMPLE DATA — The artifacts, emblems, and charms in this calculator are REPRESENTATIVE EXAMPLES, not confirmed game items. The developer confirmed 100+ artifacts, 8 Emblem families, and 30+ Charms exist, but specific names and stats are still being documented by the community during Early Access. Calculations below are for demonstration only.">⚠ 示例数据警告——本计算器中的神器、徽章和护符均为代表性示例，并非已确认的游戏内物品。开发者已确认有 100+ 神器、8 个徽章家族和 30+ 种护符，但具体名称和数值正在抢先体验期间由社区整理。以下计算仅供参考演示。</p>
+    </div>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Select an artifact, emblem, and charm to see cumulative stat bonuses. Adjust base stats to match your character.">选择神器、徽章和护符，查看累计属性加成。调整基础属性以匹配你的角色。</p>
+    <div class="calc-box" id="buildCalculator">
+      <div class="calc-row">
+        <div>
+          <label data-en="Artifact">神器</label>
+          <select id="calcArtifact">
+            <optgroup label="攻击型" data-en="Offense">
+              <option value="off-blade" data-en="Ex: Blade Shard">示例：利刃碎片</option>
+              <option value="off-frenzy" data-en="Ex: Frenzy Blood">示例：狂战之血</option>
+              <option value="off-executioner" data-en="Ex: Executioner's Mark">示例：处刑者印记</option>
+            </optgroup>
+            <optgroup label="防御型" data-en="Defense">
+              <option value="def-bulwark" data-en="Ex: Bulwark Heart">示例：壁垒之心</option>
+              <option value="def-reflection" data-en="Ex: Mirror of Reflection">示例：反射之镜</option>
+            </optgroup>
+            <optgroup label="辅助型" data-en="Utility">
+              <option value="util-swift" data-en="Ex: Wings of Swiftness">示例：疾风之翼</option>
+              <option value="util-greed" data-en="Ex: Eye of Greed">示例：贪婪之眼</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label data-en="Emblem">徽章</label>
+          <select id="calcEmblem">
+            <option value="emb-warrior" data-en="Ex: Warrior Emblem">示例：战士徽章</option>
+            <option value="emb-guardian" data-en="Ex: Guardian Emblem">示例：守护徽章</option>
+            <option value="emb-scout" data-en="Ex: Scout Emblem">示例：侦察徽章</option>
+            <option value="emb-sage" data-en="Ex: Sage Emblem">示例：贤者徽章</option>
+          </select>
+        </div>
+        <div>
+          <label data-en="Charm">护符</label>
+          <select id="calcCharm">
+            <option value="chm-iron" data-en="Ex: Iron Charm">示例：铁壁护符</option>
+            <option value="chm-thorn" data-en="Ex: Thorn Charm">示例：荆棘护符</option>
+            <option value="chm-vitality" data-en="Ex: Vitality Charm">示例：生命护符</option>
+            <option value="chm-swift" data-en="Ex: Swift Charm">示例：疾行护符</option>
+            <option value="chm-warding" data-en="Ex: Warding Charm">示例：庇护护符</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-row" style="grid-template-columns:1fr 1fr">
+        <div>
+          <label data-en="Base ATK">基础攻击力</label>
+          <input type="number" id="calcBaseAtk" value="100" min="1" max="9999">
+        </div>
+        <div>
+          <label data-en="Base HP">基础生命值</label>
+          <input type="number" id="calcBaseHp" value="500" min="1" max="99999">
+        </div>
+      </div>
+      <div class="calc-result">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px">
+          <div><div class="calc-num" id="rATK" style="color:var(--crimson)">100</div><div class="calc-label" data-en="Final ATK">最终攻击</div></div>
+          <div><div class="calc-num" id="rHP" style="color:var(--moss)">500</div><div class="calc-label" data-en="Final HP">最终生命</div></div>
+          <div><div class="calc-num" id="rDR" style="color:var(--heather)">0%</div><div class="calc-label" data-en="DMG Reduction">减伤</div></div>
+          <div><div class="calc-num" id="rCrit" style="color:var(--copper)">0%</div><div class="calc-label" data-en="Crit Rate">暴击率</div></div>
+          <div><div class="calc-num" id="rAtkSpd" style="color:var(--crimson)">0%</div><div class="calc-label" data-en="ATK SPD">攻速</div></div>
+          <div><div class="calc-num" id="rMoveSpd" style="color:var(--heather)">0%</div><div class="calc-label" data-en="Move SPD">移速</div></div>
+          <div><div class="calc-num" id="rCDR" style="color:var(--copper)">0%</div><div class="calc-label" data-en="Cooldown Reduction">冷却缩减</div></div>
+        </div>
+        <div id="rEffects" style="margin-top:14px;font-size:13px;border-top:1px solid var(--line);padding-top:12px"></div>
+      </div>
     </div>
 
     <!-- 交叉引用 -->
     <div class="cross-links">
       <h4 data-en="Related Guides">相关攻略</h4>
       <div class="cl-list">
-        <a href="economy.html" data-en="Economy">经济养成</a>
         <a href="combat.html" data-en="Combat">战斗系统</a>
-        <a href="codex.html#towers" data-en="Tower Codex">防御塔图鉴</a>
+        <a href="economy.html" data-en="Progression">养成进度</a>
+        <a href="codex.html#artifacts" data-en="Artifact Codex">神器图鉴</a>
+        <a href="bosses.html" data-en="Bosses">Boss 专题</a>
       </div>
     </div>
 
     <!-- 上下篇导航 -->
     <div class="page-nav">
       <a href="combat.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Combat System">战斗系统</div></a>
-      <a href="economy.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Economy">经济养成</div></a>
+      <a href="economy.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Progression">养成进度</div></a>
     </div>
   </div>
 </section>
@@ -161,12 +338,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -177,7 +354,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>

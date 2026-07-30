@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>新手入门指南 | Tears of Metal 钢铁之泪攻略</title>
-<meta name="description" content="Tears of Metal 新手入门攻略：从首战到通关的完整流程，核心机制讲解，常见错误避坑指南。">
-<meta name="keywords" content="Tears of Metal新手,钢铁之泪入门,首战攻略,塔防教学,roguelite新手">
+<meta name="description" content="Tears of Metal 新手入门攻略：战役流程、核心机制讲解、合作模式与手柄设置、常见错误避坑指南。">
+<meta name="keywords" content="Tears of Metal新手,钢铁之泪入门,战役流程,动作roguelike,合作模式,手柄,抢先体验">
 <link rel="stylesheet" href="css/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2a3a4a">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 新手入门指南","inLanguage":"zh-CN","about":"Tears of Metal 新手入门攻略与首战流程","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 新手入门指南","inLanguage":"zh-CN","about":"Tears of Metal 新手入门攻略与战役流程","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
 </script>
-</head>
+
+    <meta property="og:title" content="新手入门指南 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="Tears of Metal 新手入门攻略：战役流程、核心机制讲解、合作模式与手柄设置、常见错误避坑指南。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <header class="nav">
@@ -21,9 +28,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" class="active" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -40,103 +48,162 @@
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Beginner">新手入门</span></div>
     <span class="eyebrow" data-en="Beginner">新手入门</span>
-    <h2 class="title" data-en="First-Run Walkthrough">从首战到通关</h2>
-    <p class="subtitle" data-en="New to Tears of Metal? Follow this timeline to learn core mechanics, build your first defense line, and clear your first run."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>刚接触钢铁之泪？跟着这条时间线走，学会核心机制、建好第一条防线、完成首次通关。</p>
+    <h2 class="title" data-en="Campaign Walkthrough & Basics">战役流程与基础</h2>
+    <p class="subtitle" data-en="New to Tears of Metal? Follow this guide to learn combat basics, understand the roguelite loop, complete your first campaign, and set up co-op or controller."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>刚接触钢铁之泪？跟着本攻略学习战斗基础、理解 Roguelite 循环、完成首次战役，并设置合作或手柄。</p>
 
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="campaign">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+      <div class="progress-actions">
+        <button data-action="export-progress" data-i18n="progress.export">导出进度</button>
+        <button data-action="import-progress" data-i18n="progress.import">导入进度</button>
+        <button data-action="reset-progress" data-i18n="progress.reset">重置全部进度</button>
+      </div>
+    </div>
     <div class="timeline">
       <div class="tl-item">
-        <div class="tl-dot">W1</div>
-        <div class="tl-body">
-          <h4 data-en="Wave 1 · Learn the Basics">第 1 波 · 认识基本操作</h4>
+        <div class="tl-dot">01</div>
+        <div class="tl-body" data-track="campaign-1" data-track-type="task" data-track-group="campaign">
+          <h4 data-en="Step 1 · Complete the Tutorial">第 1 步 · 完成教程</h4>
           <ul>
-            <li data-en="The game is a &lt;b&gt;tower defense roguelite&lt;/b&gt;: place towers and position units to defend against waves of enemies">游戏是<b>塔防 roguelite</b>：放置防御塔、部署单位来抵御一波波敌人</li>
-            <li data-en="Place your first &lt;b&gt;Arrow Tower&lt;/b&gt; at the choke point — the narrow path enemies must pass through">在<b>隘口</b>（敌人必经的窄道）放下第一座<b>箭塔</b></li>
-            <li data-en="Position your starting &lt;b&gt;Highlander Swordsman&lt;/b&gt; in front of the tower to block enemies">将初始的<b>高地剑士</b>放在塔前，挡住敌人推进</li>
-            <li data-en="Watch the gold counter — killing enemies gives gold, which you spend on more towers and upgrades">注意金币计数——击杀敌人获得金币，用来建更多塔和升级</li>
+            <li data-en="Tears of Metal is an &lt;b&gt;action roguelike&lt;/b&gt;: fight through environments, collect artifacts, and rally your Scottish battalion">钢铁之泪是<b>动作 Roguelike</b>：穿越环境、收集神器、集结苏格兰营</li>
+            <li data-en="Choose from &lt;b&gt;4 playable heroes&lt;/b&gt; (Wallace, Luthan, Brienne, Ruadh), each with unique abilities and playstyles. Two more heroes are coming soon!">从<b>4 名可玩英雄</b>（Wallace、Luthan、Brienne、Ruadh）中选择，各有独特技能和操作风格。另有 2 名神秘英雄即将加入！</li>
+            <li data-en="Learn basic combat: &lt;b&gt;light attacks, heavy attacks, dodge&lt;/b&gt; — these are your core tools">学习基础战斗：<b>轻击、重击、闪避</b>——这是你的核心工具</li>
+            <li data-en="The tutorial teaches movement, targeting, and ability usage">教程教授移动、锁定和使用技能</li>
+            <li data-en="Complete all tutorial objectives before venturing into campaign">在进入战役前完成所有教程目标</li>
           </ul>
+          <span class="track-label">未完成</span>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-dot">W2</div>
-        <div class="tl-body">
-          <h4 data-en="Wave 2 · Expand Defenses">第 2 波 · 扩展防线</h4>
+        <div class="tl-dot">02</div>
+        <div class="tl-body" data-track="campaign-2" data-track-type="task" data-track-group="campaign">
+          <h4 data-en="Step 2 · Start Your First Campaign">第 2 步 · 开始首次战役</h4>
           <ul>
-            <li data-en="Build a second tower — choose based on enemy composition (more arrows for swarms)">建第二座塔——根据敌人组成选择（群怪多就建箭塔）</li>
-            <li data-en="Upgrade existing tower to &lt;b&gt;Tier 2&lt;/b&gt; (costs gold but significantly increases damage)">将已有塔升到<b>2 级</b>（消耗金币但伤害显著提升）</li>
-            <li data-en="Unlock and place a &lt;b&gt;Highlander Archer&lt;/b&gt; behind the front line for ranged DPS">解锁并在后排部署一个<b>高地弩手</b>提供远程输出</li>
-            <li data-en="Don't overspend — save gold for the economy upgrade coming next">别花光金币——留一些给接下来要做的经济升级</li>
+            <li data-en="Each &lt;b&gt;campaign run&lt;/b&gt; takes you through a series of environments across &lt;b&gt;3 Acts&lt;/b&gt; — gain new powerful upgrades each time">每次<b>战役运行</b>带你穿越<b>3 幕</b>的一系列环境——每次获得新的强力升级</li>
+            <li data-en="Focus on &lt;b&gt;collecting artifacts&lt;/b&gt; — they're your primary power source during a run">专注<b>收集神器</b>——它们是运行中的主要力量来源</li>
+            <li data-en="Don't worry about dying — this is a roguelite, permanent upgrades carry over">不用担心死亡——这是 Roguelite，永久升级会继承</li>
+            <li data-en="Learn enemy patterns: timing your dodges and abilities is key to survival">学习敌人模式：掌握闪避和技能时机是生存关键</li>
           </ul>
+          <span class="track-label">未完成</span>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-dot">W3</div>
-        <div class="tl-body">
-          <h4 data-en="Wave 3 · Invest in Economy">第 3 波 · 投资经济</h4>
+        <div class="tl-dot">03</div>
+        <div class="tl-body" data-track="campaign-3" data-track-type="task" data-track-group="campaign">
+          <h4 data-en="Step 3 · Understand the Roguelite Loop">第 3 步 · 理解 Roguelite 循环</h4>
           <ul>
-            <li data-en="Spend gold on &lt;b&gt;Gold income upgrade&lt;/b&gt; in the meta tree — passive gold per wave">在养成树中点出<b>金币产出升级</b>——每波被动获得金币</li>
-            <li data-en="This is the key roguelite element: permanent upgrades carry over between runs">这是 roguelite 的核心机制：永久升级在多次运行间继承</li>
-            <li data-en="Position matters: towers near the &lt;b&gt;main path&lt;/b&gt; hit more enemies, side paths are for coverage">位置很关键：靠近<b>主路径</b>的塔能打更多敌人，侧路用于覆盖</li>
-            <li data-en="Start thinking about &lt;b&gt;tower synergy&lt;/b&gt;: arrow tower slows, cannon tower hits groups">开始考虑<b>塔的协同</b>：箭塔减速，炮塔打群伤</li>
+            <li data-en="The core loop: &lt;b&gt;campaign → collect artifacts → die/complete → expand settlement → stronger next run&lt;/b&gt;">核心循环：<b>战役 → 收集神器 → 死亡/通关 → 扩建定居点 → 下次更强</b></li>
+            <li data-en="Between runs, invest in &lt;b&gt;village upgrades&lt;/b&gt; — these are permanent and make future runs easier">局间投资<b>村庄升级</b>——这些是永久的，让未来战役更轻松</li>
+            <li data-en="Emblems (8 families, Tier 1-3) and charms (30+) provide additional build customization">徽章（8 家族、Tier 1-3）和护符（30+）提供额外的构建定制</li>
+            <li data-en="Soldiers have &lt;b&gt;permadeath&lt;/b&gt; — choose carefully which allies to invest in">士兵有<b>永久死亡</b>机制——谨慎选择投资哪些盟友</li>
+            <li data-en="See the <a href='economy.html'>Progression Guide</a> for the recommended upgrade order">查看<a href='economy.html'>养成攻略</a>了解推荐升级顺序</li>
           </ul>
+          <span class="track-label">未完成</span>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-dot">W5</div>
-        <div class="tl-body">
-          <h4 data-en="Wave 5 · Diversify">第 5 波 · 兵种多样化</h4>
+        <div class="tl-dot">04</div>
+        <div class="tl-body" data-track="campaign-4" data-track-type="task" data-track-group="campaign">
+          <h4 data-en="Step 4 · Set Up Co-op">第 4 步 · 设置合作模式</h4>
           <ul>
-            <li data-en="New enemy types appear: &lt;b&gt;armored units&lt;/b&gt; take less damage from arrow towers">出现新敌人类型：<b>重甲单位</b>对箭塔伤害有减伤</li>
-            <li data-en="Build a &lt;b&gt;Magic Tower&lt;/b&gt; — ignores armor, essential for mid-game">建一座<b>法塔</b>——无视护甲，中期必备</li>
-            <li data-en="Add a &lt;b&gt;Support unit&lt;/b&gt; (Banner Bearer) to buff nearby allies' damage">加入<b>支援单位</b>（旗手）为周围友军加伤害 buff</li>
-            <li data-en="If an enemy leaks through, you lose &lt;b&gt;base HP&lt;/b&gt; — not an instant loss, but don't let too many through">敌人漏过去会扣<b>基地血量</b>——不会直接输，但别放太多过去</li>
+            <li data-en="Tears of Metal supports &lt;b&gt;up to 4-player online co-op&lt;/b&gt;">钢铁之泪支持<b>最多 4 人在线联机</b></li>
+            <li data-en="Co-op is available from the start — invite friends or matchmake">合作模式从一开始就可用——邀请好友或匹配</li>
+            <li data-en="Co-op scales difficulty and rewards — tougher enemies but better loot">合作模式有难度和奖励缩放——敌人更强但掉落更好</li>
+            <li data-en="Coordinate builds: mix offense, defense, and support artifacts for team synergy">协调构建：混合攻击、防御、辅助神器以实现团队协同</li>
           </ul>
+          <span class="track-label">未完成</span>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-dot">W7</div>
-        <div class="tl-body">
-          <h4 data-en="Wave 7 · Late Game Setup">第 7 波 · 后期布阵</h4>
+        <div class="tl-dot">05</div>
+        <div class="tl-body" data-track="campaign-5" data-track-type="task" data-track-group="campaign">
+          <h4 data-en="Step 5 · Configure Controller">第 5 步 · 配置手柄</h4>
           <ul>
-            <li data-en="By now you should have 4-5 towers, 3-4 units, and a steady gold income">这时候你应该有 4-5 座塔、3-4 个单位和稳定的金币收入</li>
-            <li data-en="Upgrade towers to &lt;b&gt;Tier 3&lt;/b&gt; — the final tier unlocks special abilities">将塔升至<b>3 级</b>——最终级别解锁特殊能力</li>
-            <li data-en="Position units in a &lt;b&gt;formation&lt;/b&gt;: melee in front, ranged in middle, support in back">单位排成<b>阵型</b>：近战在前、远程居中、支援在后</li>
-            <li data-en="Save gold for emergency repairs and mid-wave unit revives">留金币应急修理和波次中途复活单位</li>
+            <li data-en="Tears of Metal has &lt;b&gt;full controller support&lt;/b&gt;">钢铁之泪提供<b>完整手柄支持</b></li>
+            <li data-en="Controller recommended for action combat — analog sticks for movement and aiming">动作战斗推荐使用手柄——摇杆控制移动和瞄准</li>
+            <li data-en="Customize button mapping in settings to match your playstyle">在设置中自定义按键映射以匹配你的操作习惯</li>
+            <li data-en="Keyboard + mouse also fully supported — both input methods are viable">键鼠也完全支持——两种输入方式都可行</li>
           </ul>
+          <span class="track-label">未完成</span>
         </div>
       </div>
       <div class="tl-item">
-        <div class="tl-dot">W10</div>
-        <div class="tl-body">
-          <h4 data-en="Wave 10 · Boss Wave">第 10 波 · Boss 战</h4>
+        <div class="tl-dot">06</div>
+        <div class="tl-body" data-track="campaign-6" data-track-type="task" data-track-group="campaign">
+          <h4 data-en="Step 6 · Push Toward the Mother Dragon Stone">第 6 步 · 向母龙石推进</h4>
           <ul>
-            <li data-en="The first &lt;b&gt;Boss&lt;/b&gt; appears — massive HP, special abilities (AOE, summon, etc.)">第一个<b>Boss</b>出现——超高血量、特殊技能（AOE、召唤等）</li>
-            <li data-en="Concentrate all tower fire on the Boss, but don't ignore adds (smaller enemies)">集中所有塔火力打 Boss，但别忽略小怪</li>
-            <li data-en="Use unit &lt;b&gt;active abilities&lt;/b&gt; at the right moment — don't waste them early">在正确时机使用单位<b>主动技能</b>——别在前面浪费掉</li>
-            <li data-en="If you fail, no worries — you keep your &lt;b&gt;meta upgrades&lt;/b&gt; and retry stronger">输了也没事——<b>永久升级</b>保留，带着更强的属性重开</li>
+            <li data-en="The story goal: &lt;b&gt;reclaim your island&lt;/b&gt; from the invader who carves into the Mother Dragon Stone to harvest its power">故事目标：从挖掘母龙石汲取力量的入侵者手中<b>夺回你的岛屿</b></li>
+            <li data-en="Face &lt;b&gt;Gilles the Hog&lt;/b&gt; (Act 1), &lt;b&gt;Iseult the Banshee&lt;/b&gt; (Act 2), and &lt;b&gt;Harold&lt;/b&gt; (Act 3) — one boss per Act">迎战<b>Gilles the Hog</b>（第一幕）、<b>Iseult the Banshee</b>（第二幕）和<b>Harold</b>（第三幕）——每幕一个 Boss</li>
+            <li data-en="Later environments are tougher — optimize your build and settlement upgrades">后期环境更难——优化你的构建和定居点升级</li>
+            <li data-en="Rally your Scottish battalion forces for additional power in fights">集结苏格兰营部队在战斗中获得额外力量</li>
+            <li data-en="See the <a href='bosses.html'>Boss Guide</a> for endgame encounter strategies">查看<a href='bosses.html'>Boss 专题</a>了解终局遭遇战策略</li>
           </ul>
+          <span class="track-label">未完成</span>
         </div>
       </div>
     </div>
 
     <div class="feature-grid" style="margin-top:40px">
       <div class="fcard"><h4 data-en="Common Beginner Mistakes">新手常见坑</h4><ul>
-        <li data-en="Don't put all towers in one spot — spread them along the path">别把塔全堆一个位置——沿路分布</li>
-        <li data-en="Don't ignore economy upgrades — they compound over waves">别忽视经济升级——波次越多收益越大</li>
-        <li data-en="Don't upgrade a tower to max too early — tier 2 is often enough for mid-game">别太早把塔升满——2 级在中期通常够用</li>
-        <li data-en="Don't forget to reposition units between waves — the enemy path changes">波次间记得重新摆位——敌人路径会变</li>
+        <li data-en="Don't ignore dodge timing — it's more important than raw attack power">别忽视闪避时机——比纯攻击力更重要</li>
+        <li data-en="Don't hoard artifacts — equip and experiment with builds early">别囤着神器——尽早装备并尝试不同构建</li>
+        <li data-en="Don't skip meta upgrades — they compound across runs">别跳过 Meta 升级——它们跨战役复利</li>
+        <li data-en="Don't play alone if struggling — co-op makes tough content easier">别硬撑单人——合作模式让难内容更轻松</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Tower Upgrade Priority">防御塔升级优先级</h4><ul>
-        <li data-en="Tier 1 → 2 on your main tower (Wave 2-3)">主塔 1→2 级（第 2-3 波）</li>
-        <li data-en="Build a second tower before upgrading to Tier 3">先建第二座塔再考虑升 3 级</li>
-        <li data-en="Magic Tower is essential after Wave 5 (armored enemies)">第 5 波后法塔必备（重甲敌人）</li>
-        <li data-en="Tier 3 only when you have surplus gold (Wave 7+)">仅在有富余金币时升 3 级（第 7+ 波）</li>
+      <div class="fcard"><h4 data-en="Artifact Priority">神器优先级</h4><ul>
+        <li data-en="Early: grab any artifact you find — quantity matters at start">前期：拿到什么用什么——初期数量更重要</li>
+        <li data-en="Mid: start specializing — pick artifacts that synergize">中期：开始专精——选择有协同的神器</li>
+        <li data-en="Late: optimize — swap weaker artifacts for better ones">后期：优化——用更好的神器替换弱的</li>
+        <li data-en="See <a href='towers.html'>Artifacts Guide</a> for full details">详见<a href='towers.html'>神器攻略</a></li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Meta Upgrade Priority">永久升级优先级</h4><ul>
-        <li data-en="1st: Gold income bonus (compounds every wave)">第一：金币产出加成（每波复利）</li>
-        <li data-en="2nd: Starting gold (more options at wave 1)">第二：初始金币（第 1 波有更多选择）</li>
-        <li data-en="3rd: Unit HP / damage (survivability)">第三：单位血量/伤害（生存能力）</li>
-        <li data-en="4th: Tower damage / range (offense)">第四：塔伤害/范围（进攻力）</li>
+      <div class="fcard"><h4 data-en="Settlement Upgrade Priority">定居点升级优先级</h4><ul>
+        <li data-en="1st: Stone Power (boosts all stats globally)">第一：母石之力（全局属性提升）</li>
+        <li data-en="2nd: Rally Size (more battalion forces)">第二：集结规模（更多营队兵力）</li>
+        <li data-en="3rd: Artifact Slot (carry more artifacts per run)">第三：神器槽位（每次携带更多神器）</li>
+        <li data-en="4th: Revive (cheaper revives in co-op)">第四：复活（合作模式复活更便宜）</li>
+        <li data-en="See <a href='economy.html#meta-tree'>Progression Guide</a> for full tree">详见<a href='economy.html#meta-tree'>养成攻略</a>完整升级树</li>
       </ul></div>
+    </div>
+
+    <!-- Difficulty & Game Modes -->
+    <h3 id="difficulty" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Game Modes">游戏模式</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Tears of Metal offers solo and co-op modes. Understanding the differences helps you pick the right approach for your skill level and playstyle.">钢铁之泪提供单人和合作模式。了解差异有助于根据你的水平和操作习惯选择合适的方式。</p>
+    <div class="feature-grid">
+      <div class="fcard" style="border-left:4px solid var(--moss)">
+        <h4 data-en="Solo Mode">单人模式</h4>
+        <p data-en="Play alone at your own pace. Best for learning mechanics and experimenting with builds. Recommended for your first few campaign runs.">以自己的节奏独自游玩。适合学习机制和尝试构建。推荐前几次战役使用。</p>
+        <ul>
+          <li data-en="Full control over build and playstyle">完全掌控构建和操作风格</li>
+          <li data-en="Pause and resume anytime">随时暂停和恢复</li>
+          <li data-en="Best for: learning the game">适合：学习游戏</li>
+        </ul>
+      </div>
+      <div class="fcard" style="border-left:4px solid var(--copper)">
+        <h4 data-en="Co-op Mode (Up to 4 Players)">合作模式（最多 4 人）</h4>
+        <p data-en="Team up with friends or matchmake online. Difficulty and rewards scale with player count. Coordinate builds for maximum synergy.">与好友组队或在线匹配。难度和奖励随玩家数缩放。协调构建以实现极限协同。</p>
+        <ul>
+          <li data-en="Up to 4 players online co-op">最多 4 人在线联机</li>
+          <li data-en="Scaled difficulty and better rewards">缩放难度和更好奖励</li>
+          <li data-en="Best for: tough content, faster farming">适合：难内容、快速刷取</li>
+        </ul>
+      </div>
+      <div class="fcard" style="border-left:4px solid var(--heather)">
+        <h4 data-en="Roguelite Structure">Roguelite 结构</h4>
+        <p data-en="Each campaign run is a roguelite loop: explore environments, collect artifacts, gain Meta points, expand your settlement between runs. The game has 3 Acts, each ending with a boss fight.">每次战役是 Roguelite 循环：探索环境、收集神器、获得 Meta 点数、局间扩建定居点。游戏有 3 幕，每幕末尾有 Boss 战。</p>
+        <ul>
+          <li data-en="Permanent upgrades carry between runs">永久升级跨战役继承</li>
+          <li data-en="Each run: new environment layouts and artifact drops">每次战役：新环境布局和神器掉落</li>
+          <li data-en="3 Acts, 3 bosses, 4+ heroes — structured campaign progression">3 幕、3 Boss、4+ 英雄——结构化战役推进</li>
+          <li data-en="Best for: long-term progression">适合：长期养成</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fcard" style="margin-top:16px;background:var(--parchment);border-color:var(--copper)">
+      <h4 style="color:var(--copper)" data-en="Early Access Tip">抢先体验建议</h4>
+      <p data-en="Tears of Metal launched in Early Access on July 22, 2026. Content is being actively updated by Paper Cult. Some details in this guide may change as the game evolves — check the <a href='https://steamcommunity.com/app/1913120/allnews/'>patch notes</a> for the latest updates.">钢铁之泪于 2026 年 7 月 22 日进入抢先体验。Paper Cult 正在持续更新内容。本攻略的部分细节可能随游戏演进而变化——查看<a href='https://steamcommunity.com/app/1913120/allnews/'>补丁说明</a>获取最新更新。</p>
     </div>
 
     <!-- 交叉引用 -->
@@ -144,8 +211,8 @@
       <h4 data-en="Related Guides">相关攻略</h4>
       <div class="cl-list">
         <a href="combat.html" data-en="Combat System">战斗系统</a>
-        <a href="towers.html" data-en="Towers">防御塔</a>
-        <a href="economy.html" data-en="Economy">经济养成</a>
+        <a href="towers.html" data-en="Artifacts">神器构建</a>
+        <a href="economy.html" data-en="Progression">养成进度</a>
       </div>
     </div>
 
@@ -162,12 +229,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -178,7 +245,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>

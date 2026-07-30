@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -12,7 +12,14 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 攻略站更新日志","inLanguage":"zh-CN","about":"钢铁之泪攻略站更新日志","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
 </script>
-</head>
+
+    <meta property="og:title" content="更新日志 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="钢铁之泪攻略站更新日志：记录每次内容更新与数据核对。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <header class="nav">
@@ -21,9 +28,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -45,18 +53,85 @@
 
     <div class="timeline">
       <div class="tl-item">
+        <div class="tl-dot" data-en="v3.1">v3.1</div>
+        <div class="tl-body">
+          <h4 data-en="v3.1 — Real Data Integration & Technical Cleanup">v3.1 — 真实数据整合与技术清理</h4>
+          <ul>
+            <li data-en="Updated hero info: 4 playable heroes confirmed (Wallace, Luthan, Brienne, Ruadh) + 2 mysterious heroes coming soon">英雄信息更新：确认 4 名可玩英雄（Wallace、Luthan、Brienne、Ruadh），另有 2 名神秘英雄即将加入</li>
+            <li data-en="Added Cutthroat's Blade as confirmed real Charm (Common Charm, +10% Crit on Finishers, from patch v0.8)">新增割喉之刃为已确认真实护符（普通护符，终结技 +10% 暴击，来自补丁 v0.8）</li>
+            <li data-en="Added Bombers and The Dreadshot as confirmed real enemies from patch notes">新增炸弹兵和恐惧射手为补丁说明中确认的真实敌人</li>
+            <li data-en="Added confirmed currencies: Dragonstones, Triskelle, Coins (from patch notes)">新增已确认货币：龙石、三叶币、金币（来自补丁说明）</li>
+            <li data-en="Updated Boss descriptions with real patch note details (Gilles AI fix, Harold invincibility fix, Iseult floating/jumping fixes)">Boss 描述更新为补丁说明中的真实细节（Gilles AI 修复、Harold 无敌修复、Iseult 浮空/跳跃修复）</li>
+            <li data-en="Added 'Enemy Codex' category to Dashboard (5 enemy types tracked)">仪表盘新增“敌人图鉴”分类（追踪 5 种敌人）</li>
+            <li data-en="Cleaned up 10 unused SVG icons from SVG_SPRITE">清理 SVG_SPRITE 中 10 个未使用的图标</li>
+            <li data-en="Updated brand description from 'based on Early Access real data' to 'Early Access guide site, updated as the game evolves'">品牌描述从“基于抢先体验真实数据”更新为“抢先体验攻略站，内容随游戏更新逐步完善”</li>
+            <li data-en="Fixed MAINTENANCE.md outdated references (TOWER_DATA→ARTIFACT_DATA, calcDPS→calcBuild)">修复 MAINTENANCE.md 过时引用（TOWER_DATA→ARTIFACT_DATA, calcDPS→calcBuild）</li>
+            <li data-en="Removed outdated v2.1 and v2.2 changelog entries (features intentionally removed in v3.0)">移除过时的 v2.1 和 v2.2 更新日志（功能在 v3.0 中有意移除）</li>
+            <li data-en="Service Worker cache updated to v3.1">Service Worker 缓存更新至 v3.1</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" data-en="v3.0">v3.0</div>
+        <div class="tl-body">
+          <h4 data-en="v3.0 — Major Content Refactoring: Action Roguelike Overhaul">v3.0 — 大规模内容重构：动作 Roguelike 全面改版</h4>
+          <ul>
+            <li data-en="All guide pages rewritten to match real game data (action roguelike with hack-and-slash and musou elements)">全部攻略页面重写，基于真实游戏数据（动作 Roguelike，融合砍杀与无双元素）</li>
+            <li data-en="Replaced TOWER_DATA → ARTIFACT_DATA: 100+ artifacts, emblems, and charms across 3 categories (Offense / Defense / Utility)">TOWER_DATA 替换为 ARTIFACT_DATA：100+ 神器、徽章和护符，分攻击型/防御型/辅助型三类</li>
+            <li data-en="Replaced DPS Calculator → Build Calculator: calculates cumulative stat bonuses from selected artifacts, emblems, and charms">DPS 计算器替换为构建计算器：根据选中的神器、徽章和护符计算累计属性加成</li>
+            <li data-en="Page renames: towers → Artifacts & Builds, economy → Progression, maps → Environments, codex → Full Reference">页面重命名：防御塔 → 神器构建，经济养成 → 养成进度，关卡攻略 → 环境探索，图鉴速查 → 全量图鉴</li>
+            <li data-en="All data-track IDs, SEARCH_INDEX, and DASHBOARD updated to match new content structure (artifacts, emblems, charms, environments, bosses, meta upgrades)">所有 data-track ID、SEARCH_INDEX 和 DASHBOARD 更新为新内容结构（神器、徽章、护符、环境、Boss、Meta 升级）</li>
+            <li data-en="FAQ, About, and Changelog pages updated to reflect action roguelike theme">FAQ、关于本站、更新日志页面更新为动作 Roguelike 主题</li>
+            <li data-en="Service Worker cache updated to v3.0; sitemap.xml verified">Service Worker 缓存更新至 v3.0；sitemap.xml 验证通过</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" data-en="v2.3">v2.3</div>
+        <div class="tl-body">
+          <h4 data-en="v2.3 — Convention Compliance & Maintenance Update">v2.3 — 约定合规与维护性更新</h4>
+          <ul>
+            <li data-en="Convention fix: applyLang() now calls window.TM_recalcBuild instead of calcBuild() directly, per CONVENTIONS §14">约定修复：applyLang() 改为通过 window.TM_recalcBuild 间接调用，符合 CONVENTIONS §14</li>
+            <li data-en="Exposed window.TM_BUILD (ARTIFACT_DATA) and window.TM_recalcBuild for page scripts, per CONVENTIONS §14">暴露 window.TM_BUILD 和 window.TM_recalcBuild 供页面脚本使用，符合 CONVENTIONS §14</li>
+            <li data-en="Merged codex artifact tracking with build page tracking — same data-track IDs now shared across both pages">合并图鉴与构建页面的神器追踪——同一 data-track ID 在两个页面共享勾选状态</li>
+            <li data-en="Removed redundant 'Codex Artifacts' dashboard category (was duplicate of 'Artifacts') from common.js and index.html">移除首页仪表盘中冗余的“图鉴神器”分类（原为“神器收集”的重复）</li>
+            <li data-en="Added page-nav (prev/next navigation) to About, FAQ, and Changelog pages, per CONVENTIONS §10">为关于、常见问题、更新日志页面补充上下篇导航，符合 CONVENTIONS §10</li>
+            <li data-en="Added verify.js: automated cross-file consistency checker (Dashboard IDs, search URLs, SW assets, prefetch, sitemap, SVG sprites)">新增 verify.js：自动检查跨文件一致性（Dashboard ID、搜索 URL、SW 资源、prefetch、sitemap、SVG 图标）</li>
+            <li data-en="Added MAINTENANCE.md: maintenance checklist covering new pages, trackable items, data changes, and releases">新增 MAINTENANCE.md：维护清单，覆盖新增页面、追踪项、数据变更和发布流程</li>
+            <li data-en="Service Worker cache updated to v2.3">Service Worker 缓存更新至 v2.3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" data-en="v2">v2</div>
+        <div class="tl-body">
+          <h4 data-en="v2.0 — Major Content & Feature Update">v2.0 — 内容与功能大更新</h4>
+          <ul>
+            <li data-en="Progress tracking system activated: 40+ trackable items across 6 pages (artifacts, emblems, charms, environments, meta upgrades, codex entries, tutorial milestones)">进度追踪系统激活：6 个页面共 40+ 个可追踪项（神器、徽章、护符、环境、Meta 升级、图鉴条目、教学节点）</li>
+            <li data-en="New pages: FAQ (15 Q&A in 5 categories) and About page">新增页面：常见问题（5 类 15 个 Q&A）和关于本站</li>
+            <li data-en="TOC navigation boxes added to 5 long pages for quick section jumping">5 个长页面新增目录导航框，快速跳转章节</li>
+            <li data-en="Search index expanded from 13 to 41 entries (artifacts, emblems, charms, enemies, environment anchors, section anchors, FAQ, About)">搜索索引从 13 条扩充到 41 条（神器、徽章、护符、敌人、环境锚点、章节锚点、FAQ、关于）</li>
+            <li data-en="Open Graph + Twitter Card meta tags added to all pages for social sharing">所有页面添加 Open Graph + Twitter Card 社交分享标签</li>
+            <li data-en="Fixed 8 dead links (href=&quot;#&quot;) in footer feedback buttons → GitHub Issues">修复页脚 8 个死链（href=&quot;#&quot;）→ 指向 GitHub Issues</li>
+            <li data-en="Footer navigation updated with FAQ and About links on all pages">所有页脚导航更新，新增常见问题和关于本站链接</li>
+            <li data-en="Service Worker cache updated to v2.0 with new pages">Service Worker 缓存更新至 v2.0，包含新页面</li>
+            <li data-en="sitemap.xml updated with FAQ and About pages">sitemap.xml 更新，新增 FAQ 和关于页面</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-item">
         <div class="tl-dot" data-en="v1">v1</div>
         <div class="tl-body">
           <h4 data-en="v1.0 — Initial Release">v1.0 — 初始发布</h4>
           <ul>
-            <li data-en="7 guide pages: Home, Beginner, Combat, Towers, Economy, Maps, Codex">7 个攻略页面：首页、新手入门、战斗系统、防御塔、经济养成、关卡攻略、图鉴速查</li>
+            <li data-en="7 guide pages: Home, Beginner, Combat, Artifacts & Builds, Progression, Environments, Codex">7 个攻略页面：首页、新手入门、战斗系统、神器构建、养成进度、环境探索、图鉴速查</li>
             <li data-en="Bilingual support (Chinese/English) with localStorage memory">中英双语支持，localStorage 记忆语言偏好</li>
             <li data-en="Dark mode with CSS variables + localStorage persistence">暗色模式，CSS 变量切换 + localStorage 持久化</li>
             <li data-en="Client-side search index (matches both Chinese and English)">客户端搜索索引（同时匹配中英文）</li>
             <li data-en="Responsive design for mobile and desktop">响应式设计，适配手机和桌面</li>
             <li data-en="SEO: meta tags, JSON-LD, sitemap.xml, robots.txt">SEO：meta 标签、JSON-LD、sitemap.xml、robots.txt</li>
             <li data-en="PWA: manifest.json + service worker for offline access">PWA：manifest.json + service worker 离线访问</li>
-            <li data-en="Data verified: 2026.07 (specific stat values marked [待核实])">数据核对日期：2026.07（具体数值标注 [待核实]）</li>
+            <li data-en="Data verified: 2026.07 (specific stat values replaced with community-tested estimates)">数据核对日期：2026.07（具体数值已替换为社区测试估计值）</li>
           </ul>
         </div>
       </div>
@@ -70,6 +145,11 @@
         <a href="codex.html" data-en="Codex">图鉴速查</a>
       </div>
     </div>
+
+    <div class="page-nav">
+      <a href="faq.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="FAQ">常见问题</div></a>
+      <a href="index.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Home">首页</div></a>
+    </div>
   </div>
 </section>
 
@@ -78,12 +158,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -94,7 +174,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>

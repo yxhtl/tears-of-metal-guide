@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>钢铁之泪攻略站 | Tears of Metal 中文攻略</title>
-<meta name="description" content="《Tears of Metal》(钢铁之泪) 中文攻略站：新手入门、战斗系统、防御塔、经济养成、关卡攻略与图鉴速查。苏格兰高地塔防roguelite，一站式攻略。">
-<meta name="keywords" content="Tears of Metal,钢铁之泪,攻略,塔防,roguelite,苏格兰,高地,防御塔,新手指南">
+<meta name="description" content="《Tears of Metal》(钢铁之泪) 中文攻略站：新手入门、战斗系统、神器构建、养成进度、环境探索与图鉴速查。Paper Cult 出品的动作 Roguelike，支持4人联机，一站式攻略。">
+<meta name="keywords" content="Tears of Metal,钢铁之泪,攻略,动作,roguelike,无双,合作,苏格兰,Paper Cult,神器,徽章,护符">
 <link rel="stylesheet" href="css/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2a3a4a">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"钢铁之泪攻略站","alternateName":"Tears of Metal 中文攻略","inLanguage":"zh-CN","url":"index.html","about":"《Tears of Metal》中文攻略站：新手入门、战斗系统、防御塔、经济养成、关卡攻略与图鉴速查"}
+{"@context":"https://schema.org","@type":"WebSite","name":"钢铁之泪攻略站","alternateName":"Tears of Metal 中文攻略","inLanguage":"zh-CN","url":"index.html","about":"《Tears of Metal》中文攻略站：新手入门、战斗系统、神器构建、养成进度、环境探索与图鉴速查"}
 </script>
-</head>
+
+    <meta property="og:title" content="钢铁之泪攻略站 | Tears of Metal 中文攻略" />
+    <meta property="og:description" content="《Tears of Metal》(钢铁之泪) 中文攻略站：Paper Cult 出品的动作 Roguelike，支持4人联机。新手入门、战斗系统、神器构建、养成进度、环境探索与图鉴速查。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <!-- ===== NAV ===== -->
@@ -22,9 +29,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -44,25 +52,26 @@
   </div>
   <div class="wrap hero-grid">
     <div>
-      <h1 data-en="Defend the Highlands in&lt;br&gt;&lt;span&gt;Tears of Metal&lt;/span&gt;">在 <span>钢铁之泪</span><br>守卫高地</h1>
-      <p class="tag" data-en="A tower defense roguelite — command Scottish highlanders, build defenses, survive endless waves. Your journey from first skirmish to final stand, all in one place.">苏格兰高地塔防 roguelite——指挥高地战士，建造防御，抵御无尽的波次。从第一场小规模战斗到最终坚守，你的攻略一站搞定。</p>
+      <h1 data-en="Reclaim Your Island in&lt;br&gt;&lt;span&gt;Tears of Metal&lt;/span&gt;">在 <span>钢铁之泪</span><br>夺回你的岛屿</h1>
+      <p class="tag" data-en="An action roguelike by Paper Cult — fight solo or in 4-player co-op alongside your Scottish battalion. Gain powerful upgrades, combine over a hundred artifacts, and stop the invaders as they carve into the Mother Dragon Stone to harvest its power.">Paper Cult 出品的动作 Roguelike——独自或 4 人联机，与苏格兰营并肩作战。获取强力升级、组合超过百种神器，阻止入侵者挖掘母龙石汲取力量。</p>
       <div class="hero-btns">
         <a href="getting-started.html" class="btn btn-primary" data-en="Beginner Guide">新手入门指南</a>
-        <a href="maps.html" class="btn btn-ghost" data-en="Level Guide">关卡攻略</a>
+        <a href="maps.html" class="btn btn-ghost" data-en="Environment Guide">环境探索</a>
       </div>
       <div class="hero-stats">
-        <div class="s"><b>7</b><small data-en="Guide Pages">攻略页面</small></div>
-        <div class="s"><b>6+</b><small data-en="Unit Types">单位类型</small></div>
-        <div class="s"><b>5+</b><small data-en="Tower Types">防御塔</small></div>
-        <div class="s"><b>10+</b><small data-en="Enemy Types">敌人种类</small></div>
+        <div class="s"><b>100+</b><small data-en="Artifacts">神器</small></div>
+        <div class="s"><b>45+</b><small data-en="Environments">环境</small></div>
+        <div class="s"><b>4</b><small data-en="Player Co-op">人联机</small></div>
+        <div class="s"><b>10</b><small data-en="Languages ✓">语言支持 ✓</small></div>
+        <div class="s"><b>$24.99</b><small data-en="Price">抢先体验价</small></div>
       </div>
     </div>
     <div class="hero-art">
       <div class="island-card">
         <h3 data-en="First 3 Things to Do">前三件事</h3>
-        <div class="day-row"><div class="day-badge">W1</div><div class="t"><b data-en="Place Defenses">部署防御</b><small data-en="Build towers at choke points">在隘口建防御塔</small></div></div>
-        <div class="day-row"><div class="day-badge">W2</div><div class="t"><b data-en="Position Units">排兵布阵</b><small data-en="Melee front, ranged back">近战在前，远程在后</small></div></div>
-        <div class="day-row"><div class="day-badge">W3</div><div class="t"><b data-en="Upgrade Economy">升级经济</b><small data-en="Spend gold on permanent upgrades">用金币投资永久升级</small></div></div>
+        <div class="day-row"><div class="day-badge">01</div><div class="t"><b data-en="Complete the Tutorial">完成教程</b><small data-en="Learn basic combat: light/heavy attacks, dodge, abilities">学习基础战斗：轻击/重击、闪避、技能</small></div></div>
+        <div class="day-row"><div class="day-badge">02</div><div class="t"><b data-en="Collect Artifacts">收集神器</b><small data-en="Each campaign run grants new powerful artifacts">每次战役获得新的强力神器</small></div></div>
+        <div class="day-row"><div class="day-badge">03</div><div class="t"><b data-en="Rally Your Forces">集结部队</b><small data-en="Recruit and upgrade your Scottish battalion">招募并升级你的苏格兰营</small></div></div>
       </div>
     </div>
   </div>
@@ -72,44 +81,110 @@
 <section style="padding-top:54px">
   <div class="wrap">
     <div class="quick">
-      <a href="getting-started.html" class="qcard"><h3 data-en="Beginner Guide">新手入门</h3><p data-en="First-run walkthrough, core mechanics, common mistakes">首战通关流程、核心机制、新手避坑</p></a>
-      <a href="combat.html" class="qcard"><h3 data-en="Combat System">战斗系统</h3><p data-en="Unit types, formations, tactical tips">单位类型、阵型搭配、战术技巧</p></a>
-      <a href="towers.html" class="qcard"><h3 data-en="Towers">防御塔</h3><p data-en="Tower types, upgrade paths, placement">塔类型、升级路线、放塔策略</p></a>
+      <a href="getting-started.html" class="qcard"><div class="ico"><svg viewBox="0 0 24 24"><use href="#i-flag"/></svg></div><h3 data-en="Beginner Guide">新手入门</h3><p data-en="Campaign flow, core mechanics, co-op basics">战役流程、核心机制、合作基础</p></a>
+      <a href="combat.html" class="qcard"><div class="ico"><svg viewBox="0 0 24 24"><use href="#i-sword"/></svg></div><h3 data-en="Combat System">战斗系统</h3><p data-en="Hack and slash mechanics, combos, abilities">动作战斗机制、连招、技能</p></a>
+      <a href="towers.html" class="qcard"><div class="ico"><svg viewBox="0 0 24 24"><use href="#i-gem"/></svg></div><h3 data-en="Artifacts & Builds">神器构建</h3><p data-en="100+ artifacts, emblems, charms, build synergies">100+ 神器、徽章、护符、构建协同</p></a>
     </div>
   </div>
 </section>
 
-<!-- ===== WAVE PROGRESSION ===== -->
+<!-- ===== PROGRESS DASHBOARD ===== -->
+<section style="padding-top:54px">
+  <div class="wrap">
+    <span class="eyebrow" data-en="Your Progress">你的进度</span>
+    <h2 class="title" data-en="Completion Dashboard">攻略完成度仪表盘</h2>
+    <p class="subtitle" data-en="Track your collection and completion across all guide categories. Click any category to jump to its page.">追踪你在所有攻略分类中的收集和完成情况。点击任意分类跳转到对应页面。</p>
+    <div class="dash-overall">
+      <div class="pbar pbar-lg" id="dashOverall">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+    </div>
+    <div class="dash-grid" id="dashGrid">
+      <a href="towers.html#artifacts" class="dash-item" data-dash="art-off-blade">
+        <div class="dash-head"><span class="dash-label" data-en="Artifacts">神器收集</span><span class="pbar-text">0 / 7</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="towers.html#emblems" class="dash-item" data-dash="art-emb-warrior">
+        <div class="dash-head"><span class="dash-label" data-en="Emblems">徽章解锁</span><span class="pbar-text">0 / 4</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="towers.html#charms" class="dash-item" data-dash="art-chm-iron">
+        <div class="dash-head"><span class="dash-label" data-en="Charms">护符收集</span><span class="pbar-text">0 / 6</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="maps.html#biomes" class="dash-item" data-dash="env-act1">
+        <div class="dash-head"><span class="dash-label" data-en="Environments">环境探索</span><span class="pbar-text">0 / 3</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="bosses.html" class="dash-item" data-dash="boss-gilles">
+        <div class="dash-head"><span class="dash-label" data-en="Bosses">Boss 击败</span><span class="pbar-text">0 / 3</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="getting-started.html" class="dash-item" data-dash="campaign-1">
+        <div class="dash-head"><span class="dash-label" data-en="Campaign">战役进度</span><span class="pbar-text">0 / 6</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="economy.html#meta-tree" class="dash-item" data-dash="meta-stone-power">
+        <div class="dash-head"><span class="dash-label" data-en="Meta Upgrades">Meta 升级</span><span class="pbar-text">0 / 8</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+      <a href="codex.html#enemies" class="dash-item" data-dash="codex-enemy-grunt">
+        <div class="dash-head"><span class="dash-label" data-en="Enemy Codex">敌人图鉴</span><span class="pbar-text">0 / 5</span></div>
+        <div class="pbar"><div class="pbar-fill" style="width:0"></div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAMPAIGN PROGRESSION ===== -->
 <section class="bg-alt">
   <div class="wrap">
-    <span class="eyebrow" data-en="Wave Progression">波次推进</span>
-    <h2 class="title" data-en="Wave Difficulty Curve">波次难度曲线</h2>
-    <p class="subtitle" data-en="Each wave introduces new enemy types and tougher numbers. Plan your defense upgrades ahead — gold spent early on economy pays off in later waves."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>每一波引入新敌人类型和更多数量。提前规划防御升级——早期投资经济的金币在后期波次会有回报。</p>
+    <span class="eyebrow" data-en="Campaign Progression">战役推进</span>
+    <h2 class="title" data-en="Campaign Difficulty Curve">战役难度曲线</h2>
+    <p class="subtitle" data-en="Each campaign run introduces new environments, enemies, and artifacts. Plan your build and rally your forces — permanent upgrades carry over between runs."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>每次战役引入新环境、新敌人和新神器。规划构建、集结部队——永久升级在多次战役间继承。</p>
     <div class="wave-grid">
       <div class="wave-card">
-        <div class="wave-num" data-en="WAVE 1-3">第 1-3 波</div>
-        <h4 data-en="Early Waves">前期波次</h4>
-        <p class="wave-desc" data-en="Basic infantry enemies, low HP. Focus on economy — minimal defenses needed. Build gold-generating structures early.">基础步兵敌人，低血量。专注经济建设——只需最低限度防御。尽早建造产出金币的建筑。</p>
-        <span class="wave-power" data-en="Threat: Low">威胁：低</span>
+        <div class="wave-num" data-en="ACT 1">第一幕</div>
+        <h4 data-en="First Steps">初入战场</h4>
+        <p class="wave-desc" data-en="Learn core combat mechanics. March through varied biomes, fight unique enemies and elites, and face Gilles the Hog at the end of Act 1. Solo play recommended to learn at your own pace.">学习核心战斗机制。穿过多样化生物群系、对抗独特敌人和精英，在第一幕末尾迎战 Gilles the Hog。推荐单人游玩按自己节奏学习。</p>
+        <span class="wave-power" data-en="Threat: Low-Medium">威胁：低-中</span>
       </div>
       <div class="wave-card">
-        <div class="wave-num" data-en="WAVE 4-6">第 4-6 波</div>
-        <h4 data-en="Mid Waves">中期波次</h4>
-        <p class="wave-desc" data-en="Armored units and fast runners appear. Upgrade towers to tier 2. Position melee units at choke points to slow advances.">出现重甲单位和快速冲锋兵。防御塔升至2级。将近战单位放在隘口减缓推进。</p>
-        <span class="wave-power" data-en="Threat: Medium">威胁：中</span>
-      </div>
-      <div class="wave-card">
-        <div class="wave-num" data-en="WAVE 7-9">第 7-9 波</div>
-        <h4 data-en="Late Waves">后期波次</h4>
-        <p class="wave-desc" data-en="Ranged enemies and siege units join. Diversify tower types — magic towers for armor, cannon towers for groups. Prepare healing.">远程敌人和攻城单位加入。防御塔多样化——法塔破甲，炮塔清群。准备治疗手段。</p>
+        <div class="wave-num" data-en="ACT 2">第二幕</div>
+        <h4 data-en="Building Power">力量积累</h4>
+        <p class="wave-desc" data-en="Unlock more emblems (8 families, Tier 1-3) and charms (30+). Experiment with different artifact builds. Co-op becomes more valuable — team up for tougher environments and better rewards. Face Iseult the Banshee at the end.">解锁更多徽章（8 家族、Tier 1-3）和护符（30+）。尝试不同神器构建。联机更有价值——组队挑战更难环境获取更好奖励。第二幕末尾迎战 Iseult the Banshee。</p>
         <span class="wave-power" data-en="Threat: High">威胁：高</span>
       </div>
       <div class="wave-card">
-        <div class="wave-num" data-en="WAVE 10+">第 10+ 波</div>
-        <h4 data-en="Boss Waves">Boss 波次</h4>
-        <p class="wave-desc" data-en="Boss-class enemies with massive HP and special abilities. Full upgrade path needed. Concentrate fire and use unit abilities strategically.">Boss 级敌人，超高血量+特殊技能。需要完整升级路线。集中火力，战略性使用单位技能。</p>
+        <div class="wave-num" data-en="ACT 3">第三幕</div>
+        <h4 data-en="Final Push">最终推进</h4>
+        <p class="wave-desc" data-en="Tackle the toughest environments with optimized builds. Village upgrades from previous runs give you an edge. Face Harold, the final boss, at the end of Act 3. 4-player co-op recommended for the final stretch.">用优化构建挑战最难环境。前几幕的村庄升级给你优势。第三幕末尾迎战最终 Boss Harold。最后阶段推荐 4 人联机。</p>
         <span class="wave-power" data-en="Threat: Extreme">威胁：极高</span>
       </div>
+      <div class="wave-card">
+        <div class="wave-num" data-en="BETWEEN RUNS">局间</div>
+        <h4 data-en="Expand Your Settlement">扩建定居点</h4>
+        <p class="wave-desc" data-en="Between campaigns, expand your settlement to unlock new shops, buy permanent upgrades, and unlock difficult challenges for greater rewards. Complete special objectives to discover new artifacts, playable characters, cosmetics, upgrades and combos.">在战役之间扩建你的定居点，解锁新商店、购买永久升级、开启困难挑战获取更好奖励。完成特殊目标以发现新神器、可玩角色、外观、升级和组合。</p>
+        <span class="wave-power" data-en="Permanent Progress">永久进度</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAME OVERVIEW ===== -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow" data-en="Game Info">游戏信息</span>
+    <h2 class="title" data-en="About Tears of Metal">关于钢铁之泪</h2>
+    <p class="subtitle" data-en="An action roguelike by Paper Cult. Fight solo or up to 4-player co-op to reclaim your island alongside your Scottish battalion.">Paper Cult 开发的动作 Roguelike。独自或最多 4 人联机，与苏格兰营并肩夺回你的岛屿。</p>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Developer">开发商</h4><p data-en="Paper Cult">Paper Cult</p><ul><li data-en="Steam App ID: 1913120">Steam App ID: 1913120</li><li data-en="Early Access: July 22, 2026 · Price: US$24.99">抢先体验：2026年7月22日 · 价格：US$24.99</li><li><a href="https://store.steampowered.com/app/1913120/Tears_of_Metal/" target="_blank" rel="noopener" data-en="Steam Store Page">Steam 商店页</a></li><li><a href="https://papercultgames.com/" target="_blank" rel="noopener" data-en="Official Website">官方网站</a></li></ul></div>
+      <div class="fcard"><h4 data-en="Genre Tags">类型标签</h4><p data-en="Action Roguelike · Hack and Slash · Musou · Beat 'em up">动作 Roguelike · 砍杀 · 无双 · 清版</p><ul><li data-en="Genre: Action, Indie, Early Access (Steam)">Steam 类型：动作、独立、抢先体验</li><li data-en="Medieval · Dark Fantasy · War · Stylized">中世纪 · 暗黑奇幻 · 战争 · 风格化</li><li data-en="Co-op · Third Person · Difficult · Replay Value">合作 · 第三人称 · 高难度 · 高重复游玩价值</li></ul></div>
+      <div class="fcard"><h4 data-en="Core Systems">核心系统</h4><p data-en="100+ artifacts, 8 Emblem families, 30+ Charms, 3 Acts, 3 Heroes, 89 Achievements">100+ 神器、8 徽章家族、30+ 护符、3 幕、3 英雄、89 成就</p><ul><li data-en="Artifacts, Emblems, Charms, Equipment, Companions">神器、徽章、护符、装备、同伴</li><li data-en="Village upgrades, settlement expansion">村庄升级、定居点扩建</li><li data-en="Full controller support, Crossplay (confirmed; specific platforms TBD)">完整手柄支持、跨平台联机（已确认；具体平台待确认）</li></ul></div>
+      <div class="fcard"><h4 data-en="System Requirements">配置要求</h4><p data-en="Windows 10 64-bit, DirectX 11 ✓ Verified from Steam">Windows 10 64-bit, DirectX 11 ✓ 已从 Steam 核实</p><ul><li data-en="Min: Dual Core 2.4 GHz, 8 GB RAM, GTX 1070, 10 GB">最低：双核 2.4 GHz，8 GB 内存，GTX 1070，10 GB</li><li data-en="Rec: Quad Core 3 GHz, 16 GB RAM, RTX 20 Series">推荐：四核 3 GHz，16 GB 内存，RTX 20 系列</li><li data-en="Source: Steam Store (verified July 2026)">来源：Steam 商店页（2026年7月核实）</li></ul></div>
+      <div class="fcard"><h4 data-en="Language Support">语言支持</h4><p data-en="10 languages including 简体中文 ✓ Verified from Steam">含简体中文共 10 种语言 ✓ 已从 Steam 核实</p><ul><li data-en="English, French, German, Japanese">英语、法语、德语、日语</li><li data-en="Korean, Russian, 简体中文">韩语、俄语、简体中文</li><li data-en="Latin American Spanish, Spanish - Spain, Brazilian Portuguese">拉美西语、西班牙语、巴西葡语</li></ul></div>
+      <div class="fcard"><h4 data-en="Story Premise">故事背景</h4><p data-en="The Dragon Stone Meteor brought swarms of invaders to your island. Fight alongside your Scottish battalion to reclaim your home, and stop the invaders as they carve into the Mother Dragon Stone to harvest its power.">龙陨石事件带来了大批入侵者。与苏格兰营并肩夺回你的岛屿，阻止入侵者挖掘母龙石汲取力量。</p><ul><li data-en="Each campaign: gain new powerful upgrades, combine 100+ artifacts">每次战役获得新的强力升级、组合 100+ 神器</li><li data-en="Rally your forces, expand your settlement, push back the invaders">集结部队、扩建定居点、反击入侵</li></ul></div>
     </div>
   </div>
 </section>
@@ -119,14 +194,15 @@
   <div class="wrap">
     <span class="eyebrow" data-en="Guide Navigation">攻略导航</span>
     <h2 class="title" data-en="Site Guide Overview">全站攻略总览</h2>
-    <p class="subtitle" data-en="Six sections covering all core Tears of Metal gameplay. Click a card to jump to the guide.">六大板块覆盖钢铁之泪全部核心玩法，点击卡片直达对应攻略。</p>
+    <p class="subtitle" data-en="Seven sections covering all core Tears of Metal gameplay. Click a card to jump to the guide.">七大板块覆盖钢铁之泪全部核心玩法，点击卡片直达对应攻略。</p>
     <div class="feature-grid">
-      <a href="getting-started.html" class="fcard"><h4 data-en="Beginner Guide">新手入门</h4><p data-en="From first wave to first clear — a step-by-step walkthrough.">从第一波到首次通关，逐步教学。</p><ul><li data-en="First-run strategy">首战策略</li><li data-en="Core mechanics explained">核心机制讲解</li><li data-en="Common mistakes to avoid">新手常见错误</li></ul></a>
-      <a href="combat.html" class="fcard"><h4 data-en="Combat System">战斗系统</h4><p data-en="Unit types, roles, formations, and tactical tips.">单位类型、角色定位、阵型与战术。</p><ul><li data-en="Melee / Ranged / Support / Siege">近战/远程/支援/攻城</li><li data-en="Formation strategies">阵型策略</li><li data-en="Counter relationships">克制关系</li></ul></a>
-      <a href="towers.html" class="fcard"><h4 data-en="Towers">防御塔</h4><p data-en="Tower types, upgrade paths, and placement strategy.">防御塔类型、升级路线与放塔策略。</p><ul><li data-en="Arrow / Cannon / Magic towers">箭塔/炮塔/法塔</li><li data-en="Tier upgrade paths">等级升级路线</li><li data-en="Placement principles">放塔原则</li></ul></a>
-      <a href="economy.html" class="fcard"><h4 data-en="Economy">经济养成</h4><p data-en="Gold management and meta-progression upgrade tree.">金币管理与 Meta 养成升级树。</p><ul><li data-en="Gold income & spending">金币收支</li><li data-en="Permanent upgrade priorities">永久升级优先级</li><li data-en="Meta progression tree">Meta 养成树</li></ul></a>
-      <a href="maps.html" class="fcard"><h4 data-en="Maps">关卡攻略</h4><p data-en="Full level guide with terrain analysis and wave breakdowns.">全关卡地图与地形分析、波次拆解。</p><ul><li data-en="Grassland / Forest / Mountain">草地/森林/山地</li><li data-en="Coast / Village levels">海岸/村庄关卡</li><li data-en="Choke points & terrain">隘口与地形利用</li></ul></a>
-      <a href="codex.html" class="fcard"><h4 data-en="Codex">图鉴速查</h4><p data-en="Full searchable codex of units, enemies, and towers.">可搜索的全单位、敌人、防御塔图鉴。</p><ul><li data-en="Unit stats & abilities">单位属性与技能</li><li data-en="Enemy stats & weaknesses">敌人属性与弱点</li><li data-en="Tower stats & upgrades">防御塔属性与升级</li></ul></a>
+      <a href="getting-started.html" class="fcard"><h4 data-en="Beginner Guide">新手入门</h4><p data-en="Campaign flow, core mechanics, co-op basics.">战役流程、核心机制、合作基础。</p><ul><li data-en="Campaign walkthrough">战役流程教学</li><li data-en="Core mechanics explained">核心机制讲解</li><li data-en="Co-op & controller setup">联机与手柄设置</li></ul></a>
+      <a href="combat.html" class="fcard"><h4 data-en="Combat System">战斗系统</h4><p data-en="Hack and slash mechanics, combos, and co-op tactics.">动作战斗机制、连招与合作战术。</p><ul><li data-en="Light / heavy / special attacks">轻击/重击/特殊攻击</li><li data-en="Combo chains & abilities">连招链与技能</li><li data-en="Co-op combat tactics">合作战斗战术</li></ul></a>
+      <a href="towers.html" class="fcard"><h4 data-en="Artifacts & Builds">神器构建</h4><p data-en="100+ artifacts, emblems, charms, and build synergies.">100+ 神器、徽章、护符与构建协同。</p><ul><li data-en="Artifact categories & effects">神器分类与效果</li><li data-en="Emblems & charms system">徽章与护符系统</li><li data-en="Build calculator">构建计算器</li></ul></a>
+      <a href="economy.html" class="fcard"><h4 data-en="Progression">养成进度</h4><p data-en="Roguelite meta-progression and upgrade tree.">Roguelite Meta 养成与升级树。</p><ul><li data-en="Between-run upgrades">局间永久升级</li><li data-en="Meta upgrade priorities">Meta 升级优先级</li><li data-en="Recommended build order">推荐养成路线</li></ul></a>
+      <a href="maps.html" class="fcard"><h4 data-en="Environments">环境探索</h4><p data-en="45+ environments with unique terrain and features.">45+ 环境与独特地形特性。</p><ul><li data-en="Biome types & terrain">生物群系与地形</li><li data-en="Environmental features">环境特性机制</li><li data-en="Exploration tips">探索技巧</li></ul></a>
+      <a href="bosses.html" class="fcard"><h4 data-en="Bosses">Boss 专题</h4><p data-en="Boss encounter mechanics and counter strategies.">Boss 遭遇战机制与应对策略。</p><ul><li data-en="Boss phase breakdowns">Boss 阶段拆解</li><li data-en="Counter strategies & builds">克制策略与推荐构建</li><li data-en="General boss tips">通用 Boss 技巧</li></ul></a>
+      <a href="codex.html" class="fcard"><h4 data-en="Codex">图鉴速查</h4><p data-en="Full searchable codex of artifacts, emblems, charms, and enemies.">可搜索的全神器、徽章、护符、敌人图鉴。</p><ul><li data-en="Artifact stats & effects">神器属性与效果</li><li data-en="Enemy stats & weaknesses">敌人属性与弱点</li><li data-en="Filterable reference">可筛选速查</li></ul></a>
     </div>
   </div>
 </section>
@@ -136,7 +212,7 @@
   <div class="wrap">
     <div class="cta-strip">
       <h3 data-en="Guides Continuously Updated">攻略持续更新中</h3>
-      <p data-en="Content curated by the player community, guiding you from wave 1 to the final boss. Feedback welcome!">本站内容由玩家社区整理，陪你从第一波打到最终 Boss。有问题欢迎反馈！</p>
+      <p data-en="Based on Early Access data (July 2026). Content curated by the player community as we explore the game together. Feedback welcome!">基于抢先体验数据（2026年7月）。内容由玩家社区在共同探索中整理。有问题欢迎反馈！</p>
       <a href="getting-started.html" class="btn btn-primary" data-en="Start with Beginner Guide">从新手攻略开始</a>
     </div>
   </div>
@@ -148,12 +224,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -164,7 +240,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>

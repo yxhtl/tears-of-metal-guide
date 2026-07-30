@@ -1,0 +1,318 @@
+﻿﻿﻿﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boss 遭遇战 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal Boss 遭遇战攻略：Gilles the Hog、Iseult the Banshee、Harold 的机制与应对策略。每幕一个 Boss，三幕共三大遭遇战。">
+<meta name="keywords" content="Tears of Metal Boss,钢铁之泪遭遇战,Gilles the Hog,Iseult the Banshee,Harold,Act 1,Act 2,Act 3,Boss攻略">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a3a4a">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal Boss 遭遇战攻略","inLanguage":"zh-CN","about":"Tears of Metal Boss 遭遇战机制与应对策略","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+</script>
+
+    <meta property="og:title" content="Boss 遭遇战 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="Tears of Metal Boss 遭遇战攻略：Gilles the Hog、Iseult the Banshee、Harold 的机制与应对策略。每幕一个 Boss，三幕共三大遭遇战。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><span class="logo">TM</span><span data-i18n="brand">钢铁之泪攻略站</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
+      <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" class="active" data-i18n="nav.bosses">Boss 专题</a>
+      <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
+    </nav>
+    <div class="nav-utils">
+      <button class="nav-btn search-btn" aria-label="搜索"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-btn dark-btn" aria-label="暗色模式"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="nav-btn lang-btn" aria-label="语言">English</button>
+      <a href="index.html" class="nav-cta" data-i18n="nav.cta.home">返回首页</a>
+    </div>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section id="top" class="section-anchor" style="padding-top:54px">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Bosses">Boss 专题</span></div>
+    <span class="eyebrow" data-en="Boss Encounters">Boss 遭遇战</span>
+    <h2 class="title" data-en="Boss Encounter Mechanics &amp; Strategies">Boss 遭遇战机制与应对策略</h2>
+    <p class="subtitle" data-en="Every boss encounter has distinct phases and mechanics. Learn the patterns, optimize your build, and rally your battalion to push back the invader."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>每场 Boss 遭遇战都有独特的阶段和机制。掌握规律、优化构建、集结营队，击退入侵者。</p>
+
+    <div class="toc-box">
+      <h4 data-en="Contents">目录</h4>
+      <ol>
+        <li><a href="#gilles" data-en="Gilles the Hog (Act 1)">Gilles the Hog（第一幕）</a></li>
+        <li><a href="#banshee" data-en="Iseult the Banshee (Act 2)">Iseult the Banshee（第二幕）</a></li>
+        <li><a href="#harold" data-en="Harold (Act 3)">Harold（第三幕）</a></li>
+        <li><a href="#general" data-en="General Boss Tips">通用 Boss 技巧</a></li>
+        <li><a href="#co-op" data-en="Co-op Boss Tactics">合作 Boss 战术</a></li>
+        <li><a href="#builds" data-en="Build Recommendations">构建推荐</a></li>
+      </ol>
+    </div>
+
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="bosses">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+      <div class="progress-actions">
+        <button data-action="export-progress" data-i18n="progress.export">导出进度</button>
+        <button data-action="import-progress" data-i18n="progress.import">导入进度</button>
+        <button data-action="reset-progress" data-i18n="progress.reset">重置全部进度</button>
+      </div>
+    </div>
+
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Three major boss encounters stand between you and the end of your campaign — one at the end of each Act. Below are pattern breakdowns based on Early Access playtesting and developer patch notes.">三大 Boss 遭遇战横亘在战役终点前——每幕末尾各一场。以下为基于抢先体验实测和开发者补丁说明的规律拆解。</p>
+    <div class="fcard" style="margin-bottom:20px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ The game launched in Early Access on July 22, 2026. Detailed boss mechanics (exact HP thresholds, phase triggers, attack patterns) are still being compiled by the community. The information below is based on developer patch notes and player reports. Specific numbers will be updated as data becomes available.">⚠ 游戏于 2026 年 7 月 22 日上线抢先体验，Boss 详细机制（精确血量阈值、阶段触发、攻击模式）仍在社区整理中。以下信息基于开发者补丁说明和玩家反馈，具体数值将随数据完善而更新。</p>
+    </div>
+
+    <!-- Boss 1: Gilles the Hog (Act 1) -->
+    <h3 id="gilles" class="section-anchor" style="font-size:22px;color:var(--ink);margin:30px 0 16px" data-en="Gilles the Hog (Act 1)">Gilles the Hog（第一幕 Boss）</h3>
+    <div class="boss-card" data-track="boss-gilles" data-track-type="boss" data-track-group="bosses" style="margin-bottom:20px">
+      <div class="boss-head">
+        <div class="boss-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/></svg></div>
+        <div>
+          <h4 data-en="Gilles the Hog">Gilles the Hog</h4>
+          <p style="font-size:13px;color:var(--ink-soft)" data-en="Act 1 Boss · End of Act 1">第一幕 Boss · 第一幕末尾</p>
+        </div>
+      </div>
+      <div class="boss-body">
+        <div class="boss-stats">
+          <span data-en="Role: Aggressive melee bruiser">定位：猛攻型近战</span>
+          <span data-en="Threat: High HP, heavy hits">威胁：高血量、重击</span>
+          <span data-en="Weakness: Punishable during recovery">弱点：恢复期可被反击</span>
+          <span data-en="Difficulty: ★★☆">难度：★★☆</span>
+        </div>
+        <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Gilles the Hog is the first major boss, encountered at the end of Act 1. In early beta testing, he was notoriously difficult due to a last-minute threat-scaling system that made him a bullet sponge. Developers have since reworked his behavior to be more engaging and up-close, with less running in circles and more real clashes. Patch v0.8 fixed an issue where Gilles would ignore players who had been attacking him for an extended period.">Gilles the Hog 是第一个主要 Boss，出现于第一幕末尾。在早期 Beta 测试中，因临时加入的威胁度系统使他成为血牛，非常难打。开发者随后重做了他的行为模式，使其更具近身交互感，减少了绕圈跑动，增加了真正的交锋。补丁 v0.8 修复了 Gilles 在被玩家长时间攻击后仍然无视玩家的问题。</p>
+        <div class="feature-grid">
+          <div class="fcard"><h4 data-en="Key Mechanics">关键机制</h4><ul>
+            <li data-en="<b>Threat-based scaling</b> — difficulty increases with the threat bar; manage it carefully"><b>威胁度缩放</b>——难度随威胁条上升，需谨慎管理</li>
+            <li data-en="<b>Heavy melee swings</b> — telegraphed but high damage; dodge-roll through them"><b>重型近战挥击</b>——前摇明显但伤害高，翻滚穿过</li>
+            <li data-en="<b>Burst windows</b> — after big attacks, Gilles has recovery frames ripe for punishment"><b>爆发窗口</b>——大攻击后 Gilles 有恢复硬直，适合反击</li>
+          </ul></div>
+          <div class="fcard"><h4 data-en="Counter Strategy">应对策略</h4><ul>
+            <li data-en="<b>Stay close</b> — the reworked fight rewards up-close clashes over kiting"><b>保持近身</b>——重做后的战斗鼓励近身交锋而非拉扯</li>
+            <li data-en="Manage the threat bar — don't let it max out before you're ready">控制威胁条——别在准备就绪前让它叠满</li>
+            <li data-en="Use battalion forces to distract adds and maintain pressure">用营队兵力牵制小怪并保持压力</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boss 2: Iseult the Banshee (Act 2) -->
+    <h3 id="banshee" class="section-anchor" style="font-size:22px;color:var(--ink);margin:30px 0 16px" data-en="Iseult the Banshee (Act 2)">Iseult the Banshee（第二幕 Boss）</h3>
+    <div class="boss-card" data-track="boss-banshee" data-track-type="boss" data-track-group="bosses" style="margin-bottom:20px">
+      <div class="boss-head">
+        <div class="boss-icon" style="background:var(--steel)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 12h5a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h5"/><path d="M12 12V4"/></svg></div>
+        <div>
+          <h4 data-en="Iseult the Banshee">Iseult the Banshee</h4>
+          <p style="font-size:13px;color:var(--ink-soft)" data-en="Act 2 Boss · End of Act 2">第二幕 Boss · 第二幕末尾</p>
+        </div>
+      </div>
+      <div class="boss-body">
+        <div class="boss-stats">
+          <span data-en="Role: Evasive ranged caster">定位：闪避型远程法师</span>
+          <span data-en="Threat: Mobility, area denial">威胁：高机动、区域封锁</span>
+          <span data-en="Weakness: Vulnerable when grounded">弱点：落地时脆弱</span>
+          <span data-en="Difficulty: ★★★">难度：★★★</span>
+        </div>
+        <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Iseult the Banshee is the Act 2 boss. Based on patch notes, her fight involves mechanics around hiding, jumping away, and floating — she can be elusive. Developers have fixed bugs where she would 'hide forever', 'jump away and never return', or get 'stuck floating'. This suggests a highly mobile boss that requires constant repositioning.">Iseult the Banshee 是第二幕 Boss。根据补丁说明，她的战斗机制涉及隐匿、跳跃远离和浮空——她非常难以捉摸。开发者已修复她会"永久隐藏"、"跳走不回来"和"卡在浮空状态"的 Bug。这表明她是一个高机动性 Boss，需要玩家不断重新定位。</p>
+        <div class="feature-grid">
+          <div class="fcard"><h4 data-en="Key Mechanics (Inferred)">关键机制（推断）</h4><ul>
+            <li data-en="<b>Hiding / Stealth</b> — can disappear from view; watch for visual cues"><b>隐匿/潜行</b>——可从视野中消失；注意视觉提示</li>
+            <li data-en="<b>Jumping away</b> — repositions when approached; use mobility to chase"><b>跳跃远离</b>——被近身时位移；用机动技能追击</li>
+            <li data-en="<b>Floating</b> — enters a floating state; likely has a grounded recovery window"><b>浮空</b>——进入浮空状态；落地后有恢复窗口</li>
+          </ul></div>
+          <div class="fcard"><h4 data-en="Counter Strategy">应对策略</h4><ul>
+            <li data-en="<b>Build mobility</b> — movement speed and dodge are essential to chase her">需要<b>机动构建</b>——移速和闪避是追击她的关键</li>
+            <li data-en="Save burst damage for grounded windows — don't waste cooldowns while she's floating">爆发伤害留到落地窗口——浮空时别浪费技能</li>
+            <li data-en="Coordinate with co-op partners to cover multiple escape routes">与联机队友协调覆盖多个逃跑路线</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Boss 3: Harold (Act 3) -->
+    <h3 id="harold" class="section-anchor" style="font-size:22px;color:var(--ink);margin:30px 0 16px" data-en="Harold (Act 3)">Harold（第三幕 Boss）</h3>
+    <div class="boss-card" data-track="boss-harold" data-track-type="boss" data-track-group="bosses" style="margin-bottom:20px">
+      <div class="boss-head">
+        <div class="boss-icon" style="background:var(--heather)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div>
+          <h4 data-en="Harold">Harold</h4>
+          <p style="font-size:13px;color:var(--ink-soft)" data-en="Act 3 Boss · End of Act 3">第三幕 Boss · 第三幕末尾</p>
+        </div>
+      </div>
+      <div class="boss-body">
+        <div class="boss-stats">
+          <span data-en="Role: Final challenge">定位：终极挑战</span>
+          <span data-en="Threat: Invulnerability mechanics">威胁：无敌机制</span>
+          <span data-en="Weakness: Vulnerability windows after invuln">弱点：无敌结束后的破绽</span>
+          <span data-en="Difficulty: ★★★★">难度：★★★★</span>
+        </div>
+        <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Harold is the Act 3 boss (referred to as 'Act 3 Giant' in patch notes), the final challenge before the campaign's conclusion. Patch notes mention a bug fix for 'Harold Boss something being invincible', suggesting he has an invulnerability mechanic that players must work around. A further fix in v0.9 addressed him being invincible. Expect the most complex encounter in the game.">Harold 是第三幕 Boss（补丁说明中称为“Act 3 Giant”），也是战役结论前的最终挑战。补丁说明中提到修复了“Harold Boss 某种无敌状态”的 Bug，暗示他拥有无敌机制，玩家需要想办法应对。v0.9 补丁进一步修复了他的无敌问题。预计这是游戏中最复杂的 Boss 遭遇战。</p>
+        <div class="feature-grid">
+          <div class="fcard"><h4 data-en="Key Mechanics (Inferred)">关键机制（推断）</h4><ul>
+            <li data-en="<b>Invulnerability phases</b> — enters a state where he cannot be damaged; find the trigger to break it"><b>无敌阶段</b>——进入无法造成伤害的状态；找到触发条件打破无敌</li>
+            <li data-en="<b>Combined mechanics</b> — as the final boss, likely incorporates elements from prior encounters"><b>综合机制</b>——作为最终 Boss，可能融合之前遭遇战的元素</li>
+            <li data-en="<b>High damage output</b> — expect punishing attacks that require precise dodging"><b>高伤害输出</b>——预计有需要精确闪避的高伤害攻击</li>
+          </ul></div>
+          <div class="fcard"><h4 data-en="Counter Strategy">应对策略</h4><ul>
+            <li data-en="<b>Observe invuln triggers</b> — learn what causes and breaks his invincibility"><b>观察无敌触发</b>——学习什么导致和打破他的无敌</li>
+            <li data-en="Bring a balanced build — you'll need offense, defense, and mobility">带均衡构建——需要攻击、防御和机动</li>
+            <li data-en="In co-op, coordinate to manage adds and maximize damage during vulnerability windows">联机时协调管理小怪并在破绽窗口最大化伤害</li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- General Boss Tips -->
+    <h3 id="general" class="section-anchor" style="font-size:22px;color:var(--ink);margin:30px 0 16px" data-en="General Boss Tips">通用 Boss 技巧</h3>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Before the Encounter">遭遇战前</h4><ul>
+        <li data-en="Optimize your <a class='xref' href='towers.html#calc'>build</a> for the boss — different bosses need different stats">根据 Boss 优化<a class='xref' href='towers.html#calc'>构建</a>——不同 Boss 需要不同属性</li>
+        <li data-en="Clear surrounding trash mobs first — don't fight a boss with adds around">先清周围杂兵——别带小怪打 Boss</li>
+        <li data-en="Check your <a class='xref' href='economy.html#meta-tree'>meta upgrades</a> — rally size and revive cost matter">检查<a class='xref' href='economy.html#meta-tree'>Meta 升级</a>——集结规模和复活成本很关键</li>
+        <li data-en="Save your ultimate — it charges during trash clears, don't waste it before the boss">留好大招——清杂兵时充能，别在 Boss 前浪费</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="During the Fight">战斗中</h4><ul>
+        <li data-en="Watch <b>phase transitions</b> — mechanics change, adapt your approach immediately">关注<b>阶段转换</b>——机制变化，立即调整策略</li>
+        <li data-en="Dodge-roll is your best friend — time it against telegraphed attacks for invulnerability frames">翻滚是你最好的朋友——对准前摇攻击翻滚获得无敌帧</li>
+        <li data-en="Use <b>battalion forces</b> to distract adds — frees you to focus the boss">用<b>营队兵力</b>牵制小怪——让你专注于 Boss</li>
+        <li data-en="Don't greed for damage — respect the boss patterns, punish only during recovery windows">别贪刀——尊重 Boss 规律，只在恢复窗口反击</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="After the Kill">击杀后</h4><ul>
+        <li data-en="Boss encounters drop <b>bonus meta points</b> — see <a class='xref' href='economy.html#farming'>farming guide</a>">Boss 掉落<b>额外 Meta 点数</b>——见<a class='xref' href='economy.html#farming'>刷取攻略</a></li>
+        <li data-en="Heal and regroup before pushing deeper — don't limp into the next environment wounded">继续深入前治疗整备——别带着伤进入下一个环境</li>
+        <li data-en="Check for <a class='xref' href='maps.html#features'>artifact caches</a> nearby — bosses often guard loot">检查附近的<a class='xref' href='maps.html#features'>神器藏匿点</a>——Boss 常守护战利品</li>
+      </ul></div>
+    </div>
+
+    <!-- Co-op Boss Tactics -->
+    <h3 id="co-op" class="section-anchor" style="font-size:22px;color:var(--ink);margin:30px 0 16px" data-en="Co-op Boss Tactics">合作 Boss 战术</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Boss encounters scale with player count. Co-op opens up tactical options impossible solo — but coordination is essential.">Boss 遭遇战随玩家数缩放。联机开启了单人无法实现的战术——但协调至关重要。</p>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Role Split">角色分工</h4><ul>
+        <li data-en="<b>Tank</b> draws aggro, eats heavy slams, keeps the boss facing one direction"><b>坦克</b>吸引仇恨，吃重击，让 Boss 面朝固定方向</li>
+        <li data-en="<b>DPS</b> punishes from behind during recovery windows — maximize damage uptime"><b>输出</b>在恢复窗口从背后反击——最大化伤害时间</li>
+        <li data-en="<b>Support</b> manages adds, calls out phase transitions, uses AoE abilities on minions"><b>辅助</b>管理小怪，报告阶段转换，对小怪放范围技能</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Revive Protocol">复活协议</h4><ul>
+        <li data-en="Downed teammates can be revived — but the reviver is vulnerable">倒地队友可复活——但复活者处于脆弱状态</li>
+        <li data-en="Tank should hold aggro during revives — don't let the boss interrupt">复活时坦克应拉住仇恨——别让 Boss 打断</li>
+        <li data-en="<a class='xref' href='economy.html#meta-tree'>Meta upgrade</a> reduces revive cost and speed — prioritize it">减少复活成本和时间的<a class='xref' href='economy.html#meta-tree'>Meta 升级</a>——优先点出</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Ultimate Rotation">大招轮换</h4><ul>
+        <li data-en="Stagger ultimates — don't pop all at once unless it's a Phase 4 burn">错开大招——除非阶段 4 全力爆发，否则别同时放</li>
+        <li data-en="Call out your ultimate timing — "I'm ulting Phase 3" lets teammates position for follow-up">报告大招时机——"我阶段 3 放大"让队友跟进修位</li>
+        <li data-en="Save one ultimate for emergency revive protection">留一个大招保护紧急复活</li>
+      </ul></div>
+    </div>
+
+    <!-- Build Recommendations by Boss -->
+    <h3 id="builds" class="section-anchor" style="font-size:22px;color:var(--ink);margin:30px 0 16px" data-en="Build Recommendations by Boss">各 Boss 构建推荐</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Quick reference for optimal build priorities per boss. Use the <a class='xref' href='towers.html#calc'>Build Calculator</a> to verify your stats.">每个 Boss 的最优构建优先级速查。使用<a class='xref' href='towers.html#calc'>构建计算器</a>验证你的属性。</p>
+    <table class="counter-table">
+      <thead>
+        <tr>
+          <th data-en="Boss">Boss</th>
+          <th data-en="Act">所属幕</th>
+          <th data-en="Key Mechanic">核心机制</th>
+          <th data-en="Key Strategy">核心策略</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ct-enemy"><svg viewBox="0 0 24 24"><use href="#i-sword"/></svg> Gilles the Hog</span></td>
+          <td data-en="Act 1">第一幕</td>
+          <td data-en="Threat scaling, heavy melee">威胁度缩放、重近战</td>
+          <td data-en="Stay close, manage threat bar, punish recovery">保持近身、控制威胁条、反击恢复硬直</td>
+        </tr>
+        <tr>
+          <td><span class="ct-enemy"><svg viewBox="0 0 24 24"><use href="#i-bolt"/></svg> Iseult the Banshee</span></td>
+          <td data-en="Act 2">第二幕</td>
+          <td data-en="Hiding, jumping, floating">隐匿、跳跃、浮空</td>
+          <td data-en="Build mobility, chase repositions, burst grounded windows">堆机动、追击位移、落地窗口爆发</td>
+        </tr>
+        <tr>
+          <td><span class="ct-enemy"><svg viewBox="0 0 24 24"><use href="#i-crown"/></svg> Harold</span></td>
+          <td data-en="Act 3">第三幕</td>
+          <td data-en="Invulnerability phases">无敌阶段</td>
+          <td data-en="Learn invuln triggers, balanced build, maximize vulnerability windows">学会无敌触发、均衡构建、最大化破绽窗口</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="fcard" style="margin-top:16px;background:var(--parchment);border-color:var(--copper)">
+      <h4 style="color:var(--copper)" data-en="Build Synergy Notes">构建协同说明</h4>
+      <ul>
+        <li data-en="No single build solves all bosses — each Act's boss tests different skills.">没有单一构建能通杀所有 Boss——每幕 Boss 考验不同能力。</li>
+        <li data-en="Use the <a href='towers.html#calc'>Build Calculator</a> to test different artifact + emblem + charm combinations.">使用<a href='towers.html#calc'>构建计算器</a>测试不同神器+徽章+护符组合。</li>
+        <li data-en="Meta upgrades from <a class='xref' href='economy.html#meta-tree'>prior runs</a> give permanent stat boosts — they make every boss easier.">来自<a class='xref' href='economy.html#meta-tree'>之前战役</a>的 Meta 升级提供永久属性加成——让每场 Boss 更轻松。</li>
+        <li data-en="In co-op, coordinate builds — a balanced team comp covers all bases better than 4 DPS.">联机时协调构建——均衡阵容比 4 个输出更全面。</li>
+        <li data-en="Detailed boss phase data (HP thresholds, exact patterns) will be updated as the community compiles it.">Boss 详细阶段数据（血量阈值、精确模式）将随社区整理而更新。</li>
+      </ul>
+    </div>
+
+    <!-- 交叉引用 -->
+    <div class="cross-links">
+      <h4 data-en="Related Guides">相关攻略</h4>
+      <div class="cl-list">
+        <a href="combat.html" data-en="Combat">战斗系统</a>
+        <a href="towers.html" data-en="Artifacts">神器构建</a>
+        <a href="economy.html" data-en="Progression">养成进度</a>
+        <a href="maps.html" data-en="Environments">环境探索</a>
+      </div>
+    </div>
+
+    <!-- 上下篇导航 -->
+    <div class="page-nav">
+      <a href="maps.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Environments">环境探索</div></a>
+      <a href="codex.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Codex">图鉴速查</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
+      </div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
+    </div>
+    <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="返回顶部" data-en="Top">顶部</button>
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-panel">
+    <div class="search-input-wrap">
+      <span class="s-ico"></span>
+      <input type="text" placeholder="搜索攻略、神器、环境…">
+      <button class="search-close" aria-label="关闭">×</button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
+<script src="js/common.js"></script>
+</body>
+</html>

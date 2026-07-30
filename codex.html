@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全图鉴速查表 | Tears of Metal 钢铁之泪攻略</title>
-<meta name="description" content="Tears of Metal 全图鉴速查表：单位、敌人、防御塔的属性数据一览，支持按类型筛选。">
-<meta name="keywords" content="Tears of Metal图鉴,钢铁之泪数据,单位属性,敌人属性,防御塔属性,速查表">
+<title>全图鉴速查 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal 全图鉴速查：神器、徽章、护符、敌人属性一览，支持按类型筛选。">
+<meta name="keywords" content="Tears of Metal图鉴,钢铁之泪数据,神器属性,徽章,护符,敌人,速查表">
 <link rel="stylesheet" href="css/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2a3a4a">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 全图鉴速查表","inLanguage":"zh-CN","about":"Tears of Metal 单位、敌人、防御塔属性图鉴","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 全图鉴速查","inLanguage":"zh-CN","about":"Tears of Metal 神器、徽章、护符、敌人属性图鉴","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
 </script>
-</head>
+
+    <meta property="og:title" content="全图鉴速查 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="Tears of Metal 全图鉴速查：神器、徽章、护符、敌人属性一览，支持按类型筛选。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <header class="nav">
@@ -21,9 +28,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" class="active" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -39,64 +47,211 @@
 <section id="top" class="section-anchor" style="padding-top:54px">
   <div class="wrap">
     <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Codex">图鉴速查</span></div>
-    <span class="eyebrow" data-en="Codex">图鉴速查</span>
+    <span class="eyebrow" data-en="Full Reference">全图鉴速查</span>
     <h2 class="title" data-en="Full Codex Quick Reference">全图鉴速查表</h2>
-    <p class="subtitle" data-en="All units, enemies, and towers in one searchable reference. Filter by type to find what you need fast."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>所有单位、敌人、防御塔一站式速查。按类型筛选快速定位。</p>
+    <p class="subtitle" data-en="All artifacts, emblems, charms, and enemy types in one searchable reference. Filter by category to find what you need fast."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>所有神器、徽章、护符、敌人类型一站式速查。按类型筛选快速定位。</p>
 
-    <!-- Units Codex -->
-    <h3 id="units" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Unit Codex">单位图鉴</h3>
-    <div class="chips" data-chip-group="unit-type" data-chip-target="#unit-gallery">
-      <span class="chip-label" data-en="Role">角色</span>
+    <div class="fcard" style="margin-bottom:20px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ The game launched in Early Access on July 22, 2026. The items listed below are representative examples of each category type, NOT confirmed game items. The developer confirmed 100+ artifacts, 8 Emblem families (Tier 1-3), and 30+ Charms, but specific names and stats are being compiled by the community. Enemy names are representative. Data will be updated as Early Access playthroughs are documented.">⚠ 游戏于 2026 年 7 月 22 日上线抢先体验。以下列出的物品是各类别的代表性示例，并非已确认的游戏内物品。开发者已确认 100+ 神器、8 个徽章家族（Tier 1-3）和 30+ 种护符，但具体名称和数值正在由社区整理。敌人为代表性命名。数据将随抢先体验游玩记录而更新。</p>
+    </div>
+
+    <div class="toc-box">
+      <h4 data-en="Contents">目录</h4>
+      <ol>
+        <li><a href="#artifacts" data-en="Artifact Codex">神器图鉴</a></li>
+        <li><a href="#emblems" data-en="Emblem Codex">徽章图鉴</a></li>
+        <li><a href="#charms" data-en="Charm Codex">护符图鉴</a></li>
+        <li><a href="#enemies" data-en="Enemy Codex">敌人图鉴</a></li>
+        <li><a href="#reference" data-en="Quick Reference">快速参考</a></li>
+      </ol>
+    </div>
+
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="overall">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+      <div class="progress-actions">
+        <button data-action="export-progress" data-i18n="progress.export">导出进度</button>
+        <button data-action="import-progress" data-i18n="progress.import">导入进度</button>
+        <button data-action="reset-progress" data-i18n="progress.reset">重置全部进度</button>
+      </div>
+    </div>
+
+    <!-- Artifact Codex -->
+    <h3 id="artifacts" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Artifact Codex">神器图鉴</h3>
+    <div class="chips" data-chip-group="artifact-type" data-chip-target="#artifact-gallery">
+      <span class="chip-label" data-en="Category">类型</span>
       <button class="chip active" data-chip="all" data-en="All">全部</button>
-      <button class="chip" data-chip="melee" data-en="Melee">近战</button>
-      <button class="chip" data-chip="ranged" data-en="Ranged">远程</button>
-      <button class="chip" data-chip="support" data-en="Support">支援</button>
-      <button class="chip" data-chip="siege" data-en="Siege">攻城</button>
+      <button class="chip" data-chip="offense" data-en="Offense">攻击型</button>
+      <button class="chip" data-chip="defense" data-en="Defense">防御型</button>
+      <button class="chip" data-chip="utility" data-en="Utility">辅助型</button>
     </div>
-    <div class="unit-grid" id="unit-gallery">
-      <div class="unit" data-chip-tags="melee">
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="artifacts">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+    </div>
+    <div class="unit-grid" id="artifact-gallery">
+      <div class="unit" data-chip-tags="offense" data-track="art-off-blade" data-track-type="collect" data-track-group="artifacts">
         <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-sword"/></svg></div>
-        <h5 data-en="Highlander Swordsman">高地剑士</h5>
-        <p data-en="Melee · Tank">近战 · 坦克</p>
-        <span class="role-badge r-melee" data-en="Melee">近战</span>
-        <div class="ustats"><span data-en="HP: High">血量：高</span><span data-en="ATK: Med">攻击：中</span></div>
+        <h5 data-en="Ex: Blade Shard">示例：利刃碎片</h5>
+        <p data-en="Offense · Crit">攻击 · 暴击</p>
+        <span class="role-badge r-melee" data-en="Offense">攻击</span>
+        <div class="ustats"><span data-en="+15% ATK">+15% 攻击</span><span data-en="+5% Crit">+5% 暴击</span></div>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="unit" data-chip-tags="melee">
+      <div class="unit" data-chip-tags="offense" data-track="art-off-frenzy" data-track-type="collect" data-track-group="artifacts">
+        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-bolt"/></svg></div>
+        <h5 data-en="Ex: Frenzy Blood">示例：狂战之血</h5>
+        <p data-en="Offense · Atk SPD">攻击 · 攻速</p>
+        <span class="role-badge r-melee" data-en="Offense">攻击</span>
+        <div class="ustats"><span data-en="+10% ATK">+10% 攻击</span><span data-en="+20% ATK SPD">+20% 攻速</span></div>
+        <span class="track-label">未收集</span>
+      </div>
+      <div class="unit" data-chip-tags="offense" data-track="art-off-executioner" data-track-type="collect" data-track-group="artifacts">
         <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-axe"/></svg></div>
-        <h5 data-en="Berserker">狂战士</h5>
-        <p data-en="Melee · Burst">近战 · 爆发</p>
-        <span class="role-badge r-melee" data-en="Melee">近战</span>
-        <div class="ustats"><span data-en="HP: Med">血量：中</span><span data-en="ATK: High">攻击：高</span></div>
+        <h5 data-en="Ex: Executioner's Mark">示例：处刑者印记</h5>
+        <p data-en="Offense · Crit DMG">攻击 · 暴伤</p>
+        <span class="role-badge r-melee" data-en="Offense">攻击</span>
+        <div class="ustats"><span data-en="+50% Crit DMG">+50% 暴伤</span><span data-en="+5% ATK">+5% 攻击</span></div>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="unit" data-chip-tags="melee">
+      <div class="unit" data-chip-tags="defense" data-track="art-def-bulwark" data-track-type="collect" data-track-group="artifacts">
         <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
-        <h5 data-en="Shield Wall">盾卫</h5>
-        <p data-en="Melee · Wall">近战 · 墙</p>
-        <span class="role-badge r-melee" data-en="Melee">近战</span>
-        <div class="ustats"><span data-en="HP: Very High">血量：极高</span><span data-en="ATK: Low">攻击：低</span></div>
+        <h5 data-en="Ex: Bulwark Heart">示例：壁垒之心</h5>
+        <p data-en="Defense · Tank">防御 · 坦克</p>
+        <span class="role-badge r-support" data-en="Defense">防御</span>
+        <div class="ustats"><span data-en="+20% HP">+20% 生命</span><span data-en="+10% DR">+10% 减伤</span></div>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="unit" data-chip-tags="ranged">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-bow"/></svg></div>
-        <h5 data-en="Highlander Archer">高地弩手</h5>
-        <p data-en="Ranged · DPS">远程 · 输出</p>
-        <span class="role-badge r-ranged" data-en="Ranged">远程</span>
-        <div class="ustats"><span data-en="HP: Low">血量：低</span><span data-en="ATK: High">攻击：高</span></div>
+      <div class="unit" data-chip-tags="defense" data-track="art-def-reflection" data-track-type="collect" data-track-group="artifacts">
+        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
+        <h5 data-en="Ex: Mirror of Reflection">示例：反射之镜</h5>
+        <p data-en="Defense · Reflect">防御 · 反伤</p>
+        <span class="role-badge r-support" data-en="Defense">防御</span>
+        <div class="ustats"><span data-en="+15% DR">+15% 减伤</span><span data-en="Reflect 10%">反射 10%</span></div>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="unit" data-chip-tags="support">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-flag"/></svg></div>
-        <h5 data-en="Banner Bearer">旗手</h5>
-        <p data-en="Support · Buffer">支援 · 增益</p>
-        <span class="role-badge r-support" data-en="Support">支援</span>
-        <div class="ustats"><span data-en="HP: Med">血量：中</span><span data-en="Buff: +DMG">增益：+伤害</span></div>
+      <div class="unit" data-chip-tags="utility" data-track="art-util-swift" data-track-type="collect" data-track-group="artifacts">
+        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-whirl"/></svg></div>
+        <h5 data-en="Ex: Wings of Swiftness">示例：疾风之翼</h5>
+        <p data-en="Utility · Mobility">辅助 · 机动</p>
+        <span class="role-badge r-siege" data-en="Utility">辅助</span>
+        <div class="ustats"><span data-en="+15% Move SPD">+15% 移速</span><span data-en="+10% CDR">+10% 冷却</span></div>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="unit" data-chip-tags="siege">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-hammer"/></svg></div>
-        <h5 data-en="Siege Breaker">攻城兵</h5>
-        <p data-en="Siege · AoE">攻城 · 范围</p>
-        <span class="role-badge r-siege" data-en="Siege">攻城</span>
-        <div class="ustats"><span data-en="HP: Med">血量：中</span><span data-en="ATK: AoE">攻击：范围</span></div>
+      <div class="unit" data-chip-tags="utility" data-track="art-util-greed" data-track-type="collect" data-track-group="artifacts">
+        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-gem"/></svg></div>
+        <h5 data-en="Ex: Eye of Greed">示例：贪婪之眼</h5>
+        <p data-en="Utility · Farming">辅助 · 刷金</p>
+        <span class="role-badge r-siege" data-en="Utility">辅助</span>
+        <div class="ustats"><span data-en="+2 Pickup">+2 拾取</span><span data-en="+15% Gold">+15% 金币</span></div>
+        <span class="track-label">未收集</span>
       </div>
     </div>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: These are representative artifacts. The full game has 100+ artifacts across three categories (Offense, Defense, Utility). Specific names and stats are being compiled from Early Access. See <a class='xref' href='towers.html#artifacts'>Artifacts & Builds</a> for detailed synergy and the <a class='xref' href='towers.html#calc'>Build Calculator</a>.">注：以上为代表型神器。完整游戏有 100+ 神器，分为三大类别（攻击型、防御型、辅助型）。具体名称和数值正在从抢先体验中整理。详见<a class="xref" href="towers.html#artifacts">神器构建</a>了解协同，使用<a class="xref" href="towers.html#calc">构建计算器</a>。</p>
+
+    <!-- Emblem Codex -->
+    <h3 id="emblems" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Emblem Codex">徽章图鉴</h3>
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="emblems">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+    </div>
+    <table class="data-table">
+      <thead><tr>
+        <th data-en="Emblem">徽章</th>
+        <th data-en="Stats">属性</th>
+        <th data-en="Best For">适合</th>
+        <th data-en="Status">状态</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><b data-en="Ex: Warrior Emblem">示例：战士徽章</b></td>
+          <td data-en="+10% ATK, +5% HP">+10% 攻击，+5% 生命</td>
+          <td data-en="All-round builds">全能型构建</td>
+          <td><div data-track="art-emb-warrior" data-track-type="collect" data-track-group="emblems"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Guardian Emblem">示例：守护徽章</b></td>
+          <td data-en="+15% HP, +5% DR">+15% 生命，+5% 减伤</td>
+          <td data-en="Tank builds, boss fights">坦克构建、Boss 战</td>
+          <td><div data-track="art-emb-guardian" data-track-type="collect" data-track-group="emblems"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Scout Emblem">示例：侦察徽章</b></td>
+          <td data-en="+10% Move SPD, +8% Crit">+10% 移速，+8% 暴击</td>
+          <td data-en="Mobility, hit-and-run">机动型、游击战</td>
+          <td><div data-track="art-emb-scout" data-track-type="collect" data-track-group="emblems"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Sage Emblem">示例：贤者徽章</b></td>
+          <td data-en="+15% CDR, +5% ATK SPD">+15% 冷却，+5% 攻速</td>
+          <td data-en="Ability-focused builds">技能型构建</td>
+          <td><div data-track="art-emb-sage" data-track-type="collect" data-track-group="emblems"><span class="track-label">未收集</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: The full game features 8 Emblem families with Tier 1-3 emblems and cross-family synergies. The above are representative examples. Ally emblems persist across runs until that ally dies (permadeath). See <a class='xref' href='towers.html#emblems'>Emblems System</a> for details.">注：完整游戏有 8 个徽章家族，每个家族有 Tier 1-3 徽章和跨家族协同。以上为代表型示例。盟友徽章在局间继承，直到该盟友阵亡（永久死亡）。详见<a class="xref" href="towers.html#emblems">徽章系统</a>。</p>
+
+    <!-- Charm Codex -->
+    <h3 id="charms" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Charm Codex">护符图鉴</h3>
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="charms">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
+    </div>
+    <table class="data-table">
+      <thead><tr>
+        <th data-en="Charm">护符</th>
+        <th data-en="Stats">属性</th>
+        <th data-en="Best For">适合</th>
+        <th data-en="Status">状态</th>
+      </tr></thead>
+      <tbody>
+        <tr style="background:var(--moss-tint,rgba(76,124,76,0.1))">
+          <td><b data-en="Cutthroat's Blade ✓">割喉之刃 ✓</b></td>
+          <td data-en="+10% Crit on Finishers">终结技 +10% 暴击</td>
+          <td data-en="Crit builds, Finisher combos">暴击构建、终结连招</td>
+          <td><div data-track="art-chm-cutthroat" data-track-type="collect" data-track-group="charms"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Iron Charm">示例：铁壁护符</b></td>
+          <td data-en="+50 HP, +5% DR">+50 生命，+5% 减伤</td>
+          <td data-en="Survivability">生存能力</td>
+          <td><div data-track="art-chm-iron" data-track-type="collect" data-track-group="charms"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Thorn Charm">示例：荆棘护符</b></td>
+          <td data-en="Reflect 15%, +5% ATK">反射 15%，+5% 攻击</td>
+          <td data-en="Reflect builds, melee">反伤构建、近战</td>
+          <td><div data-track="art-chm-thorn" data-track-type="collect" data-track-group="charms"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Vitality Charm">示例：生命护符</b></td>
+          <td data-en="+15% HP, +2% Regen/s">+15% 生命，+2% 回复/秒</td>
+          <td data-en="Sustain, long fights">持续作战、持久战</td>
+          <td><div data-track="art-chm-vitality" data-track-type="collect" data-track-group="charms"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Swift Charm">示例：疾行护符</b></td>
+          <td data-en="+10% Move SPD, +5% Dodge">+10% 移速，+5% 闪避</td>
+          <td data-en="Mobility, dodge builds">机动、闪避构建</td>
+          <td><div data-track="art-chm-swift" data-track-type="collect" data-track-group="charms"><span class="track-label">未收集</span></div></td>
+        </tr>
+        <tr>
+          <td><b data-en="Ex: Warding Charm">示例：庇护护符</b></td>
+          <td data-en="+10% DR, +10% HP">+10% 减伤，+10% 生命</td>
+          <td data-en="Defense, tough content">防御、难内容</td>
+          <td><div data-track="art-chm-warding" data-track-type="collect" data-track-group="charms"><span class="track-label">未收集</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: The full game features 30+ Charms with rarity tiers, purchased from shops and earned through challenges. 'Cutthroat's Blade' (✓) is confirmed from official patch notes. All other entries are representative examples. See <a class='xref' href='towers.html#charms'>Charms System</a> for details.">注：完整游戏有 30+ 种护符，有稀有度等级，可在商店购买或通过挑战获得。"割喉之刃"（✓）已由官方补丁说明确认，其余均为代表性示例。详见<a class="xref" href="towers.html#charms">护符系统</a>。</p>
 
     <!-- Enemy Codex -->
     <h3 id="enemies" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Enemy Codex">敌人图鉴</h3>
@@ -106,112 +261,138 @@
       <button class="chip" data-chip="low" data-en="Low">低</button>
       <button class="chip" data-chip="mid" data-en="Mid">中</button>
       <button class="chip" data-chip="high" data-en="High">高</button>
-      <button class="chip" data-chip="boss" data-en="Boss">Boss</button>
+    </div>
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="codex-enemies">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
+      </div>
     </div>
     <div class="enemy-grid" id="enemy-gallery">
-      <div class="enemy" data-chip-tags="low">
+      <div class="enemy" data-chip-tags="low" data-track="codex-enemy-grunt" data-track-type="collect" data-track-group="codex-enemies">
         <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-skull"/></svg></div>
-        <h5 data-en="Grunts">步兵</h5>
-        <p data-en="Basic melee, no armor">基础近战，无甲</p>
+        <h5 data-en="Ex: Invader Grunts">示例：入侵步兵</h5>
+        <p data-en="Basic melee, low HP">基础近战，低血量</p>
+        <div class="estats"><span data-en="HP: Low">血量：低</span><span data-en="ATK: Low">攻击：低</span><span data-en="SPD: Med">移速：中</span></div>
         <span class="danger d-low" data-en="Low Threat">低危</span>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="enemy" data-chip-tags="low">
+      <div class="enemy" data-chip-tags="low" data-track="codex-enemy-charger" data-track-type="collect" data-track-group="codex-enemies">
         <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-bolt"/></svg></div>
-        <h5 data-en="Runners">冲锋兵</h5>
-        <p data-en="Fast, low HP, leak risk">快速、低血、易漏怪</p>
+        <h5 data-en="Ex: Chargers">示例：冲锋兵</h5>
+        <p data-en="Fast, closes distance quickly">快速，迅速拉近距离</p>
+        <div class="estats"><span data-en="HP: Low">血量：低</span><span data-en="ATK: Low">攻击：低</span><span data-en="SPD: Fast">移速：快</span></div>
         <span class="danger d-low" data-en="Low Threat">低危</span>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="enemy" data-chip-tags="mid">
+      <div class="enemy" data-chip-tags="mid" data-track="codex-enemy-armored" data-track-type="collect" data-track-group="codex-enemies">
         <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
-        <h5 data-en="Armored Soldiers">重甲兵</h5>
-        <p data-en="Armor blocks arrow damage">护甲减伤箭塔</p>
+        <h5 data-en="Ex: Armored Invaders">示例：重甲入侵者</h5>
+        <p data-en="Armor reduces damage, needs heavy hits">护甲减伤，需重击破甲</p>
+        <div class="estats"><span data-en="HP: Med">血量：中</span><span data-en="ATK: Med">攻击：中</span><span data-en="Armor: Yes">护甲：有</span></div>
         <span class="danger d-mid" data-en="Mid Threat">中危</span>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="enemy" data-chip-tags="mid">
-        <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-bow"/></svg></div>
-        <h5 data-en="Enemy Archers">敌方弩手</h5>
-        <p data-en="Ranged, targets your units">远程，打你的单位</p>
+      <div class="enemy" data-chip-tags="mid" data-track="codex-enemy-archer" data-track-type="collect" data-track-group="codex-enemies">
+        <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-target"/></svg></div>
+        <h5 data-en="✓ Bombers (Confirmed)">✓ 炸弹兵（已确认）</h5>
+        <p data-en="Ranged, stays at starting position until approached. Less likely to all target the same player after patch v0.8.">远程，在被接近前停留在起始位置。补丁 v0.8 后不太可能全部锁定同一玩家。</p>
+        <div class="estats"><span data-en="HP: Low">血量：低</span><span data-en="ATK: Med">攻击：中</span><span data-en="Range: Long">射程：远</span></div>
         <span class="danger d-mid" data-en="Mid Threat">中危</span>
+        <span class="track-label">未收集</span>
       </div>
-      <div class="enemy" data-chip-tags="high">
+      <div class="enemy" data-chip-tags="high" data-track="codex-enemy-elite" data-track-type="collect" data-track-group="codex-enemies">
         <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-hammer"/></svg></div>
-        <h5 data-en="Siege Units">攻城单位</h5>
-        <p data-en="Massive HP, AoE damage">超高血量、范围伤害</p>
+        <h5 data-en="✓ The Dreadshot (Confirmed)">✓ 恐惧射手（已确认）</h5>
+        <p data-en="Teleporting ranged enemy. Ranged attacks no longer interrupted by melee when players move close. Projectiles fixed in v0.8.">传送型远程敌人。玩家靠近时远程攻击不再被近战打断。v0.8 修复了弹道问题。</p>
+        <div class="estats"><span data-en="HP: High">血量：高</span><span data-en="ATK: High">攻击：高</span><span data-en="Teleport: Yes">传送：有</span></div>
         <span class="danger d-high" data-en="High Threat">高危</span>
-      </div>
-      <div class="enemy" data-chip-tags="boss">
-        <div class="e-icon"><svg viewBox="0 0 24 24"><use href="#i-crown"/></svg></div>
-        <h5 data-en="Warlord">军阀</h5>
-        <p data-en="Boss: summons + AOE + massive HP">Boss：召唤+AOE+超高血量</p>
-        <span class="danger d-boss" data-en="Boss Threat">Boss 级</span>
+        <span class="track-label">未收集</span>
       </div>
     </div>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: The 3 bosses (Gilles the Hog, Iseult the Banshee, Harold) are tracked on the <a class='xref' href='bosses.html'>Boss Guide</a> page. Enemy stats scale with difficulty and player count in co-op. <b>Bombers</b> and <b>The Dreadshot</b> (✓) are confirmed from patch notes. Other enemy names are representative.">注：3 个 Boss（Gilles the Hog、Iseult the Banshee、Harold）在<a class="xref" href="bosses.html">Boss 专题</a>页面追踪。敌人属性随难度和联机人数缩放。<b>炸弹兵</b>和<b>恐惧射手</b>（✓）已由补丁说明确认，其余敌人为代表性命名。</p>
 
-    <!-- Tower Codex -->
-    <h3 id="towers" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Tower Codex">防御塔图鉴</h3>
-    <table class="data-table">
+    <!-- Quick Reference -->
+    <h3 id="reference" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Quick Reference">快速参考</h3>
+    <div class="stat-grid">
+      <div class="stat-pill"><b>100+</b><span data-en="Artifacts">神器</span></div>
+      <div class="stat-pill"><b>8</b><span data-en="Emblem Families">徽章家族</span></div>
+      <div class="stat-pill"><b>30+</b><span data-en="Charms">护符</span></div>
+      <div class="stat-pill"><b>5+</b><span data-en="Enemy Types">敌人种类</span></div>
+      <div class="stat-pill"><b>3</b><span data-en="Bosses">Boss</span></div>
+      <div class="stat-pill"><b>45+</b><span data-en="Environments">环境</span></div>
+    </div>
+
+    <table class="data-table" style="margin-top:24px">
       <thead><tr>
-        <th data-en="Tower">防御塔</th>
-        <th data-en="Type">类型</th>
-        <th data-en="Tier 1">1 级</th>
-        <th data-en="Tier 2">2 级</th>
-        <th data-en="Tier 3">3 级</th>
-        <th data-en="Best vs">最佳对</th>
+        <th data-en="Build Type">构建类型</th>
+        <th data-en="Artifact">神器</th>
+        <th data-en="Emblem">徽章</th>
+        <th data-en="Charm">护符</th>
+        <th data-en="Focus">核心</th>
       </tr></thead>
       <tbody>
         <tr>
-          <td><b data-en="Arrow">箭塔</b></td>
-          <td data-en="Single-target, fast">单体、快速</td>
-          <td data-en="Basic shots">基础射击</td>
-          <td data-en="+50% DMG, +range">+50% 伤害、+范围</td>
-          <td data-en="Multi-shot, slow">多重射击、减速</td>
-          <td data-en="Swarms">群怪</td>
+          <td><b data-en="Crit Burst">暴击爆发</b></td>
+          <td data-en="Ex: Blade Shard + Executioner's Mark">示例：利刃碎片 + 处刑者印记</td>
+          <td data-en="Ex: Scout Emblem">示例：侦察徽章</td>
+          <td data-en="Ex: Thorn Charm">示例：荆棘护符</td>
+          <td data-en="Maximize crit damage">最大化暴击伤害</td>
         </tr>
         <tr>
-          <td><b data-en="Cannon">炮塔</b></td>
-          <td data-en="AoE, slow">范围、慢速</td>
-          <td data-en="Splash damage">溅射伤害</td>
-          <td data-en="+AoE radius">+范围半径</td>
-          <td data-en="Knockback">击退</td>
-          <td data-en="Groups">群体</td>
+          <td><b data-en="Attack Speed">攻速流</b></td>
+          <td data-en="Ex: Frenzy Blood">示例：狂战之血</td>
+          <td data-en="Ex: Sage Emblem">示例：贤者徽章</td>
+          <td data-en="Ex: Swift Charm">示例：疾行护符</td>
+          <td data-en="High DPS through attack speed">高攻速持续输出</td>
         </tr>
         <tr>
-          <td><b data-en="Magic">法塔</b></td>
-          <td data-en="Armor-piercing">破甲</td>
-          <td data-en="Armor ignore">无视护甲</td>
-          <td data-en="+DMG, +range">+伤害、+范围</td>
-          <td data-en="Chain lightning">链式闪电</td>
-          <td data-en="Armored">重甲</td>
+          <td><b data-en="Tank">坦克流</b></td>
+          <td data-en="Ex: Bulwark Heart">示例：壁垒之心</td>
+          <td data-en="Ex: Guardian Emblem">示例：守护徽章</td>
+          <td data-en="Ex: Warding Charm">示例：庇护护符</td>
+          <td data-en="Maximum survivability">极限生存</td>
+        </tr>
+        <tr>
+          <td><b data-en="Mobility">机动流</b></td>
+          <td data-en="Ex: Wings of Swiftness">示例：疾风之翼</td>
+          <td data-en="Ex: Scout Emblem">示例：侦察徽章</td>
+          <td data-en="Ex: Swift Charm">示例：疾行护符</td>
+          <td data-en="Dodge and reposition">闪避与重定位</td>
+        </tr>
+        <tr>
+          <td><b data-en="Reflect">反伤流</b></td>
+          <td data-en="Ex: Mirror of Reflection">示例：反射之镜</td>
+          <td data-en="Ex: Guardian Emblem">示例：守护徽章</td>
+          <td data-en="Ex: Thorn Charm">示例：荆棘护符</td>
+          <td data-en="Damage through reflection">反射造成伤害</td>
+        </tr>
+        <tr>
+          <td><b data-en="Farming">刷金流</b></td>
+          <td data-en="Ex: Eye of Greed">示例：贪婪之眼</td>
+          <td data-en="Ex: Warrior Emblem">示例：战士徽章</td>
+          <td data-en="Ex: Vitality Charm">示例：生命护符</td>
+          <td data-en="Gold and sustain">金币与续航</td>
         </tr>
       </tbody>
     </table>
-    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: Specific stat values (cost, damage numbers, range values) are [待核实 — pending game data verification]. The above describes qualitative behavior and upgrade effects.">注：具体数值（造价、伤害数字、范围值）[待核实 — 等待游戏数据确认]。上表描述的是定性行为和升级效果。</p>
-
-    <!-- Stat Summary -->
-    <h3 id="stats" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Quick Stat Summary">快速属性一览</h3>
-    <div class="stat-grid">
-      <div class="stat-pill"><b>6+</b><span data-en="Unit Types">单位类型</span></div>
-      <div class="stat-pill"><b>3</b><span data-en="Tower Families">塔系</span></div>
-      <div class="stat-pill"><b>3</b><span data-en="Upgrade Tiers">升级层级</span></div>
-      <div class="stat-pill"><b>6+</b><span data-en="Enemy Types">敌人种类</span></div>
-      <div class="stat-pill"><b>5</b><span data-en="Map Themes">地图主题</span></div>
-      <div class="stat-pill"><b>10-18</b><span data-en="Waves/Map">波次/地图</span></div>
-    </div>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Use the <a class='xref' href='towers.html#calc'>Build Calculator</a> to test these combinations. See <a class='xref' href='combat.html#tier-list'>Build Tier List</a> for community rankings.">使用<a class="xref" href="towers.html#calc">构建计算器</a>测试这些组合。查看<a class="xref" href="combat.html#tier-list">构建强度榜</a>了解社区排名。</p>
 
     <!-- 交叉引用 -->
     <div class="cross-links">
       <h4 data-en="Related Guides">相关攻略</h4>
       <div class="cl-list">
+        <a href="towers.html" data-en="Artifacts">神器构建</a>
         <a href="combat.html" data-en="Combat">战斗系统</a>
-        <a href="towers.html" data-en="Towers">防御塔</a>
-        <a href="maps.html" data-en="Maps">关卡攻略</a>
+        <a href="bosses.html" data-en="Bosses">Boss 专题</a>
+        <a href="economy.html" data-en="Progression">养成进度</a>
       </div>
     </div>
 
     <!-- 上下篇导航 -->
     <div class="page-nav">
-      <a href="maps.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Maps">关卡攻略</div></a>
-      <a href="index.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Home">首页</div></a>
+      <a href="bosses.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Bosses">Boss 专题</div></a>
+      <a href="faq.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="FAQ">常见问题</div></a>
     </div>
   </div>
 </section>
@@ -221,12 +402,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -237,7 +418,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>

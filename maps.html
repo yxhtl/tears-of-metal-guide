@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全关卡地图攻略 | Tears of Metal 钢铁之泪攻略</title>
-<meta name="description" content="Tears of Metal 全关卡地图攻略：草地、森林、山地、海岸、村庄关卡的地图分析、地形利用与波次拆解。">
-<meta name="keywords" content="Tears of Metal关卡,钢铁之泪地图,草地,森林,山地,海岸,村庄,地形,波次">
+<title>45+ 环境探索 | Tears of Metal 钢铁之泪攻略</title>
+<meta name="description" content="Tears of Metal 45+ 环境概览：生物群系、地形特征、环境机制与探索策略，涵盖海岸、高地、森林、村庄、废墟等区域。">
+<meta name="keywords" content="Tears of Metal环境,钢铁之泪地图,生物群系,海岸,高地,森林,村庄,废墟,探索">
 <link rel="stylesheet" href="css/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2a3a4a">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 全关卡地图攻略","inLanguage":"zh-CN","about":"Tears of Metal 关卡地图与地形分析","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 45+ 环境探索","inLanguage":"zh-CN","about":"Tears of Metal 环境生物群系、地形特征与探索机制","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
 </script>
-</head>
+
+    <meta property="og:title" content="45+ 环境探索 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="Tears of Metal 45+ 环境概览：生物群系、地形特征、环境机制与探索策略，涵盖海岸、高地、森林、村庄、废墟等区域。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <header class="nav">
@@ -21,9 +28,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" class="active" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" class="active" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -38,98 +46,128 @@
 
 <section id="top" class="section-anchor" style="padding-top:54px">
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Maps">关卡攻略</span></div>
-    <span class="eyebrow" data-en="Maps &amp; Levels">关卡攻略</span>
-    <h2 class="title" data-en="Full Map &amp; Level Guide">全关卡地图攻略</h2>
-    <p class="subtitle" data-en="Five map themes, each with unique terrain. Understanding the choke points and path layout is the difference between a clean clear and a leak."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>五种地图主题，各有独特地形。掌握隘口和路径布局，是完美通关和漏怪的分水岭。</p>
+    <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Environments">环境探索</span></div>
+    <span class="eyebrow" data-en="Environments">环境探索</span>
+    <h2 class="title" data-en="45+ Environments Overview">45+ 环境概览</h2>
+    <p class="subtitle" data-en="Tears of Metal features 45+ unique environments across a Scottish island. Each biome has its own terrain, hazards, and tactical considerations. Master them all to reclaim your homeland."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>钢铁之泪在苏格兰岛屿上拥有 45+ 独特环境。每个生物群系有各自的地形、危险和战术考量。掌握全部以夺回你的家园。</p>
 
-    <!-- Map Progression -->
-    <h3 id="progression" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Map Unlock Progression">地图解锁顺序</h3>
-    <div class="biome-progression">
-      <div class="bp-node active"><div class="bp-step" data-en="01">01</div><div class="bp-name" data-en="Grassland">草地</div><div class="bp-info" data-en="Beginner">新手</div></div>
-      <div class="bp-arrow">›</div>
-      <div class="bp-node"><div class="bp-step" data-en="02">02</div><div class="bp-name" data-en="Forest">森林</div><div class="bp-info" data-en="Intermediate">中级</div></div>
-      <div class="bp-arrow">›</div>
-      <div class="bp-node"><div class="bp-step" data-en="03">03</div><div class="bp-name" data-en="Mountain">山地</div><div class="bp-info" data-en="Advanced">高级</div></div>
-      <div class="bp-arrow">›</div>
-      <div class="bp-node"><div class="bp-step" data-en="04">04</div><div class="bp-name" data-en="Coast">海岸</div><div class="bp-info" data-en="Expert">专家</div></div>
-      <div class="bp-arrow">›</div>
-      <div class="bp-node"><div class="bp-step" data-en="05">05</div><div class="bp-name" data-en="Village">村庄</div><div class="bp-info" data-en="Final">终极</div></div>
+    <div class="toc-box">
+      <h4 data-en="Contents">目录</h4>
+      <ol>
+        <li><a href="#biomes" data-en="Biome Overview">生物群系概览</a></li>
+        <li><a href="#features" data-en="Environmental Features">环境特性</a></li>
+        <li><a href="#strategies" data-en="Environment Strategies">环境策略</a></li>
+      </ol>
     </div>
 
-    <!-- Map Details -->
-    <div class="map-grid" style="margin-top:30px">
-      <div class="map-card" id="grassland">
-        <div class="map-head"><div class="num">1</div><h4 data-en="Grassland">草地</h4></div>
-        <p data-en="Open terrain, wide paths. Beginner-friendly — plenty of tower placement options.">开阔地形、宽阔路径。新手友好——塔位选择多。</p>
-        <ul>
-          <li data-en="<b>Difficulty:</b> Easy"><b>难度：</b>简单</li>
-          <li data-en="<b>Waves:</b> 10"><b>波次：</b>10</li>
-          <li data-en="<b>Terrain:</b> Wide paths, few choke points"><b>地形：</b>宽阔路径，少隘口</li>
-          <li data-en="<b>Strategy:</b> Spread towers along main path"><b>策略：</b>沿主路径分布塔</li>
-        </ul>
+    <!-- Biome Overview -->
+    <h3 id="biomes" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Biome Overview">生物群系概览</h3>
+    <div class="progress-header">
+      <div class="pbar" data-progress-bar="environments">
+        <div class="pbar-fill" style="width:0"></div>
+        <div class="pbar-text">0 / 0  (0%)</div>
       </div>
-      <div class="map-card b-forest" id="forest">
-        <div class="map-head"><div class="num">2</div><h4 data-en="Forest">森林</h4></div>
-        <p data-en="Tree cover provides concealment for enemies. Narrow winding paths create natural choke points.">树木遮挡敌人。蜿蜒窄路天然形成隘口。</p>
-        <ul>
-          <li data-en="<b>Difficulty:</b> Medium"><b>难度：</b>中等</li>
-          <li data-en="<b>Waves:</b> 12"><b>波次：</b>12</li>
-          <li data-en="<b>Terrain:</b> Narrow paths, good choke points"><b>地形：</b>窄路径，优良隘口</li>
-          <li data-en="<b>Strategy:</b> Stack defenses at forest gaps"><b>策略：</b>在林间缺口堆防</li>
-        </ul>
+      <div class="progress-actions">
+        <button data-action="export-progress" data-i18n="progress.export">导出进度</button>
+        <button data-action="import-progress" data-i18n="progress.import">导入进度</button>
+        <button data-action="reset-progress" data-i18n="progress.reset">重置全部进度</button>
       </div>
-      <div class="map-card b-mountain" id="mountain">
-        <div class="map-head"><div class="num">3</div><h4 data-en="Mountain">山地</h4></div>
-        <p data-en="Steep cliffs and canyon paths. Very tight choke points but multiple branching paths.">陡峭悬崖和峡谷路径。极窄隘口但有多条分岔路。</p>
+    </div>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="The game features over 45 handcrafted environments across three Acts. Each Act has varied biomes, enemies, elites, and a boss fight. Patch notes have confirmed biomes including Swamp, Birchtrees, Boiling Mire, Kurgan Fortress, and Kurgan Castle. The full list is being compiled.">游戏有 45+ 个精心制作的环境，分布在三个幕中。每幕有不同的生物群系、敌人、精英和 Boss 战。补丁说明已确认的生物群系包括沼泽（Swamp）、桦树林（Birchtrees）、沸腾沼泽（Boiling Mire）、库尔干要塞（Kurgan Fortress）和库尔干城堡（Kurgan Castle）。完整列表正在整理中。</p>
+    <div class="fcard" style="margin-bottom:14px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ The game launched in Early Access on July 22, 2026. The following biome names are CONFIRMED from official patch notes: Swamp, Birchtrees, Boiling Mire, Kurgan Fortress, Kurgan Castle. Environmental features and strategies below are general tactical advice, not confirmed game mechanics. The full list of 45+ environments will be updated as the community documents them.">⚠ 游戏于 2026 年 7 月 22 日上线抢先体验。以下生物群系名称已由官方补丁说明确认：沼泽、桦树林、沸腾沼泽、库尔干要塞、库尔干城堡。下方的环境特性和策略为一般战术建议，并非已确认的游戏机制。45+ 环境的完整列表将随社区记录而更新。</p>
+    </div>
+    <div class="map-grid" style="margin-top:20px">
+      <div class="map-card" id="act1" data-track="env-act1" data-track-type="task" data-track-group="environments">
+        <div class="map-head"><div class="num">1</div><h4 data-en="Act 1 Biomes">第一幕生物群系</h4></div>
+        <p data-en="Act 1 introduces the game's core biomes. The demo covered the first act, culminating in a boss fight against Gilles the Hog.">第一幕引入游戏核心生物群系。Demo 涵盖了第一幕，最终迎战 Boss Gilles the Hog。</p>
         <ul>
-          <li data-en="<b>Difficulty:</b> Hard"><b>难度：</b>困难</li>
-          <li data-en="<b>Waves:</b> 14"><b>波次：</b>14</li>
-          <li data-en="<b>Terrain:</b> Canyons, branching paths"><b>地形：</b>峡谷、分岔路</li>
-          <li data-en="<b>Strategy:</b> Cover both branches, focus on merge point"><b>策略：</b>两条岔路都覆盖，重点放合流点</li>
+          <li data-en="<b>Boss:</b> Gilles the Hog"><b>Boss：</b>Gilles the Hog</li>
+          <li data-en="<b>Focus:</b> Learning core mechanics, enemy types"><b>重点：</b>学习核心机制、敌人类型</li>
+          <li data-en="<b>Difficulty:</b> Low-Medium"><b>难度：</b>低-中</li>
         </ul>
+        <span class="track-label">未完成</span>
       </div>
-      <div class="map-card b-coast" id="coast">
-        <div class="map-head"><div class="num">4</div><h4 data-en="Coast">海岸</h4></div>
-        <p data-en="Coastal map with water boundaries. Enemies may approach from multiple angles. Limited build space near shore.">海岸地图，有水域边界。敌人可能从多个角度进攻。岸边建造空间有限。</p>
+      <div class="map-card b-forest" id="act2" data-track="env-act2" data-track-type="task" data-track-group="environments">
+        <div class="map-head"><div class="num">2</div><h4 data-en="Act 2 Biomes (Swamp, etc.)">第二幕生物群系（沼泽等）</h4></div>
+        <p data-en="Act 2 features the Swamp biome (being updated per patch notes) and other environments. Patch notes confirmed: the second Swamp biome, Birchtrees, and Boiling Mire. Collisions were updated in Boiling Mire and the Birchtrees level. Iseult the Banshee is the Act 2 boss.">第二幕包含沼泽生物群系（按补丁说明正在更新）和其他环境。补丁说明确认了：第二个沼泽生物群系、桦树林和沸腾沼泽。开发者在沸腾沼泽和桦树林关卡更新了碰撞体。Iseult the Banshee 是第二幕 Boss。</p>
         <ul>
-          <li data-en="<b>Difficulty:</b> Expert"><b>难度：</b>专家</li>
-          <li data-en="<b>Waves:</b> 15"><b>波次：</b>15</li>
-          <li data-en="<b>Terrain:</b> Water edges, multi-angle"><b>地形：</b>水边、多角度</li>
-          <li data-en="<b>Strategy:</b> Long-range towers (Magic), unit repositioning key"><b>策略：</b>远程塔（法塔），单位重摆是关键</li>
+          <li data-en="<b>Confirmed biomes:</b> Swamp, Birchtrees, Boiling Mire"><b>已确认生物群系：</b>沼泽、桦树林、沸腾沼泽</li>
+          <li data-en="<b>Boss:</b> Iseult the Banshee"><b>Boss：</b>Iseult the Banshee</li>
+          <li data-en="<b>Difficulty:</b> High"><b>难度：</b>高</li>
         </ul>
+        <span class="track-label">未完成</span>
       </div>
-      <div class="map-card b-village" id="village">
-        <div class="map-head"><div class="num">5</div><h4 data-en="Village">村庄</h4></div>
-        <p data-en="Final map — urban terrain with buildings blocking sight lines. Complex path network. Boss appears early.">终局地图——城镇地形，建筑遮挡视线。复杂路径网。Boss 提前出现。</p>
+      <div class="map-card b-mountain" id="act3" data-track="env-act3" data-track-type="task" data-track-group="environments">
+        <div class="map-head"><div class="num">3</div><h4 data-en="Act 3 Biomes">第三幕生物群系</h4></div>
+        <p data-en="Act 3 contains the toughest environments with the most dangerous enemies. Patch notes confirmed Kurgan Fortress (with a marker fix) and Kurgan Castle (environmental art updated). Harold is the final boss at the end of Act 3.">第三幕包含最难的环境和最危险的敌人。补丁说明确认了库尔干要塞（修复了标记问题）和库尔干城堡（更新了环境美术）。Harold 是第三幕末尾的最终 Boss。</p>
         <ul>
+          <li data-en="<b>Confirmed biomes:</b> Kurgan Fortress, Kurgan Castle"><b>已确认生物群系：</b>库尔干要塞、库尔干城堡</li>
+          <li data-en="<b>Boss:</b> Harold (final boss)"><b>Boss：</b>Harold（最终 Boss）</li>
+          <li data-en="<b>Focus:</b> Optimized builds, maximum challenge"><b>重点：</b>优化构建、极限挑战</li>
           <li data-en="<b>Difficulty:</b> Extreme"><b>难度：</b>极高</li>
-          <li data-en="<b>Waves:</b> 18"><b>波次：</b>18</li>
-          <li data-en="<b>Terrain:</b> Buildings, complex paths"><b>地形：</b>建筑、复杂路径</li>
-          <li data-en="<b>Strategy:</b> Max upgrades, full unit diversity needed"><b>策略：</b>需要满级升级和全套兵种</li>
         </ul>
+        <span class="track-label">未完成</span>
       </div>
     </div>
+    <p style="margin-top:16px;color:var(--ink-soft);font-size:13px" data-en="Note: Biome names above are CONFIRMED from patch notes (Swamp, Birchtrees, Boiling Mire, Kurgan Fortress, Kurgan Castle). The full game has 45+ unique environments. Environmental features and strategies below are general tactical advice.">注：上方生物群系名称已由补丁说明确认（沼泽、桦树林、沸腾沼泽、库尔干要塞、库尔干城堡）。完整游戏有 45+ 独特环境。下方环境特性和策略为一般战术建议。</p>
 
-    <!-- Terrain Tips -->
-    <h3 id="terrain" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Terrain &amp; Choke Point Tips">地形与隘口技巧</h3>
+    <!-- Environmental Features -->
+    <h3 id="features" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Environmental Features & Mechanics">环境特性与机制</h3>
+    <div class="fcard" style="margin-bottom:14px;background:var(--crimson);border:2px solid var(--crimson);color:#fff">
+      <p style="font-size:14px;font-weight:700;margin:0;color:#fff" data-en="⚠ UNVERIFIED — The environmental features below (terrain types, weather effects, interactive elements, enemy spawning) are GENERAL GAMEPLAY ASSUMPTIONS, not confirmed mechanics. They represent common features in the action roguelike genre. Specific mechanics will be documented as Early Access playthroughs progress.">⚠ 未验证——下方的环境特性（地形类型、天气效果、互动元素、敌人刷新）为一般游戏假设，并非已确认的游戏机制。它们代表动作 Roguelike 类型的常见特性。具体机制将随抢先体验游玩记录而更新。</p>
+    </div>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Each environment has unique mechanics that affect combat. Understanding these is the difference between victory and defeat.">每个环境有影响战斗的独特机制。理解这些机制是胜负的分水岭。</p>
     <div class="feature-grid">
-      <div class="fcard"><h4 data-en="Identify Choke Points">识别隘口</h4><ul>
-        <li data-en="Narrow paths where enemies must funnel through">敌人必须通过的窄路</li>
-        <li data-en="Path merge points (where two branches join) — ideal kill zones">路径合流点（两条岔路汇合处）——理想击杀区</li>
-        <li data-en="Corners force enemies to slow down — extra tower uptime">拐角处敌人减速——塔有更多输出时间</li>
+      <div class="fcard"><h4 data-en="Terrain Types">地形类型</h4><ul>
+        <li data-en="<b>Open ground</b>: free movement, good for musou combat"><b>开阔地</b>：自由移动，适合无双战斗</li>
+        <li data-en="<b>Narrow paths</b>: funnel enemies, good for AoE"><b>窄路</b>：让敌人聚拢，适合范围技能</li>
+        <li data-en="<b>Elevation</b>: high ground gives combat advantage"><b>高低差</b>：高处有战斗优势</li>
+        <li data-en="<b>Water</b>: slows movement, use to kite enemies"><b>水域</b>：减速移动，用于放风筝</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Tower Placement by Terrain">按地形放塔</h4><ul>
-        <li data-en="Grassland: spread along the path, no single choke to stack on">草地：沿路分布，无单一隘口可堆</li>
-        <li data-en="Forest: stack 2-3 towers at the narrowest gap">森林：在最窄处堆 2-3 塔</li>
-        <li data-en="Mountain: cover both branches, heavy defense at merge">山地：两岔路都覆盖，合流处重防</li>
-        <li data-en="Coast/Village: Magic towers for long-range coverage">海岸/村庄：法塔远程覆盖</li>
+      <div class="fcard"><h4 data-en="Weather Effects">天气效果</h4><ul>
+        <li data-en="<b>Rain</b>: reduces visibility, may affect abilities"><b>雨天</b>：降低视野，可能影响技能</li>
+        <li data-en="<b>Fog</b>: enemies appear closer, ambush risk"><b>雾天</b>：敌人更近，伏击风险</li>
+        <li data-en="<b>Wind</b>: affects projectile range and direction"><b>风天</b>：影响远程攻击范围和方向</li>
+        <li data-en="<b>Storm</b>: random lightning, environmental damage"><b>风暴</b>：随机闪电，环境伤害</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Wave Preview">波次预览</h4><ul>
-        <li data-en="Always check the wave preview before it starts — enemy types matter">波次开始前务必看预览——敌人类型很重要</li>
-        <li data-en="Armored wave? Make sure Magic Tower is ready">重甲波？确保法塔就位</li>
-        <li data-en="Swarm wave? Arrow Tower multi-shot shines">群怪波？箭塔多重射击发威</li>
-        <li data-en="Boss wave? Concentrate everything on the main path">Boss 波？集中一切在主路径</li>
+      <div class="fcard"><h4 data-en="Interactive Elements">互动元素</h4><ul>
+        <li data-en="<b>Destructible walls</b>: create shortcuts or block enemies"><b>可破坏墙</b>：开辟捷径或阻挡敌人</li>
+        <li data-en="<b>Explosive barrels</b>: AoE damage when destroyed"><b>爆炸桶</b>：破坏时范围伤害</li>
+        <li data-en="<b>Healing shrines</b>: restore HP, one-time use per run"><b>治疗神龛</b>：回复生命，每局一次</li>
+        <li data-en="<b>Artifact caches</b>: hidden stashes with random artifacts"><b>神器藏匿点</b>：随机神器隐藏处</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Enemy Spawning">敌人刷新</h4><ul>
+        <li data-en="Enemies spawn from <b>fixed points</b> — learn the locations">敌人从<b>固定点</b>刷新——记住位置</li>
+        <li data-en="<b>Ambush triggers</b>: some areas spawn enemies when entered"><b>伏击触发</b>：某些区域进入时刷怪</li>
+        <li data-en="<b>Reinforcement waves</b>: enemies call for help at low HP"><b>增援波次</b>：敌人低血时呼叫增援</li>
+        <li data-en="Elite enemies have <b>unique spawn conditions</b>">精英敌人有<b>独特刷新条件</b></li>
+      </ul></div>
+    </div>
+
+    <!-- Environment Strategies -->
+    <h3 id="strategies" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Environment-Specific Strategies">环境策略</h3>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Open Environments">开阔环境</h4><ul>
+        <li data-en="Use musou-style <b>crowd combat</b> — group enemies and AoE them down">使用无双式<b>群战</b>——聚拢敌人后范围消灭</li>
+        <li data-en="Keep <b>moving</b> — stationary fighting invites flanking">保持<b>移动</b>——站桩打容易被侧袭</li>
+        <li data-en="Rally <b>battalion forces</b> to control large areas">集结<b>营队兵力</b>控制大区域</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Narrow Environments">狭窄环境</h4><ul>
+        <li data-en="Use <b>choke points</b> — funnel enemies into kill zones">利用<b>隘口</b>——让敌人进入击杀区</li>
+        <li data-en="<b>Heavy attacks</b> shine — stagger enemies in tight spaces"><b>重击</b>发威——在窄空间打断敌人</li>
+        <li data-en="Avoid getting <b>surrounded</b> — watch your back">避免被<b>包围</b>——注意身后</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Complex Environments">复杂环境</h4><ul>
+        <li data-en="<b>Scout ahead</b> — knowledge of layout prevents ambushes"><b>提前侦察</b>——了解布局防伏击</li>
+        <li data-en="Use <b>interactive elements</b> — barrels, walls, terrain">利用<b>互动元素</b>——桶、墙、地形</li>
+        <li data-en="Split <b>co-op team</b> to cover multiple paths">拆分<b>联机队伍</b>覆盖多条路径</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Boss Environments">Boss 环境</h4><ul>
+        <li data-en="Clear trash mobs <b>first</b> — don't fight boss with adds">先清杂兵<b>优先</b>——别带小怪打 Boss</li>
+        <li data-en="Learn <b>phase transitions</b> — environment may change">了解<b>阶段转换</b>——环境可能变化</li>
+        <li data-en="Use <b>terrain</b> for cover during boss AoE attacks">Boss 范围攻击时利用<b>地形</b>掩护</li>
+        <li data-en="See <a class='xref' href='bosses.html'>Boss Guide</a> for encounter details">查看<a class="xref" href="bosses.html">Boss 专题</a>了解遭遇战详情</li>
       </ul></div>
     </div>
 
@@ -137,16 +175,17 @@
     <div class="cross-links">
       <h4 data-en="Related Guides">相关攻略</h4>
       <div class="cl-list">
-        <a href="towers.html" data-en="Towers">防御塔</a>
-        <a href="economy.html" data-en="Economy">经济养成</a>
+        <a href="combat.html" data-en="Combat">战斗系统</a>
+        <a href="economy.html" data-en="Progression">养成进度</a>
+        <a href="bosses.html" data-en="Bosses">Boss 专题</a>
         <a href="codex.html" data-en="Codex">图鉴速查</a>
       </div>
     </div>
 
     <!-- 上下篇导航 -->
     <div class="page-nav">
-      <a href="economy.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Economy">经济养成</div></a>
-      <a href="codex.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Codex">图鉴速查</div></a>
+      <a href="economy.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Progression">养成进度</div></a>
+      <a href="bosses.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Bosses">Boss 专题</div></a>
     </div>
   </div>
 </section>
@@ -156,12 +195,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -172,7 +211,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>

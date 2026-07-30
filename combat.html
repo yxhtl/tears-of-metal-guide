@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>战斗系统深度拆解 | Tears of Metal 钢铁之泪攻略</title>
-<meta name="description" content="Tears of Metal 战斗系统详解：单位类型（近战/远程/支援/攻城）、阵型搭配、克制关系与战术技巧。">
-<meta name="keywords" content="Tears of Metal战斗,钢铁之泪单位,阵型,近战,远程,支援,攻城,克制">
+<meta name="description" content="Tears of Metal 战斗系统详解：动作战斗机制、连招组合、技能使用、4人合作战术与构建强度榜。">
+<meta name="keywords" content="Tears of Metal战斗,钢铁之泪动作,连招,技能,无双,合作,构建,hack slash">
 <link rel="stylesheet" href="css/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2a3a4a">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 战斗系统深度拆解","inLanguage":"zh-CN","about":"Tears of Metal 单位类型、阵型搭配与战术技巧","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Tears of Metal 战斗系统深度拆解","inLanguage":"zh-CN","about":"Tears of Metal 动作战斗机制、连招与合作战术","isPartOf":{"@type":"WebSite","name":"钢铁之泪攻略站"}}
 </script>
-</head>
+
+    <meta property="og:title" content="战斗系统深度拆解 | Tears of Metal 钢铁之泪攻略" />
+    <meta property="og:description" content="Tears of Metal 战斗系统详解：动作战斗机制、连招组合、技能使用、4人合作战术与构建强度榜。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="钢铁之泪攻略站" />
+    <meta name="twitter:card" content="summary" />
+  </head>
 <body>
 
 <header class="nav">
@@ -21,9 +28,10 @@
     <nav class="nav-links" id="navLinks">
       <a href="getting-started.html" data-i18n="nav.getting-started">新手入门</a>
       <a href="combat.html" class="active" data-i18n="nav.combat">战斗系统</a>
-      <a href="towers.html" data-i18n="nav.towers">防御塔</a>
-      <a href="economy.html" data-i18n="nav.economy">经济养成</a>
-      <a href="maps.html" data-i18n="nav.maps">关卡攻略</a>
+      <a href="towers.html" data-i18n="nav.artifacts">神器构建</a>
+      <a href="economy.html" data-i18n="nav.progression">养成进度</a>
+      <a href="maps.html" data-i18n="nav.environments">环境探索</a>
+      <a href="bosses.html" data-i18n="nav.bosses">Boss 专题</a>
       <a href="codex.html" data-i18n="nav.codex">图鉴速查</a>
     </nav>
     <div class="nav-utils">
@@ -41,147 +49,175 @@
     <div class="breadcrumb"><a href="index.html" data-en="Home">首页</a> <span>›</span> <span data-en="Combat">战斗系统</span></div>
     <span class="eyebrow" data-en="Combat System">战斗系统</span>
     <h2 class="title" data-en="Combat System Deep Dive">战斗系统深度拆解</h2>
-    <p class="subtitle" data-en="Four unit roles, counter relationships, and formation principles — everything you need to build an effective defense line."><span class="ver-tag" data-en="Verified 2026.07">数据核对 2026.07</span>四种单位角色、克制关系、阵型原则——构建有效防线所需的一切知识。</p>
+    <p class="subtitle" data-en="Tears of Metal is an action roguelike with hack-and-slash and musou elements. Master combos, abilities, and co-op tactics to reclaim your island."><span class="ver-tag" data-en="Early Access 2026.07">抢先体验 2026.07</span>钢铁之泪是融合砍杀与无双元素的动作 Roguelike。掌握连招、技能和合作战术以夺回你的岛屿。</p>
 
-    <!-- Unit Types -->
-    <h3 id="units" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Unit Types">单位类型</h3>
-    <p style="margin-bottom:16px;color:var(--ink-soft);font-size:14px" data-en="Each unit fills a specific combat role. Mixing roles effectively is the key to surviving later waves.">每个单位承担特定战斗角色。有效搭配不同角色是存活到后期的关键。</p>
-    <div class="unit-grid">
-      <div class="unit">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-sword"/></svg></div>
-        <h5 data-en="Highlander Swordsman">高地剑士</h5>
-        <p data-en="Melee · Tank">近战 · 坦克</p>
-        <span class="role-badge r-melee" data-en="Melee">近战</span>
-        <div class="ustats"><span data-en="HP: High">血量：高</span><span data-en="ATK: Med">攻击：中</span></div>
-      </div>
-      <div class="unit">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-bow"/></svg></div>
-        <h5 data-en="Highlander Archer">高地弩手</h5>
-        <p data-en="Ranged · DPS">远程 · 输出</p>
-        <span class="role-badge r-ranged" data-en="Ranged">远程</span>
-        <div class="ustats"><span data-en="HP: Low">血量：低</span><span data-en="ATK: High">攻击：高</span></div>
-      </div>
-      <div class="unit">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-flag"/></svg></div>
-        <h5 data-en="Banner Bearer">旗手</h5>
-        <p data-en="Support · Buffer">支援 · 增益</p>
-        <span class="role-badge r-support" data-en="Support">支援</span>
-        <div class="ustats"><span data-en="HP: Med">血量：中</span><span data-en="Buff: +DMG">增益：+伤害</span></div>
-      </div>
-      <div class="unit">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-hammer"/></svg></div>
-        <h5 data-en="Siege Breaker">攻城兵</h5>
-        <p data-en="Siege · AoE">攻城 · 范围</p>
-        <span class="role-badge r-siege" data-en="Siege">攻城</span>
-        <div class="ustats"><span data-en="HP: Med">血量：中</span><span data-en="ATK: AoE">攻击：范围</span></div>
-      </div>
-      <div class="unit">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-axe"/></svg></div>
-        <h5 data-en="Berserker">狂战士</h5>
-        <p data-en="Melee · Burst">近战 · 爆发</p>
-        <span class="role-badge r-melee" data-en="Melee">近战</span>
-        <div class="ustats"><span data-en="HP: Med">血量：中</span><span data-en="ATK: High">攻击：高</span></div>
-      </div>
-      <div class="unit">
-        <div class="u-icon"><svg viewBox="0 0 24 24"><use href="#i-shield"/></svg></div>
-        <h5 data-en="Shield Wall">盾卫</h5>
-        <p data-en="Melee · Wall">近战 · 墙</p>
-        <span class="role-badge r-melee" data-en="Melee">近战</span>
-        <div class="ustats"><span data-en="HP: Very High">血量：极高</span><span data-en="ATK: Low">攻击：低</span></div>
-      </div>
+    <div class="fcard" style="margin-bottom:20px;background:var(--parchment);border-color:var(--copper)">
+      <p style="font-size:13px;color:var(--ink-soft)" data-en="⚠ The game launched in Early Access on July 22, 2026. Specific combat values (damage numbers, cooldown times, combo frame data) are still being compiled by the community. The information below is based on developer patch notes and player reports. Specific numbers will be updated as data becomes available.">⚠ 游戏于 2026 年 7 月 22 日上线抢先体验，具体战斗数值（伤害数字、冷却时间、连招帧数据）仍在社区整理中。以下信息基于开发者补丁说明和玩家反馈，具体数值将随数据完善而更新。</p>
     </div>
 
-    <!-- Counter Relationships -->
-    <h3 id="counters" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Counter Relationships">克制关系</h3>
+    <div class="toc-box">
+      <h4 data-en="Contents">目录</h4>
+      <ol>
+        <li><a href="#mechanics" data-en="Combat Mechanics">战斗机制</a></li>
+        <li><a href="#combos" data-en="Combos & Abilities">连招与技能</a></li>
+        <li><a href="#co-op" data-en="Co-op Tactics">合作战术</a></li>
+        <li><a href="#tier-list" data-en="Build Tier List">构建强度榜</a></li>
+      </ol>
+    </div>
+
+    <!-- Combat Mechanics -->
+    <h3 id="mechanics" class="section-anchor" style="font-size:22px;color:var(--ink);margin-bottom:16px" data-en="Combat Mechanics">战斗机制</h3>
+    <p style="margin-bottom:16px;color:var(--ink-soft);font-size:14px" data-en="Tears of Metal blends hack-and-slash action with musou-style crowd combat. Understanding the core mechanics is essential for surviving tougher environments.">钢铁之泪融合砍杀动作与无双式群战。理解核心机制对于在更难环境中生存至关重要。</p>
+    <div class="feature-grid">
+      <div class="fcard"><h4 data-en="Light & Heavy Attacks">轻击与重击</h4><ul>
+        <li data-en="<b>Light attacks</b>: fast, low damage, good for building combo chains"><b>轻击</b>：快速、低伤害、适合构建连招链</li>
+        <li data-en="<b>Heavy attacks</b>: slow, high damage, stagger enemies"><b>重击</b>：缓慢、高伤害、打断敌人</li>
+        <li data-en="Mix both for maximum DPS and combo variety">混合使用以最大化 DPS 和连招多样性</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Dodge & Movement">闪避与移动</h4><ul>
+        <li data-en="<b>Dodge</b> grants brief invulnerability — time it against enemy attacks"><b>闪避</b>提供短暂无敌——把握时机对抗敌人攻击</li>
+        <li data-en="Patch notes confirm <b>Block Breaking attacks can be parried</b> — timing-based defense is real">补丁说明确认<b>破防攻击可被弹反</b>——基于时机的防御机制已确认</li>
+        <li data-en="Movement is key in musou combat — reposition constantly to avoid getting surrounded">移动是无双战斗的关键——不断重定位避免被包围</li>
+        <li data-en="Use terrain to your advantage — choke points funnel enemies">利用地形优势——隘口让敌人聚拢</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Abilities & Ultimates">技能与大招</h4><ul>
+        <li data-en="Each character has unique <b>active abilities</b> with cooldowns">每个角色有独特<b>主动技能</b>和冷却时间</li>
+        <li data-en="<b>Ultimate abilities</b> charge over time — save for tough encounters"><b>大招</b>随时间充能——留给困难遭遇战</li>
+        <li data-en="Patch notes confirm <b>Ally Commands</b> (e.g., Archers' Volley) and <b>Finishers</b> as combat mechanics">补丁说明确认<b>盟友指令</b>（如弓手齐射）和<b>终结技</b>为战斗机制</li>
+        <li data-en="Abilities can be enhanced by artifacts and emblems">技能可被神器和徽章增强</li>
+      </ul></div>
+      <div class="fcard"><h4 data-en="Battalion Forces">营队兵力</h4><ul>
+        <li data-en="Rally your <b>Scottish battalion</b> to fight alongside you">集结你的<b>苏格兰营</b>与你并肩作战</li>
+        <li data-en="Battalion forces provide additional DPS and distract enemies">营队兵力提供额外输出并分散敌人注意力</li>
+        <li data-en="Upgrade rally size in your settlement for more forces">在定居点升级集结规模以获得更多兵力</li>
+        <li data-en="Soldiers have <b>permadeath</b> — if they fall in battle, they are lost forever">士兵有<b>永久死亡</b>机制——阵亡后永久消失</li>
+      </ul></div>
+    </div>
+
+    <!-- Combos & Abilities -->
+    <h3 id="combos" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Combos & Abilities">连招与技能</h3>
+    <div class="fcard" style="margin-bottom:14px;background:var(--crimson);border:2px solid var(--crimson);color:#fff">
+      <p style="font-size:14px;font-weight:700;margin:0;color:#fff" data-en="⚠ EXAMPLE DATA — The combo inputs below are REPRESENTATIVE EXAMPLES of typical hack-and-slash combo patterns, NOT confirmed game inputs. However, patch notes confirm the existence of: Finishers (Cutthroat's Blade grants +10% crit on them), Combo Chain/Combo Visualizer system, Block Breaking attacks (can be parried), and Ally Commands (e.g., Archers' Volley).">⚠ 示例数据——下方的连招输入是典型砍杀连招模式的代表性示例，并非已确认的游戏输入。但补丁说明已确认存在：终结技（Cutthroat's Blade 在终结技上提供 +10% 暴击）、连招链/连招可视化系统、破防攻击（可被弹反）和盟友指令（如弓手齐射）。</p>
+    </div>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Chaining attacks into combos is the core of Tears of Metal's combat. Different combo chains produce different results — experiment to find what works for your build.">将攻击串联为连招是钢铁之泪战斗的核心。不同连招链产生不同效果——尝试找到适合你构建的组合。</p>
     <table class="data-table">
       <thead><tr>
-        <th data-en="Unit Type">单位类型</th>
-        <th data-en="Strong Against">克制</th>
-        <th data-en="Weak Against">被克</th>
+        <th data-en="Combo Type">连招类型</th>
+        <th data-en="Input">输入</th>
+        <th data-en="Effect">效果</th>
         <th data-en="Notes">说明</th>
       </tr></thead>
       <tbody>
         <tr>
-          <td><b data-en="Melee (Swordsman)">近战（剑士）</b></td>
-          <td data-en="Light enemies, runners">轻甲敌人、冲锋兵</td>
-          <td data-en="Armored, ranged">重甲、远程</td>
-          <td data-en="Frontline blocker — cheap and effective">前排挡刀——便宜有效</td>
+          <td><b data-en="Standard Chain">标准连击</b></td>
+          <td data-en="Light → Light → Light">轻 → 轻 → 轻</td>
+          <td data-en="Fast multi-hit, low stagger">快速多段、低打断</td>
+          <td data-en="Good for single targets">适合单体目标</td>
         </tr>
         <tr>
-          <td><b data-en="Ranged (Archer)">远程（弩手）</b></td>
-          <td data-en="All ground units">所有地面单位</td>
-          <td data-en="Fast movers, shielded">快速移动、有盾敌人</td>
-          <td data-en="High DPS but fragile — protect with melee">高输出但脆——用近战保护</td>
+          <td><b data-en="Heavy Finisher">重击终结</b></td>
+          <td data-en="Light → Light → Heavy">轻 → 轻 → 重</td>
+          <td data-en="Stagger + knockback on final hit">最后一击打断+击退</td>
+          <td data-en="Great for crowd control">适合群体控制</td>
         </tr>
         <tr>
-          <td><b data-en="Support (Banner)">支援（旗手）</b></td>
-          <td data-en="— (buffs allies)">—（增益友军）</td>
-          <td data-en="Direct combat">正面战斗</td>
-          <td data-en="Position behind frontline, buff radius is limited">放在前排后面，增益范围有限</td>
+          <td><b data-en="Opening Slam">开场猛击</b></td>
+          <td data-en="Heavy → Light → Light">重 → 轻 → 轻</td>
+          <td data-en="Stagger opener into fast chain">打断起手接快速连击</td>
+          <td data-en="Initiate on grouped enemies">对聚拢敌人使用</td>
         </tr>
         <tr>
-          <td><b data-en="Siege (Breaker)">攻城（攻城兵）</b></td>
-          <td data-en="Groups, armored">群怪、重甲</td>
-          <td data-en="Fast singles">快速单体</td>
-          <td data-en="Slow attack speed but massive AoE damage">攻速慢但范围伤害巨大</td>
+          <td><b data-en="Ability Weave">技能穿插</b></td>
+          <td data-en="Light → Ability → Heavy">轻 → 技能 → 重</td>
+          <td data-en="Cancel recovery with ability, follow up with heavy">用技能取消恢复，接重击</td>
+          <td data-en="Advanced technique — maximize DPS">进阶技巧——最大化 DPS</td>
         </tr>
       </tbody>
     </table>
+    <p style="margin-top:12px;color:var(--ink-soft);font-size:13px" data-en="Note: Combo inputs above are EXAMPLES — actual inputs may vary by character and build. Patch notes confirm Finishers and Combo Chain system exist. Experiment with different artifact effects to discover new combo synergies.">注：上方连招输入为示例——实际输入可能因角色和构建而异。补丁说明已确认终结技和连招链系统存在。尝试不同神器效果以发现新的连招协同。</p>
 
-    <!-- Formation Principles -->
-    <h3 id="formations" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Formation Principles">阵型原则</h3>
-    <div class="feature-grid">
-      <div class="fcard"><h4 data-en="Standard Formation">标准阵型</h4><p data-en="The bread-and-butter layout: melee in front, ranged in middle, support in back.">万金油布局：近战在前、远程居中、支援在后。</p><ul>
-        <li data-en="Front: 2-3 melee units (Swordsman + Shield Wall)">前排：2-3 个近战（剑士+盾卫）</li>
-        <li data-en="Middle: 2-3 ranged units (Archers)">中排：2-3 个远程（弩手）</li>
-        <li data-en="Back: 1 support unit (Banner Bearer)">后排：1 个支援（旗手）</li>
+    <!-- 4 Heroes -->
+    <div class="feature-grid" style="margin-top:24px">
+      <div class="fcard"><h4 data-en="4 Playable Heroes (+2 Coming)">4 名可玩英雄（+2 即将加入）</h4><ul>
+        <li data-en="Tears of Metal features <b>4 playable heroes</b>, with 2 more mysterious heroes shown but not yet obtainable (coming soon per developers):">钢铁之泪有 <b>4 名可玩英雄</b>，另有 2 名神秘英雄已展示但尚未解锁（开发者确认即将加入）：</li>
+        <li data-en="<b>Wallace</b> — has Flamberge sword (3 Dragonstones), Celtic Longsword (500 triskelle), Committed Charge ability (35% damage resistance), and a secret weapon chest"><b>Wallace</b>——有焰刃剑（3 龙石）、凯尔特长剑（500 三叶币）、专注冲锋技能（35% 减伤）和秘密武器箱</li>
+        <li data-en="<b>Luthan</b> — model updated with additional detail in v0.8 patch"><b>Luthan</b>——v0.8 补丁中模型更新增加了细节</li>
+        <li data-en="<b>Brienne</b> — has an unlock quest with gates that can block progression"><b>Brienne</b>——有解锁任务，任务中可能有门阻挡推进</li>
+        <li data-en="<b>Ruadh</b> — unlocked after defeating the Banshee (Act 2 boss)"><b>Ruadh</b>——击败女巫（第二幕 Boss）后解锁</li>
+        <li data-en="Each hero has different <b>active abilities</b> and <b>ultimate skills</b> with cooldowns">每名英雄有不同的<b>主动技能</b>和<b>大招</b>，带冷却时间</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Burst Formation">爆发阵型</h4><p data-en="Maximum damage for boss waves. Risky but effective when you need to burn down a big target.">为 Boss 波准备的最大输出阵型。有风险但在需要速杀大目标时有效。</p><ul>
-        <li data-en="Front: 1 Shield Wall (tank only)">前排：仅 1 盾卫（纯坦克）</li>
-        <li data-en="Middle: 3-4 Archers (max DPS)">中排：3-4 弩手（极限输出）</li>
-        <li data-en="Back: Banner Bearer + Siege Breaker">后排：旗手+攻城兵</li>
+      <div class="fcard"><h4 data-en="Ability Timing">技能时机</h4><ul>
+        <li data-en="Use dodge-cancel between heavy attacks to stay mobile">重击间用闪避取消保持机动</li>
+        <li data-en="Pop abilities when enemies are staggered for bonus damage">敌人被打断时放技能获得额外伤害</li>
+        <li data-en="Save ultimates for boss phases or elite packs">大招留给 Boss 阶段或精英群</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Choke Formation">隘口阵型</h4><p data-en="For narrow map sections. Stack everything at the choke point.">窄道地图用。所有单位堆在隘口。</p><ul>
-        <li data-en="Pack 3+ melee at the narrowest point">在最窄处堆 3+ 近战</li>
-        <li data-en="Ranged directly behind, overlapping fire">远程紧贴其后，交叉火力</li>
-        <li data-en="Support in safe range">支援在安全距离</li>
+      <div class="fcard"><h4 data-en="Crowd Management">群怪管理</h4><ul>
+        <li data-en="Musou-style combat means facing many enemies at once">无双式战斗意味着同时面对大量敌人</li>
+        <li data-en="Use AoE abilities and wide-swing combos for crowds">对群怪使用范围技能和宽幅连击</li>
+        <li data-en="Reposition to avoid being surrounded — keep enemies in front">重定位避免被包围——让敌人在前方</li>
       </ul></div>
     </div>
 
-    <!-- Tactical Tips -->
-    <h3 id="tactics" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Tactical Tips">战术技巧</h3>
+    <!-- Co-op Tactics -->
+    <h3 id="co-op" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Co-op Tactics">合作战术</h3>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="With up to 4-player co-op, coordination is key. Different players can specialize in different roles for maximum effectiveness.">最多 4 人联机中，协调是关键。不同玩家可以专精不同角色以实现极限效果。</p>
     <div class="feature-grid">
-      <div class="fcard"><h4 data-en="Reposition Between Waves">波次间重摆位</h4><ul>
-        <li data-en="Enemy paths change between waves — check the preview">敌人路径会变——查看预览</li>
-        <li data-en="Move melee to match the new path direction">近战跟着新路径方向移动</li>
-        <li data-en="Ranged should always be behind melee, never exposed">远程永远在近战后面，别暴露</li>
+      <div class="fcard"><h4 data-en="Role Distribution">角色分工</h4><ul>
+        <li data-en="<b>Tank</b>: defense build, draws aggro, soaks damage"><b>坦克</b>：防御构建，吸引仇恨，吸收伤害</li>
+        <li data-en="<b>DPS</b>: offense build, maximizes damage output"><b>输出</b>：攻击构建，最大化伤害输出</li>
+        <li data-en="<b>Support</b>: utility build, provides buffs and crowd control"><b>辅助</b>：辅助构建，提供增益和群体控制</li>
+        <li data-en="<b>Scout</b>: mobility build, flanks and picks off stragglers"><b>侦察</b>：机动构建，侧翼包抄和清理散兵</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="Active Ability Timing">主动技能时机</h4><ul>
-        <li data-en="Berserker rage: use when 3+ enemies in range">狂战之怒：3+ 敌人在范围内时用</li>
-        <li data-en="Banner buff: activate just before boss arrives">旗帜增益：Boss 到达前激活</li>
-        <li data-en="Siege AoE: wait for enemy cluster, not singles">攻城范围：等敌人聚拢再放</li>
+      <div class="fcard"><h4 data-en="Co-op Scaling">合作缩放</h4><ul>
+        <li data-en="Enemy count and HP scale with player count">敌人数量和血量随玩家数缩放</li>
+        <li data-en="Rewards also scale — better artifacts and more Meta points">奖励也缩放——更好的神器和更多 Meta 点数</li>
+        <li data-en="Reviving downed teammates costs less with settlement upgrades">通过定居点升级复活倒地队友更便宜</li>
       </ul></div>
-      <div class="fcard"><h4 data-en="When Units Fall">单位阵亡处理</h4><ul>
-        <li data-en="Dead units can be revived for gold mid-wave">阵亡单位可在波次中花金币复活</li>
-        <li data-en="Prioritize reviving support/ranged over melee">优先复活支援/远程而非近战</li>
-        <li data-en="If gold is low, let melee stay dead and rely on towers">金币少时让近战躺着，靠塔输出</li>
+      <div class="fcard"><h4 data-en="Communication Tips">沟通技巧</h4><ul>
+        <li data-en="Call out elite enemies and artifact drops">报告精英敌人和神器掉落</li>
+        <li data-en="Coordinate ultimate usage — don't waste overlapping AoE">协调大招使用——别浪费重叠的范围攻击</li>
+        <li data-en="Stick together in tough environments — splitting up invites ambush">在难环境中保持一起——分头行动容易遭伏击</li>
       </ul></div>
     </div>
+
+    <!-- Build Tier List -->
+    <h3 id="tier-list" class="section-anchor" style="font-size:22px;color:var(--ink);margin:40px 0 16px" data-en="Build Tier List">构建强度榜</h3>
+    <div class="fcard" style="margin-bottom:14px;background:var(--crimson);border:2px solid var(--crimson);color:#fff">
+      <p style="font-size:14px;font-weight:700;margin:0;color:#fff" data-en="⚠ EXAMPLE TIER LIST — The game launched July 22, 2026 in Early Access. It is impossible for community-voted tier lists to exist yet. The rankings below are HYPOTHETICAL examples based on the archetype system, not community consensus. Rankings will be updated as real testing data becomes available.">⚠ 示例榜单——本游戏于 2026 年 7 月 22 日进入抢先体验，尚不可能有社区投票的强度榜。下方排名为基于原型系统的假设性示例，不代表社区共识。排名将随真实测试数据更新。</p>
+    </div>
+    <p style="margin-bottom:14px;color:var(--ink-soft);font-size:14px" data-en="Hypothetical archetype rankings. S = meta-defining, always prioritize. A = strong, frequently used. B = situational but viable.">假设原型排名。S = 改变战局，必优先。A = 强力，常用。B = 视情况可用。</p>
+    <h4 style="font-size:16px;color:var(--ink);margin-bottom:10px" data-en="Build Archetype Tier List">构建原型强度榜</h4>
+    <div class="tier-list" style="margin-bottom:24px">
+      <div class="tier-row"><div class="tier-badge tier-s">S</div><div class="tier-items">
+<a class="tier-chip" href="towers.html#artifacts" data-en="Crit Burst Build">暴击爆发流</a>
+<a class="tier-chip" href="towers.html#artifacts" data-en="Tank + Battalion Swarm">坦克+营队群流</a>
+      </div></div>
+      <div class="tier-row"><div class="tier-badge tier-a">A</div><div class="tier-items">
+<a class="tier-chip" href="towers.html#artifacts" data-en="Attack Speed Build">攻速流</a>
+<a class="tier-chip" href="towers.html#artifacts" data-en="Mobility Hit-and-Run">机动游击流</a>
+      </div></div>
+      <div class="tier-row"><div class="tier-badge tier-b">B</div><div class="tier-items">
+<a class="tier-chip" href="towers.html#artifacts" data-en="Reflect Tank">反伤坦克</a>
+<a class="tier-chip" href="towers.html#artifacts" data-en="Gold Farming Build">刷金流</a>
+      </div></div>
+    </div>
+    <p style="color:var(--ink-soft);font-size:13px;margin-bottom:20px" data-en="Note: Rankings are HYPOTHETICAL — the game launched July 2026 and no community testing data exists yet. The game has 100+ artifacts, so many more builds exist — experiment and find what works for your playstyle. Rankings will be updated as real data becomes available.">注：排名为假设性示例——游戏于 2026 年 7 月上线，尚无社区测试数据。游戏有 100+ 神器，所以还有更多构建——尝试找到适合你操作风格的。排名将随真实数据更新。</p>
 
     <!-- 交叉引用 -->
     <div class="cross-links">
       <h4 data-en="Related Guides">相关攻略</h4>
       <div class="cl-list">
-        <a href="towers.html" data-en="Towers">防御塔</a>
+        <a href="towers.html" data-en="Artifacts">神器构建</a>
+        <a href="bosses.html" data-en="Bosses">Boss 专题</a>
         <a href="getting-started.html" data-en="Beginner">新手入门</a>
-        <a href="codex.html#units" data-en="Unit Codex">单位图鉴</a>
+        <a href="codex.html" data-en="Codex">图鉴速查</a>
       </div>
     </div>
 
     <!-- 上下篇导航 -->
     <div class="page-nav">
       <a href="getting-started.html"><div class="pn-label" data-en="Previous">上一篇</div><div class="pn-title" data-en="Beginner Guide">新手入门</div></a>
-      <a href="towers.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Towers">防御塔</div></a>
+      <a href="towers.html"><div class="pn-label" data-en="Next">下一篇</div><div class="pn-title" data-en="Artifacts & Builds">神器构建</div></a>
     </div>
   </div>
 </section>
@@ -191,12 +227,12 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="index.html" class="brand" style="color:#fff"><span class="logo">TM</span><span data-en="Tears of Metal Guide">钢铁之泪攻略站</span></a>
-        <p data-i18n="foot.branddesc">《Tears of Metal》中文玩家攻略站，原创整理，持续更新。</p>
-        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to their respective owners.">本站为玩家非营利性攻略站，游戏版权归各自所有者所有。</p>
+        <p data-i18n="foot.branddesc">《Tears of Metal》抢先体验攻略站，内容随游戏更新逐步完善。</p>
+        <p class="disclaimer" data-en="This is a non-profit fan guide site. Game rights belong to Paper Cult.">本站为玩家非营利性攻略站，游戏版权归 Paper Cult 所有。</p>
       </div>
-      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Towers">防御塔</a></div>
-      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Economy">经济养成</a><a href="maps.html" data-en="Maps">关卡攻略</a><a href="codex.html" data-en="Codex">图鉴速查</a></div>
-      <div><h4 data-i18n="foot.about">关于</h4><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="#" data-i18n="foot.feedback">投稿反馈</a></div>
+      <div><h4 data-i18n="foot.nav">攻略导航</h4><a href="getting-started.html" data-en="Beginner">新手入门</a><a href="combat.html" data-en="Combat">战斗系统</a><a href="towers.html" data-en="Artifacts">神器构建</a></div>
+      <div><h4 data-i18n="foot.systems">系统与图鉴</h4><a href="economy.html" data-en="Progression">养成进度</a><a href="maps.html" data-en="Environments">环境探索</a><a href="codex.html" data-en="Codex">图鉴速查</a><a href="bosses.html" data-en="Bosses">Boss 专题</a></div>
+      <div><h4 data-i18n="foot.about">关于</h4><a href="about.html" data-i18n="foot.aboutus">关于本站</a><a href="faq.html" data-en="FAQ">常见问题</a><a href="changelog.html" data-i18n="foot.changelog">更新日志</a><a href="https://github.com/yxhtl/tears-of-metal-guide/issues" target="_blank" rel="noopener" data-i18n="foot.feedback">投稿反馈</a></div>
     </div>
     <div class="foot-bottom" data-i18n="foot.copy">© 2026 钢铁之泪攻略站 · Tears of Metal 中文攻略 · 仅供学习交流</div>
   </div>
@@ -207,7 +243,7 @@
   <div class="search-panel">
     <div class="search-input-wrap">
       <span class="s-ico"></span>
-      <input type="text" placeholder="搜索攻略、单位、防御塔…">
+      <input type="text" placeholder="搜索攻略、神器、环境…">
       <button class="search-close" aria-label="关闭">×</button>
     </div>
     <div class="search-results"></div>
