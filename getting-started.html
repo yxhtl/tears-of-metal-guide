@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://tears-of-metal.yxhtl.com/getting-started.html">
 <title>新手入门指南 | Tears of Metal 钢铁之泪攻略</title>
 <meta name="description" content="Tears of Metal 新手入门攻略：战役流程、核心机制讲解、合作模式与手柄设置、常见错误避坑指南。">
 <meta name="keywords" content="Tears of Metal新手,钢铁之泪入门,战役流程,动作roguelike,合作模式,手柄,抢先体验">
@@ -25,12 +26,17 @@
 <meta property="og:site_name" content="钢铁之泪攻略站" />
     <meta name="twitter:card" content="summary" />
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MD3PJP09L"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-5MD3PJP09L");
+  if (location.hostname === "tears-of-metal.yxhtl.com") {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-5MD3PJP09L');
+    var analyticsScript = document.createElement('script');
+    analyticsScript.async = true;
+    analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5MD3PJP09L';
+    document.head.appendChild(analyticsScript);
+  }
 </script>
   </head>
 <body>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://tears-of-metal.yxhtl.com/changelog.html">
 <title>更新日志 | Tears of Metal 钢铁之泪攻略</title>
 <meta name="description" content="钢铁之泪攻略站更新日志：记录每次内容更新与数据核对。">
 <meta name="keywords" content="Tears of Metal更新日志,钢铁之泪changelog,攻略更新">
@@ -25,12 +26,17 @@
 <meta property="og:site_name" content="钢铁之泪攻略站" />
     <meta name="twitter:card" content="summary" />
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MD3PJP09L"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-5MD3PJP09L");
+  if (location.hostname === "tears-of-metal.yxhtl.com") {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-5MD3PJP09L');
+    var analyticsScript = document.createElement('script');
+    analyticsScript.async = true;
+    analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5MD3PJP09L';
+    document.head.appendChild(analyticsScript);
+  }
 </script>
   </head>
 <body>
@@ -65,6 +71,16 @@
     <p class="subtitle" data-en="Record of content updates and data verification dates.">记录每次内容更新与数据核对日期。</p>
 
     <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" data-en="v3.1.1">v3.1.1</div>
+        <div class="tl-body">
+          <h4 data-en="v3.1.1 — Site Indexing and Analytics Corrections">v3.1.1 — 站点索引与统计修正</h4>
+          <ul>
+            <li data-en="Corrected the sitemap address and added preferred URLs for guide pages.">修正站点地图地址，为攻略页面标明正式网址。</li>
+            <li data-en="Excluded local previews from Google Analytics and refreshed the site cache.">本地预览不再计入 Google Analytics，并更新页面缓存。</li>
+          </ul>
+        </div>
+      </div>
       <div class="tl-item">
         <div class="tl-dot" data-en="v3.1">v3.1</div>
         <div class="tl-body">
