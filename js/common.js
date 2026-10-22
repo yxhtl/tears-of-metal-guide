@@ -448,7 +448,6 @@
           return '<a class="sr-item sr-history" href="#" data-query="'+h+'"><div class="sr-title">'+h+'</div></a>';
         }).join("");
         box.innerHTML = html;
-        applyLang(lang);
         var clearBtn = box.querySelector('[data-action="clear-history"]');
         if(clearBtn) clearBtn.addEventListener("click", function(){
           localStorage.removeItem("tm-search-history");

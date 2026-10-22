@@ -1,5 +1,5 @@
 /* ===== Tears of Metal Guide - Service Worker ===== */
-var CACHE_NAME = "tm-guide-v3.1.1";
+var CACHE_NAME = "tm-guide-v3.1.2";
 var ASSETS = [
   "index.html",
   "getting-started.html",
@@ -31,7 +31,7 @@ self.addEventListener("activate", function(e){
   e.waitUntil(
     caches.keys().then(function(keys){
       return Promise.all(
-        keys.filter(function(k){ return k !== CACHE_NAME; })
+        keys.filter(function(k){ return k.indexOf("tm-guide-") === 0 && k !== CACHE_NAME; })
             .map(function(k){ return caches.delete(k); })
       );
     }).then(function(){
@@ -54,7 +54,7 @@ self.addEventListener("fetch", function(e){
           return response;
         }).catch(function(){
           if(e.request.mode === "navigate"){
-            return caches.match("index.html");
+            return cache.match("index.html");
           }
         });
         return cached || fetched;
