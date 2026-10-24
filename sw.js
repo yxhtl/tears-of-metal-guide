@@ -1,5 +1,5 @@
 /* ===== Tears of Metal Guide - Service Worker ===== */
-var CACHE_NAME = "tm-guide-v3.1.2";
+var CACHE_NAME = "tm-guide-v3.1.3";
 var ASSETS = [
   "index.html",
   "getting-started.html",

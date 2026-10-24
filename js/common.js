@@ -219,6 +219,10 @@
       title: "各 Boss 构建推荐", titleEn: "Build Recommendations by Boss",
       tags: "Boss 构建 推荐 神器 属性 优先级 计算器", tagsEn: "boss build recommendation artifact stat priority calculator",
       py: "boss goujian tuijian shenqi" },
+    { page: "常见问题", pageEn: "FAQ", url: "faq.html#save-resume",
+      title: "能中途保存，退出后再继续吗？", titleEn: "Can I save mid-campaign and continue later?",
+      tags: "存档 保存 中途 退出 继续 实验分支 单人 联机", tagsEn: "save resume mid-run mid-campaign quit experimental solo co-op",
+      py: "cundang baocun zhongtu tuichu jixu shiyan danren lianji" },
     /* faq entry */
     { page: "常见问题", pageEn: "FAQ", url: "faq.html",
       title: "常见问题", titleEn: "FAQ",
