@@ -258,6 +258,11 @@
 
     /* 2) Page content elements via data-en attribute */
     document.querySelectorAll("[data-en]").forEach(function(el){
+      if(el.tagName === "OPTGROUP"){
+        if(!el.hasAttribute("data-zh")) el.setAttribute("data-zh", el.label);
+        el.label = el.getAttribute(l === "en" ? "data-en" : "data-zh");
+        return;
+      }
       if(l === "en"){
         if(!el.hasAttribute("data-zh")) el.setAttribute("data-zh", el.innerHTML);
         el.innerHTML = el.getAttribute("data-en");
@@ -790,11 +795,13 @@
     var chmSel = document.getElementById("calcCharm");
     var baseAtkEl = document.getElementById("calcBaseAtk");
     var baseHpEl = document.getElementById("calcBaseHp");
-    if(!artSel || !embSel) return;
+    if(!artSel || !embSel || !baseAtkEl || !baseHpEl) return;
 
     /* base stats */
-    var baseAtk = baseAtkEl ? parseInt(baseAtkEl.value, 10) : 100;
-    var baseHp = baseHpEl ? parseInt(baseHpEl.value, 10) : 500;
+    var baseAtk = baseAtkEl.valueAsNumber;
+    var baseHp = baseHpEl.valueAsNumber;
+    var validAtk = baseAtkEl.validity.valid && Number.isFinite(baseAtk);
+    var validHp = baseHpEl.validity.valid && Number.isFinite(baseHp);
 
     /* find selected artifact */
     var artId = artSel.value;
@@ -845,8 +852,8 @@
     var isEn = lang === "en";
 
     /* final stats */
-    var finalAtk = Math.round(baseAtk * (1 + atkBonus));
-    var finalHp = Math.round(baseHp * (1 + hpBonus) + hpFlat);
+    var finalAtk = validAtk ? Math.round(baseAtk * (1 + atkBonus)) : "—";
+    var finalHp = validHp ? Math.round(baseHp * (1 + hpBonus) + hpFlat) : "—";
     var finalDr = Math.round(drBonus * 100);
     var finalCrit = Math.round(critPct * 100);
     var finalAtkSpd = Math.round(atkSpdBonus * 100);
@@ -862,6 +869,11 @@
     el = document.getElementById("rAtkSpd"); if(el) el.textContent = finalAtkSpd + "%";
     el = document.getElementById("rMoveSpd"); if(el) el.textContent = finalMoveSpd + "%";
     el = document.getElementById("rCDR"); if(el) el.textContent = finalCDR + "%";
+
+    var hints = [];
+    if(!validAtk) hints.push(isEn ? "Enter a whole number from " + baseAtkEl.min + " to " + baseAtkEl.max + " for Base ATK." : "基础攻击力请输入 " + baseAtkEl.min + "–" + baseAtkEl.max + " 的整数。");
+    if(!validHp) hints.push(isEn ? "Enter a whole number from " + baseHpEl.min + " to " + baseHpEl.max + " for Base HP." : "基础生命值请输入 " + baseHpEl.min + "–" + baseHpEl.max + " 的整数。");
+    el = document.getElementById("rInputHint"); if(el) el.textContent = hints.join(" ");
 
     /* effects text */
     if(artifact) effects.push(isEn ? artifact.desc.en : artifact.desc.zh);
@@ -884,7 +896,7 @@
     if(!calc) return;
     ["calcArtifact","calcEmblem","calcCharm","calcBaseAtk","calcBaseHp"].forEach(function(id){
       var el = document.getElementById(id);
-      if(el) el.addEventListener("change", calcBuild);
+      if(el) el.addEventListener(el.type === "number" ? "input" : "change", calcBuild);
     });
     calcBuild();
   }
